@@ -1,0 +1,9 @@
+title: "Katelyn Schoedl"
+description: "Personal site"
+theme: minima
+markdown: kramdown
+paginate: 5
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
