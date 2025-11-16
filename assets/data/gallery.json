@@ -1,0 +1,26 @@
+[
+  {
+    "src": "/assets/gallery/shuksan-01.jpg",
+    "title": "Mount Shuksan – Fisher Chimneys",
+    "alt": "Mount Shuksan with glaciers and ridges in view",
+    "location": "North Cascades, WA",
+    "year": 2025,
+    "tags": ["alpine", "glacier", "pnw"]
+  },
+  {
+    "src": "/assets/gallery/hood-01.jpg",
+    "title": "Mount Hood – Timberline to Old Chute",
+    "alt": "Fast clouds over the summit ridge of Mount Hood",
+    "location": "Oregon, USA",
+    "year": 2025,
+    "tags": ["volcano", "snow", "sunrise"]
+  },
+  {
+    "src": "/assets/gallery/practice-01.jpg",
+    "title": "Practice Day",
+    "alt": "Hanging out amgonst trees and rocks",
+    "location": "Leavenworth, WA",
+    "year": 2025,
+    "tags": ["rock", "training", "rope"]
+  }
+]
