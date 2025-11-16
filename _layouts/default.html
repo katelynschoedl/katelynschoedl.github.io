@@ -5,30 +5,75 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: #111827;
-      color: #e5e7eb;
-    }
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #111827;
+    color: #e5e7eb;
+  }
 
-    nav {
-      margin-bottom: 2rem;
-    }
+  nav {
+    margin-bottom: 2rem;
+  }
 
-    nav a {
-      margin-right: 1.5rem;
-      color: #93c5fd;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
+  nav a {
+    margin-right: 1.5rem;
+    color: #93c5fd;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
 
-    nav a:hover {
-      color: white;
-    }
-  </style>
+  nav a:hover {
+    color: white;
+  }
+
+  /* Gallery layout */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .gallery-item figure {
+    margin: 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: #020617;
+    border: 1px solid #1f2937;
+  }
+
+  .gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery-item figcaption {
+    padding: 0.5rem 0.75rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .gallery-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .gallery-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #9ca3af;
+  }
+
+  .gallery-meta span::before {
+    content: "• ";
+  }
+</style>
+
 </head>
 
 <body>
