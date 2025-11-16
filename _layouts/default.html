@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #111827;
+      color: #e5e7eb;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      margin-right: 1.5rem;
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/resume">Resume</a>
+    <a href="/projects">Projects</a>
+    <a href="/alpine">Alpine</a>
+    <a href="/gallery">Gallery</a>
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>
