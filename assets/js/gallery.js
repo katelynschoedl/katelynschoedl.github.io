@@ -1,7 +1,7 @@
 // assets/js/gallery.js
 
 async function loadGallery() {
-  const container = document.getElementById("gallery");
+  const container = document.getElementById("gallery-grid");
   if (!container) return;
 
   try {
