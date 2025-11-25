@@ -1,6 +1,6 @@
 title: "Katelyn Schoedl"
 description: "Personal site"
-theme: minima
+#theme: 
 markdown: kramdown
 paginate: 5
 
