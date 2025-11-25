@@ -40,11 +40,13 @@
       flex-wrap: wrap;
       gap: 1.5rem;
       margin-top: 1.5rem;
+      width: 100%;
+      justify-content: space-between;
     }
 
     .gallery-item {
-      flex: 1 1 260px;   /* min ~260px, then wrap */
-      max-width: 32%;    /* aim for 3 per row on desktop */
+      flex: 1 1 calc(33.333% - 1rem);
+      max-width: calc(33.333% - 1rem);
       box-sizing: border-box;
     }
 
