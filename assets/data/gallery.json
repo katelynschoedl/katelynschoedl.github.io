@@ -16,14 +16,6 @@
     "tags": ["volcano", "snow", "sunrise"]
   },
   {
-    "src": "/assets/gallery/practice-01.jpg",
-    "title": "BoeAlps Practice Day",
-    "alt": "Hanging out amongst trees and rocks",
-    "location": "Leavenworth, WA",
-    "year": 2025,
-    "tags": ["rock", "training", "rope"]
-  },
-  {
     "src": "/assets/gallery/black-peak-01.jpg",
     "title": "Black Peak via Northeast Ridge",
     "alt": "High ridgeline leading toward Black Peak",
@@ -70,6 +62,29 @@
     "location": "Telendos, Greece",
     "year": 2025,
     "tags": ["island", "sunset", "greece"]
+  },
+  {
+    "src": "/assets/gallery/HSCT-01.jpg",
+    "title": "Howe Sound Crest Trail",
+    "alt": "Granite terrain and sweeping views over Vancouver",
+    "location": "Canada, Bristish Columbia",
+    "year": 2023,
+    "tags": ["backpacking", "vancouver", "landscape"]
+  },
+  {
+    "src": "/assets/gallery/del-campo-01.jpg",
+    "title": "Del Campo Peak",
+    "alt": "Steep summit scramble on Del Campo Peak",
+    "location": "Mountain Loop Highway, WA",
+    "year": 2025,
+    "tags": ["alpine", "scramble", "pnw"]
+  },
+  {
+    "src": "/assets/gallery/shasta-01.JPG",
+    "title": "Mount Shasta via Avalanche Gulch",
+    "alt": "Daylight on the Shasta snowfields just above the Red Banks",
+    "location": "Northern California, USA",
+    "year": 2024,
+    "tags": ["volcano", "snow", "california"]
   }
-  
 ]
