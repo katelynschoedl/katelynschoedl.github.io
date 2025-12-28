@@ -112,11 +112,11 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 
 ## Certifications & Training
 
-- Wilderness First Responder (in progress)
+- Wilderness First Responder
 - AIARE 1 Avalanche Training
-- OSHA 10
 - Wilderness First Aid
 - Washington State Rare Plant Monitoring
+- OSHA 10
 
 ---
 
