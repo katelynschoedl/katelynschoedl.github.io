@@ -268,6 +268,31 @@ const ALBUMS = [
     alt: "Yosemite",
   },
 
+  /////Hikes & scrambles//////
+
+  {
+    title: "Pacific Northwest",
+    category: "Hikes and Scrambles",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331337934",
+    cover: "https://live.staticflickr.com/65535/55027666656_2c0bd522c9.jpg",
+    alt: "Pacific Northwest",
+  },
+  {
+    title: "Cascade Pass",
+    category: "Hikes and Scrambles",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331292682",
+    cover: "https://live.staticflickr.com/65535/55025988354_25e116f387.jpg",
+    alt: "Cascade Pass",
+  },
+  {
+    title: "Lake Atitlan",
+    category: "Hikes and Scrambles",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331284340",
+    cover: "https://live.staticflickr.com/65535/55026089165_271cbd799b.jpg",
+    alt: "Lake Atitlan",
+  },
+
+  
   // ===== Backpacking =====
   {
     title: "The Enchantments",
