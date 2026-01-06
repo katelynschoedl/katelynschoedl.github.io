@@ -370,7 +370,17 @@ function openAlbumUnderRow(albumIndex) {
   link.textContent = "Open on Flickr";
   link.className = "album-panel-link";
 
-  header.appendChild(h2);
+  const left = document.createElement("div");
+  left.appendChild(h2);
+
+  if (album.description) {
+    const desc = document.createElement("p");
+    desc.className = "album-panel-desc";
+    desc.textContent = album.description;
+    left.appendChild(desc);
+  }
+
+  header.appendChild(left);
   header.appendChild(link);
 
   // Embed container
