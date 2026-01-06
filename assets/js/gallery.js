@@ -286,10 +286,7 @@ const ALBUMS = [
     alt: "Training",
   },
 ];
-
 function ensureFlickrEmbedLoaded() {
-  // Flickr's embedr script watches DOM mutations, but in case it doesn't,
-  // calling window._flickr_embed_init() will re-scan embeds.
   if (typeof window._flickr_embed_init === "function") {
     window._flickr_embed_init();
   }
@@ -301,10 +298,11 @@ function renderAlbumGrid() {
 
   grid.innerHTML = "";
 
-  ALBUMS.forEach((a) => {
+  ALBUMS.forEach((a, idx) => {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "album-tile";
+    btn.dataset.albumIndex = String(idx);
     btn.setAttribute("aria-label", `Open album: ${a.title}`);
 
     const img = document.createElement("img");
@@ -319,50 +317,117 @@ function renderAlbumGrid() {
     btn.appendChild(img);
     btn.appendChild(title);
 
-    btn.addEventListener("click", () => openAlbum(a));
+    btn.addEventListener("click", () => openAlbumUnderRow(idx));
 
     grid.appendChild(btn);
   });
 }
 
-function openAlbum(album) {
-  const view = document.getElementById("album-view");
-  const titleEl = document.getElementById("album-title");
-  const linkEl = document.getElementById("album-link");
-  const embedEl = document.getElementById("album-embed");
+function removeExistingPanel() {
+  const existing = document.getElementById("album-panel");
+  if (existing) existing.remove();
+}
 
-  if (!view || !titleEl || !linkEl || !embedEl) return;
+function openAlbumUnderRow(albumIndex) {
+  const grid = document.getElementById("album-grid");
+  if (!grid) return;
 
-  titleEl.textContent = album.title;
-  linkEl.href = album.href;
+  const album = ALBUMS[albumIndex];
+  if (!album) return;
 
-  // Inject a Flickr embed anchor (NO script tag here; loaded once in gallery.md)
-  embedEl.innerHTML = "";
+  // Remove old panel if it exists
+  removeExistingPanel();
+
+  // Find the clicked tile element
+  const clickedTile = grid.querySelector(`.album-tile[data-album-index="${albumIndex}"]`);
+  if (!clickedTile) return;
+
+  // Create the panel
+  const panel = document.createElement("div");
+  panel.id = "album-panel";
+  panel.className = "album-panel";
+
+  // Close button
+  const closeBtn = document.createElement("button");
+  closeBtn.type = "button";
+  closeBtn.className = "album-panel-close";
+  closeBtn.setAttribute("aria-label", "Close album");
+  closeBtn.textContent = "×";
+  closeBtn.addEventListener("click", () => panel.remove());
+
+  // Header
+  const header = document.createElement("div");
+  header.className = "album-panel-header";
+
+  const h2 = document.createElement("h2");
+  h2.textContent = album.title;
+
+  const link = document.createElement("a");
+  link.href = album.href;
+  link.target = "_blank";
+  link.rel = "noopener";
+  link.textContent = "Open on Flickr";
+
+  header.appendChild(h2);
+  header.appendChild(link);
+
+  // Embed container
+  const embed = document.createElement("div");
+  embed.className = "album-embed";
+
   const a = document.createElement("a");
   a.setAttribute("data-flickr-embed", "true");
   a.setAttribute("data-footer", "true");
   a.href = album.href;
   a.title = album.title;
 
-  const img = document.createElement("img");
-  img.src = album.cover; // cover acts as preview; embedr will replace/enhance
-  img.alt = album.alt || album.title;
-  img.width = 640;
-  img.height = 480;
+  const previewImg = document.createElement("img");
+  previewImg.src = album.cover;
+  previewImg.alt = album.alt || album.title;
+  previewImg.width = 640;
+  previewImg.height = 480;
 
-  a.appendChild(img);
-  embedEl.appendChild(a);
+  a.appendChild(previewImg);
+  embed.appendChild(a);
 
-  view.hidden = false;
-  view.scrollIntoView({ behavior: "smooth", block: "start" });
+  panel.appendChild(closeBtn);
+  panel.appendChild(header);
+  panel.appendChild(embed);
 
-  // Ask Flickr embedr to re-scan
+  // Insert panel *beneath the row that contains the clicked tile*
+  //
+  // We do this by finding the first element AFTER the clicked tile whose offsetTop is greater
+  // (meaning it’s in the next row). Insert the panel right before that.
+  const clickedTop = clickedTile.offsetTop;
+  const children = Array.from(grid.children);
+
+  let insertBefore = null;
+  for (const child of children) {
+    if (child === clickedTile) continue;
+    if (child.offsetTop > clickedTop) {
+      insertBefore = child;
+      break;
+    }
+  }
+
+  if (insertBefore) {
+    grid.insertBefore(panel, insertBefore);
+  } else {
+    grid.appendChild(panel);
+  }
+
+  // Kick Flickr embed to render
   ensureFlickrEmbedLoaded();
+
+  // Scroll so the panel is visible without jumping too hard
+  panel.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+
+// Optional: close on Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") removeExistingPanel();
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   renderAlbumGrid();
-
-  // Optional: auto-open the first album on page load
-  // openAlbum(ALBUMS[0]);
 });
