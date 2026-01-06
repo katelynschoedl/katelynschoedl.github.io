@@ -78,7 +78,15 @@
       min-height: 520px;
     }
 
-    .album-panel-desc {
+    .album-panel-left {
+      flex: 1;
+      min-width: 0;
+    }
+.album-panel-left h2 {
+  margin-bottom: 4px;
+}
+.album-panel-desc {
+      max-width: 100%;
       margin: 6px 0 0 0;
       color: rgba(255,255,255,0.75);
       font-size: 0.95rem;
@@ -119,9 +127,6 @@
   font-size: 20px;
 }
 
-.album-panel-close:hover {
-  background: rgba(255,255,255,0.12);
-}
     .album-panel-link {
     display: inline-flex;
     align-items: center;
@@ -165,10 +170,6 @@
       margin-top: 14px;
     }
 
-    .album-embed img {
-      max-width: 100%;
-      height: auto;
-    }
 
   </style>
 </head>
