@@ -61,8 +61,64 @@
     .album-tile-title {
       margin-top: 8px;
       font-weight: 600;
+      color: #ffffff;
     }
 
+    /* Expandable panel that appears inside the grid */
+    .album-panel {
+      grid-column: 1 / -1;
+      margin-top: 6px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 16px;
+      position: relative;
+
+      /* roughly “two rows tall” feel */
+      min-height: 520px;
+    }
+
+    
+/* Panel header row */
+    .album-panel-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .album-panel-header h2 {
+      margin: 0;
+      color: #ffffff;
+    }
+
+/* Close (X) button */
+    .album-panel-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(0,0,0,0.25);
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 0;
+    }
+
+    .album-panel-close:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* Make embed responsive */
+    .album-embed img {
+      max-width: 100%;
+      height: auto;
+    }
+    
     .album-view {
       margin-top: 28px;
     }
