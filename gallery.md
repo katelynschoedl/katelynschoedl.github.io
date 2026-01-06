@@ -9,5 +9,5 @@ title: Gallery
 
 <div id="album-grid" class="album-grid"></div>
 
-<script src="/assets/js/gallery.js"></script>
+<script src="{{ site.baseurl }}/assets/js/gallery.js"></script>
 <script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
