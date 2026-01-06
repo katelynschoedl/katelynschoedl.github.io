@@ -416,7 +416,7 @@ function openAlbumUnderRow(albumIndex) {
   a.appendChild(previewImg);
   embed.appendChild(a);
 
-
+  panel.appendChild(embed);
 
   // Insert panel *beneath the row that contains the clicked tile*
   //
