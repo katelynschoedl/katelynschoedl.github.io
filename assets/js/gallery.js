@@ -356,21 +356,17 @@ function openAlbumUnderRow(albumIndex) {
   closeBtn.textContent = "×";
   closeBtn.addEventListener("click", () => panel.remove());
 
+
   // Header
   const header = document.createElement("div");
   header.className = "album-panel-header";
 
+  // Left side: title + optional description
+  const left = document.createElement("div");
+  left.className = "album-panel-left";
+
   const h2 = document.createElement("h2");
   h2.textContent = album.title;
-
-  const link = document.createElement("a");
-  link.href = album.href;
-  link.target = "_blank";
-  link.rel = "noopener";
-  link.textContent = "Open on Flickr";
-  link.className = "album-panel-link";
-
-  const left = document.createElement("div");
   left.appendChild(h2);
 
   if (album.description) {
@@ -380,9 +376,35 @@ function openAlbumUnderRow(albumIndex) {
     left.appendChild(desc);
   }
 
-  header.appendChild(left);
-  header.appendChild(link);
+  // Button link
+  const link = document.createElement("a");
+  link.className = "album-panel-link";
+  link.href = album.href;
+  link.target = "_blank";
+  link.rel = "noopener";
+  link.textContent = "Open on Flickr";
 
+  // Close button (X)
+  const closeBtn = document.createElement("button");
+  closeBtn.type = "button";
+  closeBtn.className = "album-panel-close";
+  closeBtn.setAttribute("aria-label", "Close album");
+  closeBtn.textContent = "×";
+  closeBtn.addEventListener("click", () => panel.remove());
+
+  // Actions cluster (right side)
+  const actions = document.createElement("div");
+  actions.className = "album-panel-actions";
+  actions.appendChild(link);
+  actions.appendChild(closeBtn);
+
+  header.appendChild(left);
+  header.appendChild(actions);
+
+  panel.appendChild(header);
+
+
+  
   // Embed container
   const embed = document.createElement("div");
   embed.className = "album-embed";
@@ -402,9 +424,6 @@ function openAlbumUnderRow(albumIndex) {
   a.appendChild(previewImg);
   embed.appendChild(a);
 
-  panel.appendChild(closeBtn);
-  panel.appendChild(header);
-  panel.appendChild(embed);
 
 
   // Insert panel *beneath the row that contains the clicked tile*
