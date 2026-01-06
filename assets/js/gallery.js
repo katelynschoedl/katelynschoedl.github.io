@@ -348,14 +348,6 @@ function openAlbumUnderRow(albumIndex) {
   panel.id = "album-panel";
   panel.className = "album-panel";
 
-  // Close button
-  const closeBtn = document.createElement("button");
-  closeBtn.type = "button";
-  closeBtn.className = "album-panel-close";
-  closeBtn.setAttribute("aria-label", "Close album");
-  closeBtn.textContent = "×";
-  closeBtn.addEventListener("click", () => panel.remove());
-
 
   // Header
   const header = document.createElement("div");
