@@ -368,6 +368,7 @@ function openAlbumUnderRow(albumIndex) {
   link.target = "_blank";
   link.rel = "noopener";
   link.textContent = "Open on Flickr";
+  link.className = "album-panel-link";
 
   header.appendChild(h2);
   header.appendChild(link);
@@ -378,7 +379,7 @@ function openAlbumUnderRow(albumIndex) {
 
   const a = document.createElement("a");
   a.setAttribute("data-flickr-embed", "true");
-  a.setAttribute("data-footer", "true");
+  a.setAttribute("data-footer", "false");
   a.href = album.href;
   a.title = album.title;
 
