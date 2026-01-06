@@ -406,22 +406,6 @@ function openAlbumUnderRow(albumIndex) {
   panel.appendChild(header);
   panel.appendChild(embed);
 
-  .album-panel-link {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.06);
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 0.85rem;
-  line-height: 1;
-  }
-
-  .album-panel-link:hover {
-    background: rgba(255,255,255,0.12);
-  }
 
   // Insert panel *beneath the row that contains the clicked tile*
   //
