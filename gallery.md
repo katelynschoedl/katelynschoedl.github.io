@@ -1,14 +1,19 @@
 ---
 layout: default
 title: Gallery
-permalink: /gallery
 ---
 
-# Gallery
+<h1>Gallery</h1>
 
-Curated photos from climbing, fieldwork, and travels.
+<div id="album-grid" class="album-grid"></div>
 
-<div id="gallery-grid" class="gallery-grid"></div>
+<section id="album-view" class="album-view" hidden>
+  <div class="album-view-header">
+    <h2 id="album-title"></h2>
+    <a id="album-link" href="#" target="_blank" rel="noopener">Open on Flickr</a>
+  </div>
 
-<!-- Load the gallery script which builds photo grid -->
-<script src="{{ "/assets/js/gallery.js" | relative_url }}"></script>
+  <div id="album-carousel" class="album-carousel" aria-label="Album photos"></div>
+</section>
+
+<script src="/assets/js/flickr-albums.js"></script>
