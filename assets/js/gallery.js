@@ -286,6 +286,7 @@ const ALBUMS = [
     alt: "Training",
   },
 ];
+
 function ensureFlickrEmbedLoaded() {
   if (typeof window._flickr_embed_init === "function") {
     window._flickr_embed_init();
