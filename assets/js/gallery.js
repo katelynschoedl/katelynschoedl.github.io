@@ -204,4 +204,165 @@ const ALBUMS = [
   {
     title: "Yosemite",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331309858",
-    cover: "https://live.staticflickr.com/65535/55026019994
+    cover: "https://live.staticflickr.com/65535/55026019994_6a9a38b647_z.jpg",
+    alt: "Yosemite",
+  },
+  {
+    title: "Kalymnos",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331291247",
+    cover: "https://live.staticflickr.com/65535/55025988739_08aa236a6e_z.jpg",
+    alt: "Kalymnos",
+  },
+  {
+    title: "Lake Atitlan",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331284340",
+    cover: "https://live.staticflickr.com/65535/55026089165_271cbd799b.jpg",
+    alt: "Lake Atitlan",
+  },
+  {
+    title: "Silverton",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331319444",
+    cover: "https://live.staticflickr.com/65535/55026015419_1d88301e24_z.jpg",
+    alt: "Silverton",
+  },
+  {
+    title: "XC Skiing",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331320509",
+    cover: "https://live.staticflickr.com/65535/55026134909_9c546a50f1.jpg",
+    alt: "XC Skiing",
+  },
+  {
+    title: "Dry Tooling",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331285705",
+    cover: "https://live.staticflickr.com/65535/55026218050_907cf99b5a.jpg",
+    alt: "Dry Tooling",
+  },
+  {
+    title: "Bouldering",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331311308",
+    cover: "https://live.staticflickr.com/65535/55025032187_06a19ebf17_z.jpg",
+    alt: "Bouldering",
+  },
+  {
+    title: "Off Piste",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331311373",
+    cover: "https://live.staticflickr.com/65535/55025925996_8992e0c038_z.jpg",
+    alt: "Off Piste",
+  },
+  {
+    title: "Touring",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331296366",
+    cover: "https://live.staticflickr.com/65535/55026153334_3563e75383.jpg",
+    alt: "Touring",
+  },
+  {
+    title: "Resort Skiing",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331297036",
+    cover: "https://live.staticflickr.com/65535/55026216949_437acf02fc.jpg",
+    alt: "Resort Skiing",
+  },
+  {
+    title: "WA Day Hikes",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331292682",
+    cover: "https://live.staticflickr.com/65535/55025988354_25e116f387_z.jpg",
+    alt: "WA Day Hikes",
+  },
+  {
+    title: "WA Ice",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331296191",
+    cover: "https://live.staticflickr.com/65535/55026075705_d049f06f56_z.jpg",
+    alt: "WA Ice",
+  },
+  {
+    title: "Racing",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331283925",
+    cover: "https://live.staticflickr.com/65535/55025735766_8877dd1477.jpg",
+    alt: "Racing",
+  },
+  {
+    title: "Training",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331318674",
+    cover: "https://live.staticflickr.com/65535/55024810432_be34919476.jpg",
+    alt: "Training",
+  },
+];
+
+function ensureFlickrEmbedLoaded() {
+  // Flickr's embedr script watches DOM mutations, but in case it doesn't,
+  // calling window._flickr_embed_init() will re-scan embeds.
+  if (typeof window._flickr_embed_init === "function") {
+    window._flickr_embed_init();
+  }
+}
+
+function renderAlbumGrid() {
+  const grid = document.getElementById("album-grid");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+
+  ALBUMS.forEach((a) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "album-tile";
+    btn.setAttribute("aria-label", `Open album: ${a.title}`);
+
+    const img = document.createElement("img");
+    img.src = a.cover;
+    img.alt = a.alt || a.title;
+    img.loading = "lazy";
+
+    const title = document.createElement("div");
+    title.className = "album-tile-title";
+    title.textContent = a.title;
+
+    btn.appendChild(img);
+    btn.appendChild(title);
+
+    btn.addEventListener("click", () => openAlbum(a));
+
+    grid.appendChild(btn);
+  });
+}
+
+function openAlbum(album) {
+  const view = document.getElementById("album-view");
+  const titleEl = document.getElementById("album-title");
+  const linkEl = document.getElementById("album-link");
+  const embedEl = document.getElementById("album-embed");
+
+  if (!view || !titleEl || !linkEl || !embedEl) return;
+
+  titleEl.textContent = album.title;
+  linkEl.href = album.href;
+
+  // Inject a Flickr embed anchor (NO script tag here; loaded once in gallery.md)
+  embedEl.innerHTML = "";
+  const a = document.createElement("a");
+  a.setAttribute("data-flickr-embed", "true");
+  a.setAttribute("data-footer", "true");
+  a.href = album.href;
+  a.title = album.title;
+
+  const img = document.createElement("img");
+  img.src = album.cover; // cover acts as preview; embedr will replace/enhance
+  img.alt = album.alt || album.title;
+  img.width = 640;
+  img.height = 480;
+
+  a.appendChild(img);
+  embedEl.appendChild(a);
+
+  view.hidden = false;
+  view.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  // Ask Flickr embedr to re-scan
+  ensureFlickrEmbedLoaded();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderAlbumGrid();
+
+  // Optional: auto-open the first album on page load
+  // openAlbum(ALBUMS[0]);
+});
