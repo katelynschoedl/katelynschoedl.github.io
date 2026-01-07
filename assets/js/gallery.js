@@ -117,66 +117,66 @@ const ALBUMS = [
     alt: "Mt. St. Helens",
   },
 
-  // ===== Ski & Ice =====
+  // ===== Ski and Ice =====
   {
     title: "Ames Ice Hose",
-    category: "Ski & Ice",
+    category: "Ski and Ice",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331294911",
     cover: "https://live.staticflickr.com/65535/55024953787_42d55373c0.jpg",
     alt: "Ames Ice Hose",
   },
   {
     title: "Off Piste",
-    category: "Ski & Ice",
+    category: "Ski and Ice",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331311373",
     cover: "https://live.staticflickr.com/65535/55025038257_37259d84b0.jpg",
     alt: "Off Piste",
   },
   {
     title: "Ouray",
-    category: "Ski & Ice",
+    category: "Ski and Ice",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331309558",
     cover: "https://live.staticflickr.com/65535/55026171395_64c774a1ef.jpg",
     alt: "Ouray",
   },
   {
     title: "Resort",
-    category: "Ski & Ice",
+    category: "Ski and Ice",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331297036",
     cover: "https://live.staticflickr.com/65535/55026216949_437acf02fc.jpg",
     alt: "Resort",
   },
   {
     title: "The Ribbon",
-    category: "Ski & Ice",
+    category: "Ski and Ice",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331310187",
     cover: "https://live.staticflickr.com/65535/55026006574_1511aa632e.jpg",
     alt: "The Ribbon",
   },
   {
     title: "Silverton",
-    category: "Ski & Ice",
+    category: "Ski and Ice",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331319444",
     cover: "https://live.staticflickr.com/65535/55026015419_1d88301e24.jpg",
     alt: "Silverton",
   },
   {
     title: "Touring",
-    category: "Ski & Ice",
+    category: "Ski and Ice",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331296366",
     cover: "https://live.staticflickr.com/65535/55026153334_3563e75383.jpg",
     alt: "Touring",
   },
   {
     title: "WA Ice",
-    category: "Ski & Ice",
+    category: "Ski and Ice",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331296191",
     cover: "https://live.staticflickr.com/65535/55026075705_d049f06f56.jpg",
     alt: "WA Ice",
   },
   {
     title: "XC Skiing",
-    category: "Ski & Ice",
+    category: "Ski and Ice",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331320509",
     cover: "https://live.staticflickr.com/65535/55026134909_9c546a50f1.jpg",
     alt: "XC Skiing",
@@ -268,7 +268,7 @@ const ALBUMS = [
     alt: "Yosemite",
   },
 
-  /////Hikes & scrambles//////
+  /////Hikes and scrambles//////
 
     {
     title: "California",
@@ -418,36 +418,81 @@ const ALBUMS = [
 ];
 
 
-// Open-by-default sections
-const DEFAULT_OPEN = new Set(["Peaks", "Ski and Ice", "Cragging"]);
-
+// ---- Flickr embed helper ----
 function ensureFlickrEmbedLoaded() {
   if (typeof window._flickr_embed_init === "function") {
     window._flickr_embed_init();
   }
 }
 
-function removeExistingPanel() {
-  const existing = document.getElementById("album-panel");
+// ---- Rendering ----
+function renderAllCategoryGrids() {
+  const grids = Array.from(document.querySelectorAll(".album-grid[data-category]"));
+  if (grids.length === 0) {
+    // If you want a visible breadcrumb for debugging:
+    // console.warn("[gallery] No .album-grid[data-category] found on page.");
+    return;
+  }
+
+  grids.forEach((grid) => {
+    const category = grid.dataset.category;
+    const albumsForCategory = ALBUMS.filter((a) => a.category === category);
+    renderAlbumGridInto(grid, albumsForCategory);
+  });
+}
+
+function renderAlbumGridInto(gridEl, albums) {
+  gridEl.innerHTML = "";
+
+  if (!albums || albums.length === 0) {
+    const empty = document.createElement("p");
+    empty.style.margin = "0";
+    empty.style.opacity = "0.8";
+    empty.textContent = "No albums yet.";
+    gridEl.appendChild(empty);
+    return;
+  }
+
+  albums.forEach((album, idxInCategory) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "album-tile";
+    btn.dataset.albumIndex = String(idxInCategory);
+    btn.setAttribute("aria-label", `Open album: ${album.title}`);
+
+    const img = document.createElement("img");
+    img.src = album.cover;
+    img.alt = album.alt || album.title;
+    img.loading = "lazy";
+
+    const title = document.createElement("div");
+    title.className = "album-tile-title";
+    title.textContent = album.title;
+
+    btn.appendChild(img);
+    btn.appendChild(title);
+
+    btn.addEventListener("click", () => openAlbumUnderRow(gridEl, albums, idxInCategory));
+
+    gridEl.appendChild(btn);
+  });
+}
+
+function removeExistingPanel(gridEl) {
+  const existing = gridEl.querySelector("#album-panel");
   if (existing) existing.remove();
 }
 
-function openAlbumUnderRow(albumIndex, gridEl) {
-  if (!gridEl) return;
-
-  const album = ALBUMS[albumIndex];
+function openAlbumUnderRow(gridEl, albums, albumIndex) {
+  const album = albums[albumIndex];
   if (!album) return;
 
-  // Remove old panel if it exists (global, across all sections)
-  removeExistingPanel();
+  // Remove old panel in THIS grid
+  removeExistingPanel(gridEl);
 
-  // Find the clicked tile element inside THIS grid
-  const clickedTile = gridEl.querySelector(
-    `.album-tile[data-album-index="${albumIndex}"]`
-  );
+  const clickedTile = gridEl.querySelector(`.album-tile[data-album-index="${albumIndex}"]`);
   if (!clickedTile) return;
 
-  // Create the panel
   const panel = document.createElement("div");
   panel.id = "album-panel";
   panel.className = "album-panel";
@@ -497,11 +542,11 @@ function openAlbumUnderRow(albumIndex, gridEl) {
   const embed = document.createElement("div");
   embed.className = "album-embed";
 
-  const flickrA = document.createElement("a");
-  flickrA.setAttribute("data-flickr-embed", "true");
-  flickrA.setAttribute("data-footer", "false");
-  flickrA.href = album.href;
-  flickrA.title = album.title;
+  const a = document.createElement("a");
+  a.setAttribute("data-flickr-embed", "true");
+  a.setAttribute("data-footer", "false");
+  a.href = album.href;
+  a.title = album.title;
 
   const previewImg = document.createElement("img");
   previewImg.src = album.cover;
@@ -509,11 +554,11 @@ function openAlbumUnderRow(albumIndex, gridEl) {
   previewImg.width = 640;
   previewImg.height = 480;
 
-  flickrA.appendChild(previewImg);
-  embed.appendChild(flickrA);
+  a.appendChild(previewImg);
+  embed.appendChild(a);
   panel.appendChild(embed);
 
-  // Insert panel beneath the row containing the clicked tile (within THIS grid)
+  // Insert panel beneath the row that contains the clicked tile (within this grid)
   const clickedTop = clickedTile.offsetTop;
   const children = Array.from(gridEl.children);
 
@@ -526,91 +571,19 @@ function openAlbumUnderRow(albumIndex, gridEl) {
     }
   }
 
-  if (insertBefore) {
-    gridEl.insertBefore(panel, insertBefore);
-  } else {
-    gridEl.appendChild(panel);
-  }
+  if (insertBefore) gridEl.insertBefore(panel, insertBefore);
+  else gridEl.appendChild(panel);
 
-  // Kick Flickr embed to render
   ensureFlickrEmbedLoaded();
-
-  // Scroll to panel
   panel.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function renderAlbumGrid(gridEl, albumIndices) {
-  if (!gridEl) return;
-
-  gridEl.innerHTML = "";
-
-  albumIndices.forEach((idx) => {
-    const a = ALBUMS[idx];
-
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "album-tile";
-    btn.dataset.albumIndex = String(idx);
-    btn.setAttribute("aria-label", `Open album: ${a.title}`);
-
-    const img = document.createElement("img");
-    img.src = a.cover;
-    img.alt = a.alt || a.title;
-    img.loading = "lazy";
-
-    const title = document.createElement("div");
-    title.className = "album-tile-title";
-    title.textContent = a.title;
-
-    btn.appendChild(img);
-    btn.appendChild(title);
-
-    btn.addEventListener("click", () => openAlbumUnderRow(idx, gridEl));
-
-    gridEl.appendChild(btn);
-  });
-}
-
-function renderGallerySections() {
-  const host = document.getElementById("gallery-sections");
-  if (!host) return;
-
-  host.innerHTML = "";
-
-  // Group albums by category, keeping original order
-  const groups = new Map(); // category -> [albumIndex, ...]
-  ALBUMS.forEach((a, idx) => {
-    const cat = a.category || "Other";
-    if (!groups.has(cat)) groups.set(cat, []);
-    groups.get(cat).push(idx);
-  });
-
-  // Render each category as a dropdown section
-  for (const [category, indices] of groups.entries()) {
-    const details = document.createElement("details");
-    details.className = "gallery-section";
-    if (DEFAULT_OPEN.has(category)) details.open = true;
-
-    const summary = document.createElement("summary");
-    summary.className = "gallery-section-summary";
-    summary.textContent = category;
-
-    const grid = document.createElement("div");
-    grid.className = "album-grid";
-
-    details.appendChild(summary);
-    details.appendChild(grid);
-    host.appendChild(details);
-
-    renderAlbumGrid(grid, indices);
-  }
-}
-
-// Optional: close on Escape (closes the open panel)
+// Close panel on Escape (whichever section is open)
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") removeExistingPanel();
+  if (e.key !== "Escape") return;
+  document.querySelectorAll(".album-grid").forEach((gridEl) => removeExistingPanel(gridEl));
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderGallerySections();
+  renderAllCategoryGrids();
 });
