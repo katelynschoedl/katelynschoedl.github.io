@@ -7,14 +7,14 @@ permalink: /resume
 # Katelyn Schoedl  
 **Electrical Engineer | Research Coordinator | Instrumentation & Measurement**
 
-Seattle, WA · Denver, CO · Open to EU & International Opportunities  
+Seattlem Washington · Open to Relocation 
 [LinkedIn](https://www.linkedin.com/in/kmschoedl/) · [GitHub](https://github.com/katelynschoedl)  
 
 ---
 
 ## Profile
 
-Electrical Engineer and R1 researcher with industry and academic research experience spanning high-speed hardware, photonics-based sensing, and experimental measurement systems.
+Electrical engineer and R1 researcher with industry and academic research experience spanning high-speed hardware design, photonics-based sensing, and experimental measurement systems.
 
 
 
@@ -40,7 +40,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 
 ## Experience
 
-### University of Washington — Research Manager / Research Coordinator  
+### University of Washington — Research Coordinator  
 *Department of Earth & Space Sciences*  
 **May 2024 – May 2025**
 
@@ -53,7 +53,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 
 ---
 
-### Microsoft — Hardware Engineer II  
+### Microsoft — Hardware Engineer II, Signal Integrity  
 *Azure Cloud AI Hardware*  
 **September 2021 – September 2023**
 
@@ -66,12 +66,13 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 ---
 
 
-### Amazon — Hardware Engineer  
+### Amazon — Hardware Engineer, Bus Avionics  
 *Project Kuiper*  
 **March 2020 – July 2021**
 
+- Defined early aviation sensor hardware system requirements.
 - Designed and validated prototype sensor and electronics hardware.
-- Supported radiation and sensing test campaigns, including work at a cyclotron facility.
+- Supported radiation and sensing test campaigns, including work at Berkeley Cyclotron facility.
 - Developed schematics, PCB layouts, and test plans.
 - Authored documentation for design reviews and system validation.
 
@@ -91,8 +92,8 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 ## Skills
 
 **Technical**
-- Machine Coding (Assembly, C++)
 - Photonics & Optical Sensing
+- Machine Coding (Assembly, C++)
 - Instrumentation & Measurement
 - High Speed Signal Integrity & EMC
 - Data Acquisition Systems
@@ -112,11 +113,13 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 
 ## Certifications & Training
 
-- Wilderness First Responder
-- AIARE 1 Avalanche Training
-- Wilderness First Aid
-- Washington State Rare Plant Monitoring
-- OSHA 10
+- Wilderness First Responder Certification
+- CPR Certification
+- AIARE 1 Certification
+- Avalanche Rescue Training
+- Wilderness First Aid Certification
+- Washington State Rare Plant Monitor
+- OSHA 10 Cafety Training
 
 ---
 
