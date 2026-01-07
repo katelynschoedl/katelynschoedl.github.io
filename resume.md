@@ -8,6 +8,7 @@ permalink: /resume
 **Electrical Engineer | Research Coordinator | Instrumentation & Measurement**
 
 Seattle, Washington · Open to Relocation 
+
 [LinkedIn](https://www.linkedin.com/in/kmschoedl/) · [GitHub](https://github.com/katelynschoedl)  
 
 ---
