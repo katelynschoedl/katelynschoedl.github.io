@@ -85,6 +85,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Coordinated technical deployments and automation system rollouts.
 - Managed schedules, logistics, and documentation.
 - Supported cross-team communication and process standardization.
+- Completed OSHA 10 Safety Training.
 
 ---
 
@@ -113,19 +114,24 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 
 ## Certifications & Training
 
-- Wilderness First Responder Certification
+- American Alpine Club Member
+- AMGA Professional Member
+- Boeing Alpine Society Member
 - CPR Certification
+- Wilderness First Responder Certification
 - AIARE 1 Certification
 - Avalanche Rescue Training
 - Wilderness First Aid Certification
 - Washington State Rare Plant Monitor
-- OSHA 10 Cafety Training
+- SnowGoat Skimo Volunteer
+
+
 
 ---
 
 ## Interests
 
-Optical systems, particle physics instrumentation, novel measurement techniques, experimental research, and interdisciplinary scientific collaboration.
+Optical systems, hardware design, particle physics instrumentation, novel measurement techniques, applied experimental research, and interdisciplinary scientific collaboration.
 
 ---
 
