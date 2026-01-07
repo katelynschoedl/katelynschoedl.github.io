@@ -93,6 +93,7 @@ permalink: /alpine
     <!-- END iNaturalist widget -->
   </div>
   </div>
+  </div>
 
   <!-- Where I Climb (onX map) -->
   <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); grid-column: 1 / -1;">
