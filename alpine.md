@@ -38,12 +38,14 @@ permalink: /alpine
 
 
   <!-- iNaturalist -->
-  <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03);">
+  <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); grid-column: 1 / -1;">
     <h2 style="margin:0 0 8px 0;">iNaturalist</h2>
     <p style="margin:0 0 14px 0; color:rgba(255,255,255,0.75);">
       Recent observations.
     </p>
-
+  <!-- width constraint to match Strava + Mountain Project row -->
+    <div style="max-width:1100px; margin:0 auto;">
+    
     <!-- BEGIN iNaturalist widget -->
     <style type="text/css" media="screen">
       .inat-widget { font-family: Georgia, serif; padding: 10px; line-height: 1;}
