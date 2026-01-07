@@ -46,66 +46,75 @@ permalink: /alpine
   <!-- width constraint to match Strava + Mountain Project row -->
     <div style="max-width:1100px; margin:0 auto;">
 
+
 <style>
-  /* --- iNaturalist overrides for your site --- */
-
-  /* let the widget use the full width of the card */
-  .inat-widget { padding: 0 !important; line-height: 1.2 !important; }
-
-  /* remove the table-row layout spacing so we can grid the thumbs */
-  .inat-widget table { width: 100% !important; border-collapse: collapse !important; }
-  .inat-widget td { padding: 0 !important; vertical-align: top !important; }
-
-  /* the "layout=small" widget uses this class on thumb blocks */
-  .inat-widget-small .inat-observation-image {
-    float: none !important;
-    display: block !important;
-    margin: 0 !important;
-    height: auto !important;
-    width: auto !important;
+  /* ---------- iNaturalist: force site font + clean layout ---------- */
+  .inat-widget,
+  .inat-widget * {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
   }
 
-  /* force thumbs into a 6-column grid */
-  .inat-widget-small .inat-observations {
+  /* Remove iNat spacing + table look */
+  .inat-widget { padding: 0 !important; }
+  .inat-widget table { width: 100% !important; border-collapse: collapse !important; }
+  .inat-widget td { padding: 0 !important; }
+
+  /* Hide any text bits so we only see thumbs */
+  .inat-observation-body,
+  .inat-user-body,
+  .inat-meta,
+  .inat-label {
+    display: none !important;
+  }
+
+  /* --- THE IMPORTANT PART: make the thumbs a 6-column grid --- */
+  /* iNat “small” layout renders many .inat-observation-image blocks */
+  .inat-widget .inat-widget-small {
+    display: block !important;
+  }
+
+  /* The container that holds the observation thumbs */
+  .inat-widget .inat-widget-small td.inat-observation-image,
+  .inat-widget .inat-widget-small .inat-observation-image {
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    float: none !important;
+  }
+
+  /* Turn the area containing the observations into a grid:
+     this targets the row that holds the thumbnails */
+  .inat-widget .inat-widget-small table tbody tr {
     display: grid !important;
     grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
     gap: 10px !important;
     align-items: stretch !important;
   }
 
-  /* if the widget doesn’t have .inat-observations, fall back:
-     turn the main table row into a grid-ish wrap */
-  .inat-widget-small table { display: block !important; }
-  .inat-widget-small tbody { display: block !important; }
-  .inat-widget-small tr { display: block !important; }
-  .inat-widget-small td { display: block !important; }
-
-  /* images: fill each grid cell nicely */
-  .inat-observation-image img {
-    max-width: 100% !important;
+  /* Make each thumbnail fill its grid cell */
+  .inat-widget .inat-observation-image img {
     width: 100% !important;
-    height: 110px !important;          /* tweak: bigger = taller */
+    max-width: 100% !important;
+    height: 120px !important;      /* adjust taller/shorter */
     object-fit: cover !important;
-    border-radius: 10px !important;
+    border-radius: 12px !important;
     display: block !important;
   }
 
-  /* hide text columns so only thumbs show (clean gallery look) */
-  .inat-observation-body,
-  .inat-meta,
-  .inat-label,
-  .inat-value:not(.inat-footer .inat-value) {
-    display: none !important;
-  }
-
-  /* responsive: fewer columns on small screens */
+  /* Responsive */
   @media (max-width: 900px) {
-    .inat-widget-small .inat-observations { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+    .inat-widget .inat-widget-small table tbody tr {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
   }
   @media (max-width: 520px) {
-    .inat-widget-small .inat-observations { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .inat-widget .inat-widget-small table tbody tr {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
   }
 </style>
+
+
 
     
     <!-- BEGIN iNaturalist widget -->
