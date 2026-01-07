@@ -39,10 +39,10 @@ permalink: /alpine
 
   <!-- iNaturalist -->
   <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); grid-column: 1 / -1;">
-    <h2 style="margin:0 0 8px 0;">iNaturalist</h2>
+    <!-- <h2 style="margin:0 0 8px 0;">iNaturalist</h2>
     <p style="margin:0 0 14px 0; color:rgba(255,255,255,0.75);">
       Recent observations.
-    </p>
+    </p> -->
   <!-- width constraint to match Strava + Mountain Project row -->
     <div style="max-width:1100px; margin:0 auto;">
     
@@ -79,7 +79,7 @@ permalink: /alpine
         <tr class="inat-user">
           <td class="inat-value" style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#fff; text-decoration:none; font-size:0.95rem;">
             <strong>
-              <a href="https://www.inaturalist.org/observations/kschoedl">View my observations →</a>
+              <a href="https://www.inaturalist.org/observations/kschoedl">View my recent observations →</a>
             </strong>
           </td>
         </tr>
