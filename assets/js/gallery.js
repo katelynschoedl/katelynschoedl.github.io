@@ -270,6 +270,27 @@ const ALBUMS = [
 
   /////Hikes & scrambles//////
 
+    {
+    title: "California",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331342389",
+    cover: "https://live.staticflickr.com/65535/55028508280_4a8327907a.jpg",
+    alt: "California",
+    category: "Hikes and Scrambles",
+  },
+    {
+    title: "Colorado",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331342384",
+    cover: "https://live.staticflickr.com/65535/55027293787_697dec5f50_z.jpg",
+    alt: "Colorado",
+    category: "Hikes and Scrambles",
+  },
+    {
+    title: "Cyclades",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331318391",
+    cover: "https://live.staticflickr.com/65535/55028192691_e48590efc5.jpg",
+    alt: "Cyclades",
+    category: "Hikes and Scrambles",
+  },
   {
     title: "Pacific Northwest",
     category: "Hikes and Scrambles",
@@ -277,12 +298,12 @@ const ALBUMS = [
     cover: "https://live.staticflickr.com/65535/55027666656_2c0bd522c9.jpg",
     alt: "Pacific Northwest",
   },
-  {
-    title: "Cascade Pass",
+    {
+    title: "Parque Tayrona",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331307430",
+    cover: "https://live.staticflickr.com/65535/55028175731_10045a6b3e_z.jpg",
+    alt: "Parque Tayrona",
     category: "Hikes and Scrambles",
-    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331292682",
-    cover: "https://live.staticflickr.com/65535/55025988354_25e116f387.jpg",
-    alt: "Cascade Pass",
   },
   {
     title: "Lake Atitlan",
@@ -290,6 +311,13 @@ const ALBUMS = [
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331284340",
     cover: "https://live.staticflickr.com/65535/55026089165_271cbd799b.jpg",
     alt: "Lake Atitlan",
+  },
+    {
+    title: "Sloan Peak Approach",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331314892",
+    cover: "https://live.staticflickr.com/65535/55028508230_76a0d3d1f7.jpg",
+    alt: "Sloan Peak Approach",
+    category: "Hikes and Scrambles",
   },
 
   
@@ -300,6 +328,13 @@ const ALBUMS = [
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331286040",
     cover: "https://live.staticflickr.com/65535/55026113943_411c6558c8.jpg",
     alt: "The Enchantments",
+  },
+    {
+    title: "Gobblers Knob",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331307445",
+    cover: "https://live.staticflickr.com/65535/55028447059_22c5fdd0b4_z.jpg",
+    alt: "Gobblers Knob",
+    category: "Backpacking",
   },
   {
     title: "Golden Ears",
@@ -352,6 +387,13 @@ const ALBUMS = [
   },
 
   // ===== Training =====
+    {
+    title: "Biking",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331314902",
+    cover: "https://live.staticflickr.com/65535/55028506495_f28f246f4e_z.jpg",
+    alt: "Biking",
+    category: "Training",
+  },
   {
     title: "BoeAlps",
     category: "Training",
@@ -376,19 +418,135 @@ const ALBUMS = [
 ];
 
 
+// Open-by-default sections
+const DEFAULT_OPEN = new Set(["Peaks", "Ski and Ice", "Cragging"]);
+
 function ensureFlickrEmbedLoaded() {
   if (typeof window._flickr_embed_init === "function") {
     window._flickr_embed_init();
   }
 }
 
-function renderAlbumGrid() {
-  const grid = document.getElementById("album-grid");
-  if (!grid) return;
+function removeExistingPanel() {
+  const existing = document.getElementById("album-panel");
+  if (existing) existing.remove();
+}
 
-  grid.innerHTML = "";
+function openAlbumUnderRow(albumIndex, gridEl) {
+  if (!gridEl) return;
 
-  ALBUMS.forEach((a, idx) => {
+  const album = ALBUMS[albumIndex];
+  if (!album) return;
+
+  // Remove old panel if it exists (global, across all sections)
+  removeExistingPanel();
+
+  // Find the clicked tile element inside THIS grid
+  const clickedTile = gridEl.querySelector(
+    `.album-tile[data-album-index="${albumIndex}"]`
+  );
+  if (!clickedTile) return;
+
+  // Create the panel
+  const panel = document.createElement("div");
+  panel.id = "album-panel";
+  panel.className = "album-panel";
+
+  // Header
+  const header = document.createElement("div");
+  header.className = "album-panel-header";
+
+  const left = document.createElement("div");
+  left.className = "album-panel-left";
+
+  const h2 = document.createElement("h2");
+  h2.textContent = album.title;
+  left.appendChild(h2);
+
+  if (album.description) {
+    const desc = document.createElement("p");
+    desc.className = "album-panel-desc";
+    desc.textContent = album.description;
+    left.appendChild(desc);
+  }
+
+  const link = document.createElement("a");
+  link.className = "album-panel-link";
+  link.href = album.href;
+  link.target = "_blank";
+  link.rel = "noopener";
+  link.textContent = "Open on Flickr";
+
+  const closeBtn = document.createElement("button");
+  closeBtn.type = "button";
+  closeBtn.className = "album-panel-close";
+  closeBtn.setAttribute("aria-label", "Close album");
+  closeBtn.textContent = "×";
+  closeBtn.addEventListener("click", () => panel.remove());
+
+  const actions = document.createElement("div");
+  actions.className = "album-panel-actions";
+  actions.appendChild(link);
+  actions.appendChild(closeBtn);
+
+  header.appendChild(left);
+  header.appendChild(actions);
+  panel.appendChild(header);
+
+  // Embed container
+  const embed = document.createElement("div");
+  embed.className = "album-embed";
+
+  const flickrA = document.createElement("a");
+  flickrA.setAttribute("data-flickr-embed", "true");
+  flickrA.setAttribute("data-footer", "false");
+  flickrA.href = album.href;
+  flickrA.title = album.title;
+
+  const previewImg = document.createElement("img");
+  previewImg.src = album.cover;
+  previewImg.alt = album.alt || album.title;
+  previewImg.width = 640;
+  previewImg.height = 480;
+
+  flickrA.appendChild(previewImg);
+  embed.appendChild(flickrA);
+  panel.appendChild(embed);
+
+  // Insert panel beneath the row containing the clicked tile (within THIS grid)
+  const clickedTop = clickedTile.offsetTop;
+  const children = Array.from(gridEl.children);
+
+  let insertBefore = null;
+  for (const child of children) {
+    if (child === clickedTile) continue;
+    if (child.offsetTop > clickedTop) {
+      insertBefore = child;
+      break;
+    }
+  }
+
+  if (insertBefore) {
+    gridEl.insertBefore(panel, insertBefore);
+  } else {
+    gridEl.appendChild(panel);
+  }
+
+  // Kick Flickr embed to render
+  ensureFlickrEmbedLoaded();
+
+  // Scroll to panel
+  panel.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderAlbumGrid(gridEl, albumIndices) {
+  if (!gridEl) return;
+
+  gridEl.innerHTML = "";
+
+  albumIndices.forEach((idx) => {
+    const a = ALBUMS[idx];
+
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "album-tile";
@@ -407,140 +565,52 @@ function renderAlbumGrid() {
     btn.appendChild(img);
     btn.appendChild(title);
 
-    btn.addEventListener("click", () => openAlbumUnderRow(idx));
+    btn.addEventListener("click", () => openAlbumUnderRow(idx, gridEl));
 
-    grid.appendChild(btn);
+    gridEl.appendChild(btn);
   });
 }
 
-function removeExistingPanel() {
-  const existing = document.getElementById("album-panel");
-  if (existing) existing.remove();
+function renderGallerySections() {
+  const host = document.getElementById("gallery-sections");
+  if (!host) return;
+
+  host.innerHTML = "";
+
+  // Group albums by category, keeping original order
+  const groups = new Map(); // category -> [albumIndex, ...]
+  ALBUMS.forEach((a, idx) => {
+    const cat = a.category || "Other";
+    if (!groups.has(cat)) groups.set(cat, []);
+    groups.get(cat).push(idx);
+  });
+
+  // Render each category as a dropdown section
+  for (const [category, indices] of groups.entries()) {
+    const details = document.createElement("details");
+    details.className = "gallery-section";
+    if (DEFAULT_OPEN.has(category)) details.open = true;
+
+    const summary = document.createElement("summary");
+    summary.className = "gallery-section-summary";
+    summary.textContent = category;
+
+    const grid = document.createElement("div");
+    grid.className = "album-grid";
+
+    details.appendChild(summary);
+    details.appendChild(grid);
+    host.appendChild(details);
+
+    renderAlbumGrid(grid, indices);
+  }
 }
 
-function openAlbumUnderRow(albumIndex) {
-  const grid = document.getElementById("album-grid");
-  if (!grid) return;
-
-  const album = ALBUMS[albumIndex];
-  if (!album) return;
-
-  // Remove old panel if it exists
-  removeExistingPanel();
-
-  // Find the clicked tile element
-  const clickedTile = grid.querySelector(`.album-tile[data-album-index="${albumIndex}"]`);
-  if (!clickedTile) return;
-
-  // Create the panel
-  const panel = document.createElement("div");
-  panel.id = "album-panel";
-  panel.className = "album-panel";
-
-
-  // Header
-  const header = document.createElement("div");
-  header.className = "album-panel-header";
-
-  // Left side: title + optional description
-  const left = document.createElement("div");
-  left.className = "album-panel-left";
-
-  const h2 = document.createElement("h2");
-  h2.textContent = album.title;
-  left.appendChild(h2);
-
-  if (album.description) {
-    const desc = document.createElement("p");
-    desc.className = "album-panel-desc";
-    desc.textContent = album.description;
-    left.appendChild(desc);
-  }
-
-  // Button link
-  const link = document.createElement("a");
-  link.className = "album-panel-link";
-  link.href = album.href;
-  link.target = "_blank";
-  link.rel = "noopener";
-  link.textContent = "Open on Flickr";
-
-  // Close button (X)
-  const closeBtn = document.createElement("button");
-  closeBtn.type = "button";
-  closeBtn.className = "album-panel-close";
-  closeBtn.setAttribute("aria-label", "Close album");
-  closeBtn.textContent = "×";
-  closeBtn.addEventListener("click", () => panel.remove());
-
-  // Actions cluster (right side)
-  const actions = document.createElement("div");
-  actions.className = "album-panel-actions";
-  actions.appendChild(link);
-  actions.appendChild(closeBtn);
-
-  header.appendChild(left);
-  header.appendChild(actions);
-
-  panel.appendChild(header);
-
-
-  
-  // Embed container
-  const embed = document.createElement("div");
-  embed.className = "album-embed";
-
-  const a = document.createElement("a");
-  a.setAttribute("data-flickr-embed", "true");
-  a.setAttribute("data-footer", "false");
-  a.href = album.href;
-  a.title = album.title;
-
-  const previewImg = document.createElement("img");
-  previewImg.src = album.cover;
-  previewImg.alt = album.alt || album.title;
-  previewImg.width = 640;
-  previewImg.height = 480;
-
-  a.appendChild(previewImg);
-  embed.appendChild(a);
-
-  panel.appendChild(embed);
-
-  // Insert panel *beneath the row that contains the clicked tile*
-  //
-  // We do this by finding the first element AFTER the clicked tile whose offsetTop is greater
-  // (meaning it’s in the next row). Insert the panel right before that.
-  const clickedTop = clickedTile.offsetTop;
-  const children = Array.from(grid.children);
-
-  let insertBefore = null;
-  for (const child of children) {
-    if (child === clickedTile) continue;
-    if (child.offsetTop > clickedTop) {
-      insertBefore = child;
-      break;
-    }
-  }
-
-  if (insertBefore) {
-    grid.insertBefore(panel, insertBefore);
-  } else {
-    grid.appendChild(panel);
-  }
-
-  // Kick Flickr embed to render
-  ensureFlickrEmbedLoaded();
-
-  // Scroll so the panel is visible without jumping too hard
-  panel.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
-// Optional: close on Escape
+// Optional: close on Escape (closes the open panel)
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") removeExistingPanel();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderAlbumGrid();
+  renderGallerySections();
 });
