@@ -292,6 +292,13 @@ const ALBUMS = [
     alt: "Cyclades",
     category: "Hikes and Scrambles",
   },
+      {
+    title: "Latin America",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331307430",
+    cover: "https://live.staticflickr.com/65535/55028175731_10045a6b3e_z.jpg",
+    alt: "Latin America",
+    category: "Hikes and Scrambles",
+  },
   {
     title: "Pacific Northwest",
     category: "Hikes and Scrambles",
@@ -299,13 +306,7 @@ const ALBUMS = [
     cover: "https://live.staticflickr.com/65535/55027666656_2c0bd522c9.jpg",
     alt: "Pacific Northwest",
   },
-    {
-    title: "Parque Tayrona",
-    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331307430",
-    cover: "https://live.staticflickr.com/65535/55028175731_10045a6b3e_z.jpg",
-    alt: "Parque Tayrona",
-    category: "Hikes and Scrambles",
-  },
+
 
 
 
