@@ -126,6 +126,13 @@ const ALBUMS = [
     alt: "Ames Ice Hose",
   },
     {
+    title: "Lake City",
+    category: "Ski and Ice",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331321179",
+    cover: "https://live.staticflickr.com/65535/55026137283_e7c87583ea.jpg",
+    alt: "Lake City",
+  },
+    {
     title: "Nordic",
     category: "Ski and Ice",
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331320509",
@@ -226,13 +233,7 @@ const ALBUMS = [
     cover: "https://live.staticflickr.com/65535/55025988739_08aa236a6e.jpg",
     alt: "Kalymnos",
   },
-  {
-    title: "Lake City",
-    category: "Cragging",
-    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331321179",
-    cover: "https://live.staticflickr.com/65535/55026137283_e7c87583ea.jpg",
-    alt: "Lake City",
-  },
+
   {
     title: "Red Rock Canyon",
     category: "Cragging",
