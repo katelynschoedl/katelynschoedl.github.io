@@ -125,6 +125,13 @@ const ALBUMS = [
     cover: "https://live.staticflickr.com/65535/55024953787_42d55373c0.jpg",
     alt: "Ames Ice Hose",
   },
+    {
+    title: "Nordic",
+    category: "Ski and Ice",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331320509",
+    cover: "https://live.staticflickr.com/65535/55026134909_9c546a50f1.jpg",
+    alt: "Nordic",
+  },
   {
     title: "Off Piste",
     category: "Ski and Ice",
@@ -174,13 +181,7 @@ const ALBUMS = [
     cover: "https://live.staticflickr.com/65535/55026075705_d049f06f56.jpg",
     alt: "WA Ice",
   },
-  {
-    title: "XC Skiing",
-    category: "Ski and Ice",
-    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331320509",
-    cover: "https://live.staticflickr.com/65535/55026134909_9c546a50f1.jpg",
-    alt: "XC Skiing",
-  },
+
 
   // ===== Cragging =====
   {
