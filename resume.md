@@ -5,7 +5,7 @@ permalink: /resume
 ---
 
 # Katelyn Schoedl  
-**Electrical Engineer | Research Coordination | Instrumentation **
+**Electrical Engineer | Research Coordination | Instrumentation**
 
 Seattle, Washington · Open to Relocation 
 
