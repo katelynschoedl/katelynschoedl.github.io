@@ -45,6 +45,68 @@ permalink: /alpine
     </p> -->
   <!-- width constraint to match Strava + Mountain Project row -->
     <div style="max-width:1100px; margin:0 auto;">
+
+<style>
+  /* --- iNaturalist overrides for your site --- */
+
+  /* let the widget use the full width of the card */
+  .inat-widget { padding: 0 !important; line-height: 1.2 !important; }
+
+  /* remove the table-row layout spacing so we can grid the thumbs */
+  .inat-widget table { width: 100% !important; border-collapse: collapse !important; }
+  .inat-widget td { padding: 0 !important; vertical-align: top !important; }
+
+  /* the "layout=small" widget uses this class on thumb blocks */
+  .inat-widget-small .inat-observation-image {
+    float: none !important;
+    display: block !important;
+    margin: 0 !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  /* force thumbs into a 6-column grid */
+  .inat-widget-small .inat-observations {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    align-items: stretch !important;
+  }
+
+  /* if the widget doesn’t have .inat-observations, fall back:
+     turn the main table row into a grid-ish wrap */
+  .inat-widget-small table { display: block !important; }
+  .inat-widget-small tbody { display: block !important; }
+  .inat-widget-small tr { display: block !important; }
+  .inat-widget-small td { display: block !important; }
+
+  /* images: fill each grid cell nicely */
+  .inat-observation-image img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 110px !important;          /* tweak: bigger = taller */
+    object-fit: cover !important;
+    border-radius: 10px !important;
+    display: block !important;
+  }
+
+  /* hide text columns so only thumbs show (clean gallery look) */
+  .inat-observation-body,
+  .inat-meta,
+  .inat-label,
+  .inat-value:not(.inat-footer .inat-value) {
+    display: none !important;
+  }
+
+  /* responsive: fewer columns on small screens */
+  @media (max-width: 900px) {
+    .inat-widget-small .inat-observations { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  }
+  @media (max-width: 520px) {
+    .inat-widget-small .inat-observations { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  }
+</style>
+
     
     <!-- BEGIN iNaturalist widget -->
     <style type="text/css" media="screen">
@@ -75,15 +137,15 @@ permalink: /alpine
       <script type="text/javascript" charset="utf-8"
         src="https://www.inaturalist.org/observations/kschoedl.widget?layout=small&limit=12&order=desc&order_by=observed_on"></script>
 
-      <table class="inat-footer">
-        <tr class="inat-user">
-          <td class="inat-value" style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#fff; text-decoration:none; font-size:0.95rem;">
-            <strong>
-              <a href="https://www.inaturalist.org/observations/kschoedl">View my recent observations →</a>
-            </strong>
-          </td>
-        </tr>
-      </table>
+<div style="margin-top:12px;">
+  <a class="button"
+     style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#fff; text-decoration:none; font-size:0.95rem;"
+     href="https://www.inaturalist.org/observations/kschoedl"
+     target="_blank" rel="noopener">
+    View my recent observations →
+  </a>
+</div>
+
     </div>
     <!-- END iNaturalist widget -->
   </div>
