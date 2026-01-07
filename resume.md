@@ -5,7 +5,7 @@ permalink: /resume
 ---
 
 # Katelyn Schoedl  
-**Electrical Engineer | Research Coordinator | Instrumentation & Measurement**
+**Electrical Engineer | Research Coordination | Instrumentation **
 
 Seattle, Washington · Open to Relocation 
 
@@ -90,6 +90,35 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 
 ---
 
+### Undergraduate Roles and Internships
+
+**Shop Assistant, ECE Illinois Machine Shop and Services**
+January 2018 – January 2019
+- Supported machining, inventory, repair, and prototyping for ECE research and instructional labs.
+- Assisted students and staff.
+
+**Student Research Assistant, Illinois REU Program**  
+February 2017 – May 2017
+- Supported a UIUC Civil Engineering graduate student with prototype construction and research bibliography.
+
+**Barista, Daily Byte at ECE Illinois**
+January 2016 – May 2017
+- Operated a high-volume campus café serving the ECE community.
+
+**Amazon — Robotics Engineering Services**
+*Controls Engineering Intern*
+Seattle, WA | Summer 2018
+- Supported alpha and beta robotics and automation systems within Amazon fulfillment infrastructure.
+- Worked on documentation of controls-related engineering tasks in a production-oriented environment.
+
+**GE Global Research**
+*Edge Software Intern*
+Niskayuna, NY | Summer 2016 & Summer 2017
+- Worked with industrial applications in edge computing and software systems.
+- Contributed to multi-year research initiatives spanning two summer appointments.
+
+
+---
 
 ## Skills
 
@@ -103,10 +132,11 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Scientific Computing (Python, MATLAB)
 - Linux Environments
 
-**Research & Operations**
+**Research Operations**
 - Field Deployments
-- Research Coordination
+- Cross Team Coordination
 - Data Management & Archiving
+- Creative Solutions
 - Technical Documentation
 - Cross-Disciplinary Collaboration
 
