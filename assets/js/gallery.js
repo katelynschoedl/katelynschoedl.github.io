@@ -389,6 +389,14 @@ const ALBUMS = [
     cover: "https://live.staticflickr.com/65535/55026169568_40f3b003a2.jpg",
     alt: "Tank Lakes",
   },
+  {
+  title: "Vargus Island",
+  category: "Backpacking",
+  href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331320401",
+  cover: "https://live.staticflickr.com/65535/55027511282_095c3b81d3_z.jpg",
+  alt: "Vargus Island",
+},
+
 
   // ===== Training =====
     {
