@@ -12,10 +12,10 @@ title: Gallery
   <div id="album-grid-peaks" class="album-grid" data-category="Peaks"></div>
 </details>
 
-<!-- Ski & Ice (open by default) -->
+<!-- Ski and Ice (open by default) -->
 <details class="gallery-section" open>
-  <summary class="gallery-summary">Ski & Ice</summary>
-  <div id="album-grid-ski-ice" class="album-grid" data-category="Ski & Ice"></div>
+  <summary class="gallery-summary">Ski and Ice</summary>
+  <div id="album-grid-ski-ice" class="album-grid" data-category="Ski and Ice"></div>
 </details>
 
 <!-- Cragging (open by default) -->
@@ -30,7 +30,7 @@ title: Gallery
   <div id="album-grid-backpacking" class="album-grid" data-category="Backpacking"></div>
 </details>
 
-<!-- Hikes & Scrambles (closed by default) -->
+<!-- Hikes and Scrambles (closed by default) -->
 <details class="gallery-section">
   <summary class="gallery-summary">Hikes and Scrambles</summary>
   <div id="album-grid-hikes-scrambles" class="album-grid" data-category="Hikes and Scrambles"></div>
