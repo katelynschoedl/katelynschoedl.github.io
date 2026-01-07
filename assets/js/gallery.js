@@ -313,13 +313,7 @@ const ALBUMS = [
     cover: "https://live.staticflickr.com/65535/55026089165_271cbd799b.jpg",
     alt: "Lake Atitlan",
   },
-    {
-    title: "Sloan Peak Approach",
-    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331314892",
-    cover: "https://live.staticflickr.com/65535/55028508230_76a0d3d1f7.jpg",
-    alt: "Sloan Peak Approach",
-    category: "Hikes and Scrambles",
-  },
+
 
   
   // ===== Backpacking =====
@@ -378,6 +372,13 @@ const ALBUMS = [
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331297256",
     cover: "https://live.staticflickr.com/65535/55026228849_7600df3c3b.jpg",
     alt: "San Juan Islands",
+  },
+  {
+    title: "Sloan Peak Approach",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331314892",
+    cover: "https://live.staticflickr.com/65535/55028508230_76a0d3d1f7.jpg",
+    alt: "Sloan Peak Approach",
+    category: "Backpacking",
   },
   {
     title: "Tank Lakes",
