@@ -82,15 +82,16 @@ permalink: /alpine
               <img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/9462828/36b8c6d70c6e362bab473ebd02161656-thumb.jpeg?1750657047" />
             </a>
           </td>
-          <td class="inat-value">
+          <td class="inat-value" style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#fff; text-decoration:none; font-size:0.95rem;">
             <strong>
-              <a href="https://www.inaturalist.org/observations/kschoedl">View kschoedl's observations »</a>
+              <a href="https://www.inaturalist.org/observations/kschoedl">View Katelyn's observations »</a>
             </strong>
           </td>
         </tr>
       </table>
     </div>
     <!-- END iNaturalist widget -->
+  </div>
   </div>
 
   <!-- Where I Climb (onX map) -->
