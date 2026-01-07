@@ -7,7 +7,7 @@ permalink: /resume
 # Katelyn Schoedl  
 **Electrical Engineer | Research Coordinator | Instrumentation & Measurement**
 
-Seattlem Washington · Open to Relocation 
+Seattle, Washington · Open to Relocation 
 [LinkedIn](https://www.linkedin.com/in/kmschoedl/) · [GitHub](https://github.com/katelynschoedl)  
 
 ---
@@ -70,7 +70,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 *Project Kuiper*  
 **March 2020 – July 2021**
 
-- Defined early aviation sensor hardware system requirements.
+- Defined early avionics sensor hardware system requirements.
 - Designed and validated prototype sensor and electronics hardware.
 - Supported radiation and sensing test campaigns, including work at Berkeley Cyclotron facility.
 - Developed schematics, PCB layouts, and test plans.
