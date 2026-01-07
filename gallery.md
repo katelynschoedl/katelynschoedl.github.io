@@ -42,5 +42,5 @@ title: Gallery
   <div id="album-grid-training" class="album-grid" data-category="Training"></div>
 </details>
 
-<script src="{{ site.baseurl }}/assets/js/gallery.js"></script>
+<script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
 <script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
