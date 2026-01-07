@@ -36,128 +36,92 @@ permalink: /alpine
     </p>
   </div>
 
-
-  <!-- iNaturalist -->
+  <!-- iNaturalist (full-width row) -->
   <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); grid-column: 1 / -1;">
-    <!-- <h2 style="margin:0 0 8px 0;">iNaturalist</h2>
+    <h2 style="margin:0 0 8px 0;">iNaturalist</h2>
     <p style="margin:0 0 14px 0; color:rgba(255,255,255,0.75);">
       Recent observations.
-    </p> -->
-  <!-- width constraint to match Strava + Mountain Project row -->
-    <div style="max-width:1100px; margin:0 auto;">
+    </p>
 
+    <!-- Wrap the widget so our CSS only affects this instance -->
+    <div class="inat-wrap">
+      <style>
+        /* 1) Force the widget to use your site font (fixes font "getting messed up") */
+        .inat-wrap,
+        .inat-wrap * {
+          font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
+        }
 
-<style>
-  /* ---------- iNaturalist: force site font + clean layout ---------- */
-  .inat-widget,
-  .inat-widget * {
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
-  }
+        /* 2) Kill the default table layout + extra text.
+              The widget renders a table, but we only want the thumbnails. */
+        .inat-wrap table,
+        .inat-wrap tbody,
+        .inat-wrap tr,
+        .inat-wrap td {
+          border: 0 !important;
+        }
+        .inat-wrap .inat-observation-body,
+        .inat-wrap .inat-user-body,
+        .inat-wrap .inat-meta,
+        .inat-wrap .inat-label,
+        .inat-wrap .inat-widget-header,
+        .inat-wrap .inat-footer {
+          display: none !important;
+        }
 
-  /* Remove iNat spacing + table look */
-  .inat-widget { padding: 0 !important; }
-  .inat-widget table { width: 100% !important; border-collapse: collapse !important; }
-  .inat-widget td { padding: 0 !important; }
+        /* 3) Turn the thumbnail blocks into a 6-column grid.
+              iNat small layout uses .inat-observation-image blocks. */
+        .inat-wrap .inat-widget-small {
+          display: grid !important;
+          grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+          gap: 10px !important;
+          align-items: stretch !important;
+        }
 
-  /* Hide any text bits so we only see thumbs */
-  .inat-observation-body,
-  .inat-user-body,
-  .inat-meta,
-  .inat-label {
-    display: none !important;
-  }
+        /* Each observation image becomes a grid item */
+        .inat-wrap .inat-observation-image {
+          width: auto !important;
+          display: block !important;
+          float: none !important;
+          margin: 0 !important;
+          text-align: left !important;
+        }
 
-  /* --- THE IMPORTANT PART: make the thumbs a 6-column grid --- */
-  /* iNat “small” layout renders many .inat-observation-image blocks */
-  .inat-widget .inat-widget-small {
-    display: block !important;
-  }
+        /* Thumbnails fill the cells */
+        .inat-wrap .inat-observation-image img {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: 120px !important;
+          object-fit: cover !important;
+          border-radius: 12px !important;
+          display: block !important;
+        }
 
-  /* The container that holds the observation thumbs */
-  .inat-widget .inat-widget-small td.inat-observation-image,
-  .inat-widget .inat-widget-small .inat-observation-image {
-    display: block !important;
-    width: auto !important;
-    margin: 0 !important;
-    float: none !important;
-  }
+        /* Responsive */
+        @media (max-width: 900px) {
+          .inat-wrap .inat-widget-small { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+        }
+        @media (max-width: 520px) {
+          .inat-wrap .inat-widget-small { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+        }
+      </style>
 
-  /* Turn the area containing the observations into a grid:
-     this targets the row that holds the thumbnails */
-  .inat-widget .inat-widget-small table tbody tr {
-    display: grid !important;
-    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    align-items: stretch !important;
-  }
-
-  /* Make each thumbnail fill its grid cell */
-  .inat-widget .inat-observation-image img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 120px !important;      /* adjust taller/shorter */
-    object-fit: cover !important;
-    border-radius: 12px !important;
-    display: block !important;
-  }
-
-  /* Responsive */
-  @media (max-width: 900px) {
-    .inat-widget .inat-widget-small table tbody tr {
-      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    }
-  }
-  @media (max-width: 520px) {
-    .inat-widget .inat-widget-small table tbody tr {
-      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    }
-  }
-</style>
-
-
-
-    
-    <!-- BEGIN iNaturalist widget -->
-    <style type="text/css" media="screen">
-      .inat-widget { font-family: Georgia, serif; padding: 10px; line-height: 1;}
-      .inat-widget-header {margin-bottom: 10px;}
-      .inat-widget td {vertical-align: top; padding-bottom: 10px;}
-      .inat-label { color: #888; }
-      .inat-meta { font-size: smaller; margin-top: 3px; line-height: 1.2;}
-      .inat-observation-body, .inat-user-body { padding-left: 10px; }
-      .inat-observation-image {text-align: center;}
-      .inat-observation-image, .inat-user-image { width: 48px; display: inline-block; }
-      .inat-observation-image img, .inat-user-image img { max-width: 48px; }
-      .inat-observation-image img { vertical-align: middle; }
-      .inat-widget-small .inat-observation-image { display:block; float: left; margin: 0 3px 3px 0; height:48px;}
-      .inat-label, .inat-value, .inat-user { font-family: "Trebuchet MS", Arial, sans-serif; }
-      .inat-user-body {vertical-align: middle;}
-      .inat-widget td.inat-user-body {vertical-align: middle;}
-      .inat-widget .inat-footer td.inat-value {vertical-align: middle; padding-left: 10px;}
-    </style>
-
-    <div class="inat-widget">
-      <div class="inat-widget-header">
-        <a href="https://www.inaturalist.org">
-          <img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small-white.png" />
-        </a>
-      </div>
-
-      <script type="text/javascript" charset="utf-8"
-        src="https://www.inaturalist.org/observations/kschoedl.widget?layout=small&limit=12&order=desc&order_by=observed_on"></script>
-
-<div style="margin-top:12px;">
-  <a class="button"
-     style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#fff; text-decoration:none; font-size:0.95rem;"
-     href="https://www.inaturalist.org/observations/kschoedl"
-     target="_blank" rel="noopener">
-    View my recent observations →
-  </a>
-</div>
-
+      <!-- The widget injects its HTML here -->
+      <script
+        type="text/javascript"
+        charset="utf-8"
+        src="https://www.inaturalist.org/observations/kschoedl.widget?layout=small&limit=12&order=desc&order_by=observed_on">
+      </script>
     </div>
-    <!-- END iNaturalist widget -->
-  </div>
+
+    <div style="margin-top:14px;">
+      <a class="button"
+         style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#fff; text-decoration:none; font-size:0.95rem;"
+         href="https://www.inaturalist.org/observations/kschoedl"
+         target="_blank" rel="noopener">
+        View my recent observations →
+      </a>
+    </div>
   </div>
 
   <!-- Where I Climb (onX map) -->
