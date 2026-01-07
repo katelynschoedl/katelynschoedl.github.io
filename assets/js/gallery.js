@@ -306,13 +306,7 @@ const ALBUMS = [
     alt: "Parque Tayrona",
     category: "Hikes and Scrambles",
   },
-  {
-    title: "Lake Atitlan",
-    category: "Hikes and Scrambles",
-    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331284340",
-    cover: "https://live.staticflickr.com/65535/55026089165_271cbd799b.jpg",
-    alt: "Lake Atitlan",
-  },
+
 
 
   
@@ -358,6 +352,13 @@ const ALBUMS = [
     href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331319144",
     cover: "https://live.staticflickr.com/65535/55026061860_31cf430ce2.jpg",
     alt: "Howe Sound Crest Trail",
+  },
+    {
+    title: "Lake Atitlan",
+    category: "Backpacking",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331284340",
+    cover: "https://live.staticflickr.com/65535/55026089165_271cbd799b.jpg",
+    alt: "Lake Atitlan",
   },
   {
     title: "Olympic South Coast Trail",
