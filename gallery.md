@@ -76,27 +76,27 @@ title: Gallery
 
 
 
-<style>
-/* Match resume section separators */
+/* === SECTION SEPARATORS: single line between sections (no duplicates) === */
 .gallery-section{
   padding: 1.2rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.18);
+  border-bottom: none; /* remove old approach */
+  border-top: 1px solid rgba(255,255,255,0.18); /* single divider */
 }
 
-.gallery-section:last-of-type{
-  border-bottom: none;
+.gallery-section:first-of-type{
+  border-top: none; /* no line above the first section */
 }
 
-/* Titles (Fieldwork, Peaks, etc.) slightly larger */
+/* === SECTION TITLES: slightly larger === */
 .gallery-summary{
-  font-size: 1.18rem;   /* tiny tad larger */
+  font-size: 1.18rem;
   font-weight: 700;
   cursor: pointer;
   margin: 0;
   transition: color 0.18s ease, text-shadow 0.18s ease;
 }
 
-/* Optional hover glow similar vibe */
+/* Optional hover glow */
 .gallery-section:hover .gallery-summary{
   color:#fff;
   text-shadow:
@@ -104,26 +104,16 @@ title: Gallery
     0 0 22px rgba(255,255,255,0.10);
 }
 
-/* Replace default marker with subtle caret */
+/* === REMOVE ALL DETAILS ARROWS (browser marker + your custom caret) === */
 .gallery-summary::-webkit-details-marker{ display:none; }
-.gallery-summary::before{
-  content:"▾";
-  display:inline-block;
-  margin-right:10px;
-  opacity:0.7;
-  transform: translateY(-1px);
-  transition: transform 0.18s ease, opacity 0.18s ease;
-}
-.gallery-section:not([open]) .gallery-summary::before{
-  content:"▸";
-}
+.gallery-summary::marker{ content:""; }      /* Firefox */
+.gallery-summary::before{ content:none !important; } /* kills your custom ▾/▸ */
 
-/* Album grid spacing */
+/* === Album tile hover grow (very slight) === */
 .album-grid{
   margin-top: 14px;
 }
 
-/* Hover scale: gently grow album tile image */
 .album-tile{
   border: 0;
   background: transparent;
@@ -138,20 +128,39 @@ title: Gallery
   transform-origin: center;
 }
 
-/* The effect you asked for */
 .album-tile:hover img{
-  transform: scale(1.03);  /* very slight grow */
+  transform: scale(1.03);
   box-shadow: 0 0 18px rgba(255,255,255,0.10);
 }
 
-/* Optional: tiny lift of the whole tile (keeps it feeling responsive) */
 .album-tile:hover{
   transform: translateY(-1px);
 }
 
-/* Mobile tuning */
+/* === Center the Flickr carousel/embed inside the panel === */
+.album-embed{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flickr often injects an iframe; keep it centered and not overflowing */
+.album-embed iframe,
+.album-embed > a{
+  max-width: 100%;
+}
+
+/* Optional: if you want the embed region itself centered with a max width */
+.album-panel{
+  overflow: hidden;
+}
+
+.album-embed{
+  padding: 10px 0;
+}
+
 @media (max-width:640px){
   .gallery-section{ padding: 1rem 0; }
   .gallery-summary{ font-size: 1.12rem; }
 }
-</style>
+
