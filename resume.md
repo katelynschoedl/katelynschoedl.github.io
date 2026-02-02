@@ -4,10 +4,12 @@ title: Resume
 permalink: /resume
 ---
 
-# Katelyn Schoedl  
+# Katelyn M. Schoedl  
 **Electrical Engineer | Research Coordinator**
 
-Seattle, Washington · Open to Relocation
++1 (847) 961-0243 · kschoedl8@gmail.com
+
+[LinkedIn](https://www.linkedin.com/in/kmschoedl/) · [GitHub](https://github.com/katelynschoedl) · [ORCID](https://orcid.org/0009-0005-1689-7945)
 
 <div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
   <a href="/assets/resume/kschoedl.resume.pdf"
@@ -17,10 +19,6 @@ Seattle, Washington · Open to Relocation
     Download PDF Résumé →
   </a>
 </div>
-
-+1 (847) 961-0243 · kschoedl8@gmail.com
-
-[LinkedIn](https://www.linkedin.com/in/kmschoedl/) · [GitHub](https://github.com/katelynschoedl) · [ORCID](https://orcid.org/0009-0005-1689-7945)
 
 ---
 
