@@ -16,14 +16,13 @@ permalink: /resume
 </div>
 
 
-<div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
-  <a href="/assets/resume/kschoedl.resume.pdf"
-     class="home-card"
+<a class="resume-float"
+   href="/assets/resume/kschoedl.resume.pdf"
      target="_blank"
      rel="noopener">
     Download PDF Résumé →
   </a>
-</div>
+
 
 ---
 
@@ -240,6 +239,32 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
     background: rgba(255,255,255,0.1);
     transform: translateY(-1px);
   }
+
+  .resume-float {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9999;
+
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.resume-float:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-1px);
+}
+
 
 .contact-links {
   font-size: 0.95rem;
