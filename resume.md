@@ -163,8 +163,10 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 ## Professional Affiliations & Certifications
 
-- American Mountain Guides Association (AMGA), Professional Member  
-- American Alpine Club (AAC), Member  
+- American Mountain Guides Association (AMGA), Professional Member
+  
+- American Alpine Club (AAC), Member
+
 - Boeing Alpine Society (BOEALPS), Member  
 
 - **Wilderness First Responder (WFR) with AED and CPR Certification**  
@@ -208,4 +210,11 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
 
 ---
 
-*Downloadable PDF résumé coming soon.*
+<div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
+  <a href="/assets/resume/kschoedl.resume.pdf"
+     class="home-card"
+     target="_blank"
+     rel="noopener">
+    Download PDF Résumé →
+  </a>
+</div>
