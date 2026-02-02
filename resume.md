@@ -5,7 +5,7 @@ permalink: /resume
 ---
 
 # Katelyn Schoedl  
-**Electrical Engineer | Research Coordination | Instrumentation**
+**Electrical Engineer | Research Coordinator**
 
 Seattle, Washington · Open to Relocation 
 
@@ -15,9 +15,14 @@ Seattle, Washington · Open to Relocation
 
 ## Profile
 
-Electrical engineer and R1 researcher with industry and academic research experience spanning high-speed hardware design, photonics-based sensing, and experimental measurement systems.
+Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication,
+photonic systems, and academic research processes for geophysical science applications.
 
-
+My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research
+coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental
+design workflows, precision measurement systems, and field operations for high-quality scientific data collection.
+I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
+engineering, experimental physics, and geophysical sciences.
 
 ---
 
@@ -41,52 +46,56 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 
 ## Experience
 
-### University of Washington — Research Coordinator  
+### University of Washington, College of the Environment — Research Coordinator (Photonics)  
 *Department of Earth & Space Sciences*  
 **May 2024 – May 2025**
 
-- Supported deployment and operation of Distributed Acoustic Sensing (DAS) systems for seismic, oceanic, and cryospheric research.
-- Acted as operational liaison between research labs and departmental administration.
-- Managed procurement, inventory, shipping, customs documentation, and field logistics.
-- Supported instrumentation setup, calibration, validation, and experimental workflows.
-- Coordinated large-volume data management, documentation, and reporting across partners.
+- Supported deployment, operation, and maintenance of photonics-based Distributed Acoustic Sensing (DAS) and data acquisition systems for seismic, oceanic, and cryospheric research.
+- Coordinated technical activities with external research partners and funding agencies.
+- Acted as operational liaison between research groups and departmental administration by managing procurement, inventory, shipping, customs documentation, and field logistics.
+- Supported safety planning and permitting for remote field deployments and instrumentation campaigns.
+- CDeveloped and maintained experimental workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations.
 - Maintained project websites and supported data dissemination platforms.
 
 ---
 
-### Microsoft — Hardware Engineer II, Signal Integrity  
-*Azure Cloud AI Hardware*  
+### Microsoft — Hardware Engineer II (Signal Integrity)  
+*Cloud AI Hardware and Advanced Signal Engineering*  
 **September 2021 – September 2023**
 
-- Conducted high-speed hardware validation and signal integrity analysis.
-- Performed electromagnetic and circuit-level simulations.
-- Supported board-level stackup design and interference mitigation.
-- Executed laboratory measurements using VNA-based methods.
-- Collaborated across electrical, mechanical, and systems engineering teams.
+- Modeled and analyzed end-to-end signal integrity performance across FPGA die, packages, connectors, and board-level interconnects.
+- Conducted high-speed hardware validation and SI characterization for enterprise AI and cloud infrastructure platforms.
+- Performed electromagnetic and circuit-level simulations using tools such as ANSYS HFSS and Keysight ADS.
+- Supported board-level stackup design, routing constraints, and interference mitigation strategies.
+- Executed laboratory measurements, including S-parameters and eye-diagram analysis, using VNA and time-domain methods.
+- Collaborated with electrical, mechanical, and systems engineering teams to resolve SI and system integration issues.
+- Supported contract PCBA design reviews and monitored progress through manufacturing readiness.
 
 ---
 
 
-### Amazon — Hardware Engineer, Bus Avionics  
+### Amazon — Hardware Design Engineer (Satellite Avionics)  
 *Project Kuiper*  
-**March 2020 – July 2021**
+**April 2020 – September 2021**
 
-- Defined early avionics sensor hardware system requirements.
-- Designed and validated prototype sensor and electronics hardware.
-- Supported radiation and sensing test campaigns, including work at Berkeley Cyclotron facility.
-- Developed schematics, PCB layouts, and test plans.
-- Authored documentation for design reviews and system validation.
+- Supported early-phase (pre-PDR) satellite avionics sensor subsystem design and development.
+- Authored design review documents and test validation for electrical, thermal, and mechanical performance.
+- Defined early avionics sensor requirements from component to system level.
+- Designed and reviewed schematics, PCB layouts, and housings for sensor prototypes.
+- Performed board bring-up, debugging, and validation.
+- Supported hardware radiation test campaigns.
 
 ---
 
-### Amazon — Technical Program Coordinator  
-*Technical Engineering Services*  
+### Amazon — Technical Program Coordinator (Robotic Automation Prototypes)
+*Worldwide Technical Engineering Services*  
 **June 2019 – March 2020**
 
-- Coordinated technical deployments and automation system rollouts.
-- Managed schedules, logistics, and documentation.
-- Supported cross-team communication and process standardization.
-- Completed OSHA 10 Safety Training.
+- Supported nationwide deployment of PLC-based robotic automation prototypes across fulfillment centers.
+- Managed schedules, logistics, and readiness planning for pilot programs.
+- Coordinated on-site installations, commissioning, and documentation with engineering and operations teams.
+- Tracked development milestones through production and operational handoff.
+- Supported standardization of risk reviews and vendor evaluations.
 
 ---
 
@@ -105,7 +114,7 @@ February 2017 – May 2017
 January 2016 – May 2017
 - Operated a high-volume campus café serving the ECE community.
 
-**Amazon — Robotics Engineering Services**
+**Amazon**
 *Controls Engineering Intern*
 Seattle, WA | Summer 2018
 - Supported alpha and beta robotics and automation systems within Amazon fulfillment infrastructure.
@@ -122,47 +131,68 @@ Niskayuna, NY | Summer 2016 & Summer 2017
 
 ## Skills
 
-**Technical**
-- Photonics & Optical Sensing
-- Machine Coding (Assembly, C++)
-- Instrumentation & Measurement
-- High Speed Signal Integrity & EMC
-- Data Acquisition Systems
-- Experimental Setup & Calibration
-- Scientific Computing (Python, MATLAB)
-- Linux Environments
+**Communication**  
+English (native), Spanish (A2), French (beginner)
 
-**Research Operations**
-- Field Deployments
-- Cross Team Coordination
-- Data Management & Archiving
-- Creative Solutions
-- Technical Documentation
-- Cross-Disciplinary Collaboration
+**Programming**  
+Python, C/C++, MATLAB, JavaScript, LaTeX, Markdown
+
+**Systems & Development**  
+Git, Jupyter, Linux (Bash/Shell), Microcontrollers, ArcGIS, Docker, HW/SW RAID storage, HPC remote systems
+
+**Measurement & Instrumentation**  
+Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Characterization, Sensor Calibration, Signal Integrity Analysis, Channel Simulation, Schematic Design, PCB Layout
+
+**Research & Field Operations**  
+Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation
 
 ---
 
 
-## Certifications & Training
+## Professional Affiliations & Certifications
 
-- American Alpine Club Member
-- AMGA Professional Member
-- Boeing Alpine Society Member
-- CPR Certification
-- Wilderness First Responder Certification
-- AIARE 1 Certification
-- Avalanche Rescue Training
-- Wilderness First Aid Certification
+- American Mountain Guides Association (AMGA), Professional Member  
+- American Alpine Club (AAC), Member  
+- Boeing Alpine Society (BOEALPS), Member  
+
+- **Wilderness First Responder (WFR) with AED and CPR Certification**  
+  National Outdoor Leadership School (NOLS) — December 2025 (Yosemite, CA)
+
+- **AIARE 1 Avalanche Training Certification**  
+  Skyward Mountaineering — December 2025 (Silverton, CO)
+
+- **Avalanche Companion Rescue Training**  
+  SheJumps — January 2025 (Snoqualmie, WA)
+
 - Washington State Rare Plant Monitor
-- SnowGoat Skimo Volunteer
 
+
+---
+
+## Field & Alpine Activities
+
+- Alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide  
+- SnowGoat Skimo Volunteer for Vertfest and Wy’Easter sanctioned ski mountaineering races  
+- Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
+
+
+---
+
+## Conferences & Workshops
+
+- **BOAT Ocean Acoustics Workshop**, University of Washington (2025)  
+  Two-day intensive workshop on ocean acoustics theory and experimental practice
+
+- **DesignCon**, Santa Clara, CA (2022)  
+  Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing
 
 
 ---
 
 ## Interests
 
-Optical systems, hardware design, particle physics instrumentation, novel measurement techniques, applied experimental research, and interdisciplinary scientific collaboration.
+Optical and photonic sensing systems, scientific instrumentation, particle and space physics hardware, precision measurement techniques, applied experimental research, and interdisciplinary scientific collaboration.
+
 
 ---
 
