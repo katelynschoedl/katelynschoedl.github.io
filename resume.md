@@ -36,7 +36,7 @@ permalink: /resume
 
 <div class="resume-container">
 
-  <div class="resume-section", markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ## Profile
@@ -53,7 +53,7 @@ engineering, experimental physics, and geophysical sciences.
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ## Education
@@ -67,7 +67,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ### Exchange Semester  
@@ -77,7 +77,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ## Experience
@@ -96,7 +96,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ### Microsoft — Hardware Engineer II (Signal Integrity)  
@@ -114,7 +114,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ### Amazon — Hardware Design Engineer (Satellite Avionics)  
@@ -131,7 +131,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ### Amazon — Technical Program Coordinator (Robotic Automation Prototypes)
@@ -147,7 +147,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ### Undergraduate Roles and Internships
@@ -180,7 +180,7 @@ Niskayuna, NY | Summer 2016 & Summer 2017
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ## Skills
@@ -203,7 +203,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ## Professional Affiliations & Certifications
@@ -228,7 +228,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ## Field & Alpine Activities
@@ -240,7 +240,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ## Conferences & Workshops
@@ -254,7 +254,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
    
   </div>
 
-  <div class="resume-section", markdown="1">
+  <div class="resume-section" markdown="1">
    
 
 ## Interests
@@ -320,10 +320,27 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
     text-align: center;
     }
 
-  .profile-photo{
-    width: 95px;
-    height: 95px;
-    }
+.profile-photo{
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: 0 0 5px rgba(255,255,255,0.08);
+
+  flex-shrink: 0;
+
+  /* Add these */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover grow */
+.profile-photo:hover{
+  transform: scale(1.15);
+  box-shadow: 0 0 18px rgba(255,255,255,0.25);
+}
+  
     }
 
   
@@ -412,7 +429,12 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
 .resume-section:last-child {
   border-bottom: none;
 }
-/* When hovering ANY section */
+
+.resume-container {
+  position: relative;
+}
+
+  /* When hovering ANY section */
 .resume-container:hover .resume-section {
   opacity: 0.5;
   }
