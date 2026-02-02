@@ -7,6 +7,11 @@ title: Gallery
 <p>Albums are hosted on Flickr. Click an album to browse.</p>
 
 <details class="gallery-section" open>
+  <summary class="gallery-summary">Fieldwork</summary>
+  <div class="album-grid" data-category="Fieldwork"></div>
+</details>
+
+<details class="gallery-section" open>
   <summary class="gallery-summary">Peaks</summary>
   <div class="album-grid" data-category="Peaks"></div>
 </details>
