@@ -53,9 +53,10 @@ engineering, experimental physics, and geophysical sciences.
 ## Education
 
 ### University of Illinois at Urbana–Champaign
-*Bachelor of Science in Electrical Engineering* 
+*Bachelor of Science in Electrical Engineering*
 **August 2015 – May 2019**
-- Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement*
+
+- Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement
 - Exchange Semester, **Technical University of Denmark,**  Autumn 2017
 
 </div>
@@ -112,7 +113,7 @@ engineering, experimental physics, and geophysical sciences.
 ## Undergraduate Roles and Internships
 
 
-**Shop Assistant, Machine Shop and Services at ECE Illinois**
+**Shop Assistant, Machine Shop and Services at ECE Illinois**  
 January 2018 – January 2019
 - Supported machining, inventory, repair, and prototyping for ECE research and instructional labs.
 - Assisted students and staff.
@@ -121,19 +122,21 @@ January 2018 – January 2019
 February 2017 – May 2017
 - Supported a UIUC Civil Engineering graduate student with prototype construction and research bibliography.
 
-**Barista, Daily Byte at ECE Illinois**
+**Barista, Daily Byte at ECE Illinois**  
 January 2016 – May 2017
 - Operated a high-volume campus café serving the ECE community.
 
-**Amazon Intern**
-*Controls Engineering*
+
+**Amazon Intern**  
+*Controls Engineering*  
 Seattle, WA | Summer 2018
 - Supported alpha and beta robotics and automation systems within Amazon fulfillment infrastructure.
 - Worked on documentation of controls-related engineering tasks in a production-oriented environment.
 
+
 **GE Global Research Intern**
-*Edge Software*
-Niskayuna, NY | Summer 2016 & Summer 2017
+*Edge Software*  
+Niskayuna, NY | Summer 2016 & Summer 2017  
 - Worked with industrial applications in edge computing and software systems.
 - Contributed to multi-year research initiatives spanning two summer appointments.
 
