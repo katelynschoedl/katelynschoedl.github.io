@@ -29,20 +29,27 @@ permalink: /resume
 
 <!-- Profile Photo Modal -->
 <div id="profile-modal" class="profile-modal" aria-hidden="true">
-  <div class="profile-modal-inner" role="dialog" aria-modal="true" aria-label="Profile photo">
-    <button id="profile-modal-close" class="profile-modal-close" aria-label="Close">×</button>
+  <div class="profile-popover" role="dialog" aria-modal="true" aria-label="Contact links">
+    <button id="profile-modal-close" class="profile-popover-close" aria-label="Close">×</button>
 
-    <img src="/assets/profilephoto.bw.JPG"
-         alt="Katelyn Schoedl headshot"
-         class="profile-modal-img">
+    <div class="profile-popover-header">
+      <img src="/assets/profilephoto.bw.JPG"
+           alt="Katelyn Schoedl headshot"
+           class="profile-popover-photo">
+      <div class="profile-popover-text">
+        <div class="profile-popover-name">Katelyn M. Schoedl</div>
+        <div class="profile-popover-sub">Quick links</div>
+      </div>
+    </div>
 
-    <div class="profile-modal-caption">
-      <a href="/gallery">Click to View Gallery →</a>
-      <a href="https://www.linkedin.com/in/kmschoedl/">Contact Me On LinkedIn →</a>
-      <a href="mailto:kschoedl8@gmail.com">Send Me and Email →</a>
+    <div class="profile-popover-links">
+      <a href="mailto:kschoedl8@gmail.com">Send me an email.</a>
+      <a href="/gallery">Click to View Gallery.</a>
+      <a href="https://www.linkedin.com/in/kmschoedl/">Contact Me On LinkedIn.</a>
     </div>
   </div>
 </div>
+
 
 <a class="resume-float"
    href="/assets/resume/kschoedl.resume.pdf"
@@ -374,55 +381,57 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   cursor: default;
 }
 
-/* Profile modal (mobile friendly, glowy border) */
+/* Profile modal: small info-focused popover */
 .profile-modal{
   position: fixed;
   inset: 0;
   z-index: 2500;
   display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
   background: rgba(0,0,0,0.72);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 }
 
-.profile-modal.is-open{ display: flex; }
+.profile-modal.is-open{ display: block; }
 
-.profile-modal-inner{
-  position: relative;
-  width: min(860px, 94vw);
-  max-height: 88vh;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.22);
+/* Popover card near upper-left */
+.profile-popover{
+  position: fixed;
+  top: 92px;
+  left: 56px;
+  width: min(420px, calc(100vw - 32px));
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.20);
   background: rgba(255,255,255,0.06);
   box-shadow:
-    0 0 18px rgba(255,255,255,0.10),
+    0 0 22px rgba(255,255,255,0.10),
     0 18px 60px rgba(0,0,0,0.55);
+  padding: 16px 16px 14px 16px;
   overflow: hidden;
-  animation: profileModalIn 0.18s ease-out 1;
+  animation: profilePopoverIn 0.18s ease-out 1;
 }
 
-@keyframes profileModalIn{
-  from{ transform: translateY(6px) scale(0.985); opacity: 0.0; }
-  to{ transform: translateY(0) scale(1); opacity: 1.0; }
+@keyframes profilePopoverIn{
+  from{ transform: translateY(6px) scale(0.985); opacity: 0; }
+  to{ transform: translateY(0) scale(1); opacity: 1; }
 }
 
-.profile-modal-img{
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: calc(88vh - 160px);
-  object-fit: contain;
-  background: rgba(0,0,0,0.12);
+/* Mobile: center-ish and lower a bit so it’s not under nav */
+@media (max-width:640px){
+  .profile-popover{
+    top: 86px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+  }
 }
 
-.profile-modal-close{
+/* Close button */
+.profile-popover-close{
   position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 42px;
-  height: 42px;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.18);
   background: rgba(255,255,255,0.08);
@@ -435,36 +444,68 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   transition: background 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
 }
 
-.profile-modal-close:hover{
+.profile-popover-close:hover{
   background: rgba(255,255,255,0.14);
   transform: translateY(-1px);
   box-shadow: 0 0 18px rgba(255,255,255,0.18);
 }
 
-.profile-modal-caption{
-  padding: 14px 16px 16px 16px;
-  border-top: 1px solid rgba(255,255,255,0.14);
+/* Header row with round avatar */
+.profile-popover-header{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-right: 44px; /* room for X */
+  margin-bottom: 12px;
+}
+
+.profile-popover-photo{
+  width: 84px;   /* bigger than header photo, but not huge */
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: 0 0 18px rgba(255,255,255,0.14);
+}
+
+.profile-popover-name{
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+.profile-popover-sub{
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* Links: no boxes, just glow area */
+.profile-popover-links{
+  position: relative;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  border: 0;
+  box-shadow: 0 0 22px rgba(255,255,255,0.08);
   display: grid;
   gap: 10px;
 }
 
-.profile-modal-caption a{
-  display: inline-block;
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.06);
-  color: #fff;
+.profile-popover-links a{
+  color: rgba(255,255,255,0.92);
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+  font-weight: 700;
+  transition: color 0.18s ease, text-shadow 0.18s ease;
 }
 
-.profile-modal-caption a:hover{
-  background: rgba(255,255,255,0.12);
-  transform: translateY(-1px);
-  box-shadow: 0 0 18px rgba(255,255,255,0.14);
+/* Hover = blue emphasis */
+.profile-popover-links a:hover{
+  color: #93c5fd;
+  text-shadow:
+    0 0 10px rgba(147,197,253,0.35),
+    0 0 20px rgba(147,197,253,0.18);
 }
+
 </style>
 
 <script>
