@@ -50,12 +50,8 @@ design workflows, precision measurement systems, and field operations for high-q
 I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
 engineering, experimental physics, and geophysical sciences.
 
+<div class="resume-section" markdown="1">
    
-  </div>
-
-  <div class="resume-section" markdown="1">
-   
-
 ## Education
 
 ### Bachelor of Science in Electrical Engineering  
@@ -65,9 +61,7 @@ engineering, experimental physics, and geophysical sciences.
 Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ### Exchange Semester  
@@ -75,9 +69,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 2017 – 2018
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ## Experience
@@ -94,9 +86,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Maintained project websites and supported data dissemination platforms.
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ### Microsoft — Hardware Engineer II (Signal Integrity)  
@@ -112,9 +102,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Supported contract PCBA design reviews and monitored progress through manufacturing readiness.
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ### Amazon — Hardware Design Engineer (Satellite Avionics)  
@@ -129,9 +117,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Supported hardware radiation test campaigns.
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ### Amazon — Technical Program Coordinator (Robotic Automation Prototypes)
@@ -145,9 +131,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Supported standardization of risk reviews and vendor evaluations.
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ### Undergraduate Roles and Internships
@@ -178,9 +162,7 @@ Niskayuna, NY | Summer 2016 & Summer 2017
 - Contributed to multi-year research initiatives spanning two summer appointments.
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ## Skills
@@ -201,9 +183,7 @@ Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Charac
 Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ## Professional Affiliations & Certifications
@@ -226,9 +206,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 - Washington State Rare Plant Monitor
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ## Field & Alpine Activities
@@ -238,9 +216,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 - Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ## Conferences & Workshops
@@ -252,9 +228,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
   Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing
 
    
-  </div>
-
-  <div class="resume-section" markdown="1">
+<div class="resume-section" markdown="1">
    
 
 ## Interests
@@ -262,8 +236,6 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 Optical and photonic sensing systems, scientific instrumentation, particle and space physics hardware, precision measurement techniques, applied experimental research, and interdisciplinary scientific collaboration.
 
    
-  </div>
-
 </div>
 
 
