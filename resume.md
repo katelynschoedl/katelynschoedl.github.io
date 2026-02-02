@@ -12,6 +12,7 @@ permalink: /resume
        
   <div class="header-text">
     <h1>Katelyn M. Schoedl</h1>
+  </div>
 
     <div class="title-line">
       <strong>Electrical Engineer</strong> | <strong>Research Coordinator</strong>
@@ -24,10 +25,9 @@ permalink: /resume
       <a href="https://github.com/katelynschoedl">GitHub</a> ·
       <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
     </div>
-  </div>
-
 </div>
-<a class="resume-float"
+
+  <a class="resume-float"
    href="/assets/resume/kschoedl.resume.pdf"
      target="_blank"
      rel="noopener">
