@@ -8,11 +8,20 @@ permalink: /resume
 **Electrical Engineer | Research Coordinator**
 
 Seattle, Washington · Open to Relocation
-Mobile: +1 (847) 961-0243
-kschoedl8@gmail.com
 
-[LinkedIn](https://www.linkedin.com/in/kmschoedl/) · [GitHub](https://github.com/katelynschoedl)  
-[ORCID]([0009-0005-1689-7945](https://orcid.org/0009-0005-1689-7945))
+<div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
+  <a href="/assets/resume/kschoedl.resume.pdf"
+     class="home-card"
+     target="_blank"
+     rel="noopener">
+    Download PDF Résumé →
+  </a>
+</div>
+
+Contact:
+Mobile: +1 (847) 961-0243 · Email: kschoedl8@gmail.com
+
+[LinkedIn](https://www.linkedin.com/in/kmschoedl/) · [GitHub](https://github.com/katelynschoedl) · [ORCID](https://orcid.org/0009-0005-1689-7945)
 
 ---
 
