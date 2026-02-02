@@ -74,20 +74,19 @@ title: Gallery
     </p>
   </div>
 
+</div>
 
-
-/* === SECTION SEPARATORS: single line between sections (no duplicates) === */
+<style>
+/* === SECTION SEPARATORS: match resume (single bottom line) === */
 .gallery-section{
   padding: 1.2rem 0;
-  border-bottom: none; /* remove old approach */
-  border-top: 1px solid rgba(255,255,255,0.18); /* single divider */
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+.gallery-section:last-of-type{
+  border-bottom: none;
 }
 
-.gallery-section:first-of-type{
-  border-top: none; /* no line above the first section */
-}
-
-/* === SECTION TITLES: slightly larger === */
+/* === SECTION TITLES === */
 .gallery-summary{
   font-size: 1.18rem;
   font-weight: 700;
@@ -104,15 +103,19 @@ title: Gallery
     0 0 22px rgba(255,255,255,0.10);
 }
 
-/* === REMOVE ALL DETAILS ARROWS (browser marker + your custom caret) === */
+/* === REMOVE ALL DETAILS ARROWS === */
+/* Chromium/Safari */
 .gallery-summary::-webkit-details-marker{ display:none; }
-.gallery-summary::marker{ content:""; }      /* Firefox */
-.gallery-summary::before{ content:none !important; } /* kills your custom ▾/▸ */
-
-/* === Album tile hover grow (very slight) === */
-.album-grid{
-  margin-top: 14px;
+/* Firefox + general marker */
+.gallery-summary::marker{ content:""; display:none; }
+/* Extra insurance: stop list-marker rendering entirely */
+.gallery-summary{
+  list-style: none;
+  display: block;
 }
+
+/* === Album tile hover grow === */
+.album-grid{ margin-top: 14px; }
 
 .album-tile{
   border: 0;
@@ -144,23 +147,19 @@ title: Gallery
   align-items: center;
 }
 
-/* Flickr often injects an iframe; keep it centered and not overflowing */
-.album-embed iframe,
-.album-embed > a{
+/* Flickr injects iframe/content; keep centered */
+.album-embed > a,
+.album-embed iframe{
   max-width: 100%;
 }
 
-/* Optional: if you want the embed region itself centered with a max width */
-.album-panel{
-  overflow: hidden;
-}
+/* Optional: prevents weird overflow from embeds */
+.album-panel{ overflow: hidden; }
+.album-embed{ padding: 10px 0; }
 
-.album-embed{
-  padding: 10px 0;
-}
-
+/* Mobile tuning */
 @media (max-width:640px){
   .gallery-section{ padding: 1rem 0; }
   .gallery-summary{ font-size: 1.12rem; }
 }
-
+</style>
