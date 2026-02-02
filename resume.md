@@ -27,8 +27,6 @@ permalink: /resume
   </div>
 
 </div>
-
-
 <a class="resume-float"
    href="/assets/resume/kschoedl.resume.pdf"
      target="_blank"
@@ -36,9 +34,8 @@ permalink: /resume
     Download PDF Résumé →
   </a>
 
-
----
-
+<div class="resume-container">
+<div class="resume-section">
 ## Profile
 
 Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication,
@@ -51,7 +48,7 @@ I am seeking roles in applied research and instrumentation alongside future grad
 engineering, experimental physics, and geophysical sciences.
 
 ---
-
+<div class="resume-section">
 ## Education
 
 ### Bachelor of Science in Electrical Engineering  
@@ -59,17 +56,15 @@ engineering, experimental physics, and geophysical sciences.
 2015 – 2019
 
 Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement
-
-
+</div>
 ---
-
+<div class="resume-section">
 ### Exchange Semester  
 **Technical University of Denmark (DTU)**  
 2017 – 2018
-
+</div>
 ---
-
-
+<div class="resume-section">
 ## Experience
 
 ### University of Washington, College of the Environment — Research Coordinator (Photonics)  
@@ -82,9 +77,9 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Supported safety planning and permitting for remote field deployments and instrumentation campaigns.
 - Developed and maintained experimental workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations.
 - Maintained project websites and supported data dissemination platforms.
-
+</div>
 ---
-
+<div class="resume-section">
 ### Microsoft — Hardware Engineer II (Signal Integrity)  
 *Cloud AI Hardware and Advanced Signal Engineering*  
 **September 2021 – September 2023**
@@ -96,10 +91,9 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Executed laboratory measurements, including S-parameters and eye-diagram analysis, using VNA and time-domain methods.
 - Collaborated with electrical, mechanical, and systems engineering teams to resolve SI and system integration issues.
 - Supported contract PCBA design reviews and monitored progress through manufacturing readiness.
-
+</div>
 ---
-
-
+<div class="resume-section">
 ### Amazon — Hardware Design Engineer (Satellite Avionics)  
 *Project Kuiper*  
 **April 2020 – September 2021**
@@ -110,9 +104,9 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Designed and reviewed schematics, PCB layouts, and housings for sensor prototypes.
 - Performed board bring-up, debugging, and validation.
 - Supported hardware radiation test campaigns.
-
+</div>
 ---
-
+<div class="resume-section">
 ### Amazon — Technical Program Coordinator (Robotic Automation Prototypes)
 *Worldwide Technical Engineering Services*  
 **June 2019 – March 2020**
@@ -122,9 +116,9 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Coordinated on-site installations, commissioning, and documentation with engineering and operations teams.
 - Tracked development milestones through production and operational handoff.
 - Supported standardization of risk reviews and vendor evaluations.
-
+</div>
 ---
-
+<div class="resume-section">
 ### Undergraduate Roles and Internships
 
 **Shop Assistant, Machine Shop and Services at ECE Illinois**
@@ -140,8 +134,6 @@ February 2017 – May 2017
 January 2016 – May 2017
 - Operated a high-volume campus café serving the ECE community.
 
-
-
 **Amazon**
 *Controls Engineering Intern*
 Seattle, WA | Summer 2018
@@ -153,10 +145,9 @@ Seattle, WA | Summer 2018
 Niskayuna, NY | Summer 2016 & Summer 2017
 - Worked with industrial applications in edge computing and software systems.
 - Contributed to multi-year research initiatives spanning two summer appointments.
-
-
+</div>
 ---
-
+<div class="resume-section">
 ## Skills
 
 **Communication**  
@@ -173,10 +164,9 @@ Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Charac
 
 **Research & Field Operations**  
 Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation
-
+</div>
 ---
-
-
+<div class="resume-section">
 ## Professional Affiliations & Certifications
 
 - American Mountain Guides Association (AMGA), Professional Member
@@ -195,19 +185,17 @@ Hands-on system deployment, field logistics coordination, remote system monitori
   SheJumps — January 2025 (Snoqualmie, WA)
 
 - Washington State Rare Plant Monitor
-
-
+</div>
 ---
-
+<div class="resume-section">
 ## Field & Alpine Activities
 
 - Alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide  
 - SnowGoat Skimo Volunteer for Vertfest and Wy’Easter sanctioned ski mountaineering races  
 - Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
-
-
+</div>
 ---
-
+<div class="resume-section">
 ## Conferences & Workshops
 
 - **BOAT Ocean Acoustics Workshop**, University of Washington (2025)  
@@ -215,16 +203,17 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 - **DesignCon**, Santa Clara, CA (2022)  
   Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing
-
-
+</div>
 ---
-
+<div class="resume-section">
 ## Interests
 
 Optical and photonic sensing systems, scientific instrumentation, particle and space physics hardware, precision measurement techniques, applied experimental research, and interdisciplinary scientific collaboration.
-
-
+</div>
 ---
+</div> 
+
+
 
 <div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
   <a href="/assets/resume/kschoedl.resume.pdf"
@@ -254,7 +243,7 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   border-radius: 50%;
 
   border: 2px solid rgba(255,255,255,0.25);
-  box-shadow: 0 0 18px rgba(255,255,255,0.08);
+  box-shadow: 0 0 5px rgba(255,255,255,0.08);
 
   flex-shrink: 0;
 }
@@ -366,6 +355,18 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   color: #dddddd;
   text-decoration: underline;
 }
+.resume-section {
+  transition: opacity 0.25s ease;
+}
 
+/* When hovering ANY section */
+.resume-container:hover .resume-section {
+  opacity: 0.5;
+}
+
+/* Keep hovered section bright */
+.resume-container .resume-section:hover {
+  opacity: 1;
+}
   
 </style>
