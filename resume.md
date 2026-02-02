@@ -52,12 +52,11 @@ engineering, experimental physics, and geophysical sciences.
   <div class="resume-section" markdown="1">
 ## Education
 
-### Bachelor of Science in Electrical Engineering  
 ### University of Illinois at Urbana–Champaign
-*Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement*
+*Bachelor of Science in Electrical Engineering* 
 **August 2015 – May 2019**
-
-- **Technical University of Denmark** Exchange Semester, Autumn 2017
+- Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement*
+- Exchange Semester, **Technical University of Denmark,**  Autumn 2017
 
 </div>
 
@@ -269,7 +268,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 .resume-float{
   position:fixed;
   top:110px;
-  right:150px;
+  right:200px;
   z-index:999;
   padding:10px 14px;
   border-radius:14px;
@@ -307,4 +306,40 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 /* HOVER DIM (works once sections are siblings, not nested) */
 .resume-container:hover .resume-section{ opacity:0.35; }
 .resume-container .resume-section:hover{ opacity:1; }
+
+
+/* Section header hover effects */
+
+/* Base transitions */
+.resume-section h2,
+.resume-section h3{
+  transition:
+    color 0.18s ease,
+    text-shadow 0.18s ease,
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+/* ## headers: soft white glow (like resume button) */
+.resume-section:hover h2{
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.22),
+    0 0 22px rgba(255,255,255,0.12);
+  transform: translateY(-1px) scale(1.02);
+  opacity: 1;
+}
+
+/* ### headers: nav-style blue */
+.resume-section:hover h3{
+  color: #93c5fd; /* matches nav tone */
+  text-shadow:
+    0 0 10px rgba(111,180,255,0.35),
+    0 0 20px rgba(111,180,255,0.18);
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+
+  
 </style>
