@@ -505,6 +505,13 @@ function removeExistingPanel(gridEl) {
   if (existing) existing.remove();
 }
 
+function setActiveTile(gridEl, albumIndex) {
+  gridEl.querySelectorAll(".album-tile").forEach((t) => t.classList.remove("is-active"));
+  const active = gridEl.querySelector(`.album-tile[data-album-index="${albumIndex}"]`);
+  if (active) active.classList.add("is-active");
+}
+
+
 function openAlbumUnderRow(gridEl, albums, albumIndex) {
   const album = albums[albumIndex];
   if (!album) return;
@@ -514,6 +521,9 @@ function openAlbumUnderRow(gridEl, albums, albumIndex) {
 
   const clickedTile = gridEl.querySelector(`.album-tile[data-album-index="${albumIndex}"]`);
   if (!clickedTile) return;
+
+  // mark active tile
+  setActiveTile(gridEl, albumIndex);
 
   const panel = document.createElement("div");
   panel.id = "album-panel";
@@ -580,6 +590,57 @@ function openAlbumUnderRow(gridEl, albums, albumIndex) {
   embed.appendChild(a);
   panel.appendChild(embed);
 
+  // ---------- NEW: Prev / Next + Caption nav ----------
+  const nav = document.createElement("div");
+  nav.className = "album-panel-nav";
+
+  const prevBtn = document.createElement("button");
+  prevBtn.type = "button";
+  prevBtn.className = "album-nav-btn album-nav-prev";
+  prevBtn.textContent = "◀ Prev";
+  prevBtn.setAttribute("aria-label", "Previous album");
+
+  const nextBtn = document.createElement("button");
+  nextBtn.type = "button";
+  nextBtn.className = "album-nav-btn album-nav-next";
+  nextBtn.textContent = "Next ▶";
+  nextBtn.setAttribute("aria-label", "Next album");
+
+  // disable at edges OR wrap (choose behavior)
+  const WRAP = true; // set false if you want prev/next disabled at ends
+
+  const goTo = (newIndex) => {
+    if (newIndex < 0) newIndex = WRAP ? albums.length - 1 : 0;
+    if (newIndex >= albums.length) newIndex = WRAP ? 0 : albums.length - 1;
+    openAlbumUnderRow(gridEl, albums, newIndex);
+  };
+
+  prevBtn.addEventListener("click", () => goTo(albumIndex - 1));
+  nextBtn.addEventListener("click", () => goTo(albumIndex + 1));
+
+  // Caption strip (scrollable)
+  const captionStrip = document.createElement("div");
+  captionStrip.className = "album-caption-strip";
+  albums.forEach((al, i) => {
+    const cap = document.createElement("button");
+    cap.type = "button";
+    cap.className = "album-caption-btn";
+    cap.textContent = al.title;
+    cap.dataset.albumIndex = String(i);
+
+    if (i === albumIndex) cap.classList.add("is-active");
+
+    cap.addEventListener("click", () => goTo(i));
+    captionStrip.appendChild(cap);
+  });
+
+  nav.appendChild(prevBtn);
+  nav.appendChild(captionStrip);
+  nav.appendChild(nextBtn);
+
+  panel.appendChild(nav);
+  // ---------- end NEW ----------
+
   // Insert panel beneath the row that contains the clicked tile (within this grid)
   const clickedTop = clickedTile.offsetTop;
   const children = Array.from(gridEl.children);
@@ -599,6 +660,7 @@ function openAlbumUnderRow(gridEl, albums, albumIndex) {
   ensureFlickrEmbedLoaded();
   panel.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+
 
 // Close panel on Escape (whichever section is open)
 document.addEventListener("keydown", (e) => {
