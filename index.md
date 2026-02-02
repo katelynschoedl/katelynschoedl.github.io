@@ -26,6 +26,12 @@ title: Home
 
 </section>
 
+<div class="wave-container">
+  <img src="/assets/wavegif.gif"
+       alt="Animated waveform"
+       class="wave-gif">
+</div>
+
 <style>
   .home-card {
     display: block;
@@ -43,4 +49,19 @@ title: Home
     background: rgba(255,255,255,0.1);
     transform: translateY(-1px);
   }
+
+  .wave-container {
+  width: 100%;
+  margin: 3rem 0 -1.5rem 0;
+  display: flex;
+  justify-content: center;
+  }
+
+  .wave-gif {
+  width: 100%;
+  max-width: 1100px;   /* matches your content width */
+  height: auto;
+  opacity: 0.75;       /* subtle blend */
+  }
+  
 </style>
