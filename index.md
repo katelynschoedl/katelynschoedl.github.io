@@ -2,6 +2,7 @@
 layout: default
 title: Home
 ---
+/* index */
 
 <section style="max-width: 720px; margin: 0 auto; padding-top: 3rem; position: relative; z-index: 1;">
 
