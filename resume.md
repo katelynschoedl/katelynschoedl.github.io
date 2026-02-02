@@ -8,8 +8,8 @@ permalink: /resume
 **Electrical Engineer** | **Research Coordinator**
 
 <div class="contact-links">
-  <span>+1 (847) 961-0243</span> ·
-  <span>kschoedl8@gmail.com</span> ·
+  <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
+  <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a> ·
   <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
   <a href="https://github.com/katelynschoedl">GitHub</a> ·
   <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
@@ -243,7 +243,7 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   .resume-float {
   position: fixed;
   top: 110px;            /* move DOWN (increase this) */
-  right: 28px;           /* move LEFT (increase this) */
+  right: 50px;           /* move LEFT (increase this) */
   z-index: 999;
     
   padding: 10px 14px;
@@ -267,8 +267,7 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
 .resume-float:hover {
   background: rgba(255,255,255,0.12);
   transform: translateY(-1px);
-  box-shadow: 0 0 16px rgba(255,255,255,0.16),
-              0 0 30px rgba(255,255,255,0.10);
+
 }
 
   @keyframes resumeGlow{
