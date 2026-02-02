@@ -6,11 +6,13 @@ permalink: /resume
 
 <div class="resume-header">
 
-  <a href="/gallery" class="profile-photo-link" aria-label="View Gallery">
-    <img src="/assets/profilephoto.bw.JPG"
-         alt="Katelyn Schoedl headshot"
-         class="profile-photo">
-  </a>
+  <img src="/assets/profilephoto.bw.JPG"
+       alt="Katelyn Schoedl headshot"
+       class="profile-photo"
+       id="profile-photo"
+       aria-label="Open profile links"
+       role="button"
+       tabindex="0">
        
   <div class="header-text">
     <h1>Katelyn M. Schoedl</h1>
@@ -20,12 +22,28 @@ permalink: /resume
     </div>
 
     <div class="contact-links">
-      <a href="/gallery" class="gallery-link">View Gallery</a> ·
       <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
       <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a> ·
       <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
       <a href="https://github.com/katelynschoedl">GitHub</a> ·
       <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
+    </div>
+  </div>
+</div>
+
+<!-- Photo Click Popover -->
+<div id="profile-popover-wrap" class="profile-popover-wrap" aria-hidden="true">
+  <div class="profile-popover" role="dialog" aria-modal="true" aria-label="Profile links">
+    <button id="profile-popover-close" class="profile-popover-close" aria-label="Close">×</button>
+
+    <img src="/assets/profilephoto.bw.JPG"
+         alt="Katelyn Schoedl headshot"
+         class="profile-popover-photo">
+
+    <div class="profile-popover-links">
+      <a class="profile-popover-link primary" href="/gallery">View Gallery</a>
+      <a class="profile-popover-link" href="mailto:kschoedl8@gmail.com">Email me</a>
+      <a class="profile-popover-link" href="tel:+18479610243">+1 (847) 961-0243</a>
     </div>
   </div>
 </div>
@@ -115,7 +133,6 @@ engineering, experimental physics, and geophysical sciences.
   <div class="resume-section" markdown="1">
 ## Undergraduate Roles and Internships
 
-
 **Shop Assistant, Machine Shop and Services at ECE Illinois**  
 January 2018 – January 2019
 - Supported machining, inventory, repair, and prototyping for ECE research and instructional labs.
@@ -129,13 +146,11 @@ February 2017 – May 2017
 January 2016 – May 2017
 - Operated a high-volume campus café serving the ECE community.
 
-
 **Amazon Intern**  
 *Controls Engineering*  
 Seattle, WA | Summer 2018
 - Supported alpha and beta robotics and automation systems within Amazon fulfillment infrastructure.
 - Worked on documentation of controls-related engineering tasks in a production-oriented environment.
-
 
 **GE Global Research Intern**  
 *Edge Software*  
@@ -169,25 +184,17 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 ## Professional Affiliations & Certifications
 
 - Washington State Rare Plant Monitor
-
 - American Mountain Guides Association (AMGA), Professional Member
-  
 - American Alpine Club (AAC), Member
-
 - Boeing Alpine Society (BOEALPS), Member
-
 - Wilderness First Responder (WFR) with AED and CPR Certification  
   National Outdoor Leadership School (NOLS) — December 2025 (Yosemite, CA)
-
 - AIARE 1 Avalanche Training Certification  
   Skyward Mountaineering — December 2025 (Silverton, CO)
-
 - Avalanche Companion Rescue Training  
   Alpine Ascents International x SheJumps — January 2025 (Snoqualmie, WA)
 
-
 </div>
-
 
   <div class="resume-section" markdown="1">
 ## Field & Alpine Activities
@@ -233,11 +240,6 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   align-items:center;
   gap:36px;
   margin-bottom:1.5rem;
-}
-
-.profile-photo-link{
-  display:inline-block;
-  text-decoration:none;
 }
 
 .profile-photo{
@@ -312,18 +314,6 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 .contact-links a{ color:#fff; text-decoration:none; font-weight:500; }
 .contact-links a:hover{ color:#ddd; text-decoration:underline; }
 
-/* Top link = blue by default */
-.contact-links a.gallery-link{
-  color:#93c5fd;
-  text-shadow:
-    0 0 10px rgba(147,197,253,0.28),
-    0 0 20px rgba(147,197,253,0.14);
-}
-.contact-links a.gallery-link:hover{
-  color:#93c5fd;
-  text-decoration:underline;
-}
-
 /* SECTION LINES */
 .resume-section{
   padding: 1.2rem 0;
@@ -332,7 +322,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 }
 .resume-section:last-child{ border-bottom:none; }
 
-/* HOVER DIM (works once sections are siblings, not nested) */
+/* HOVER DIM */
 .resume-container:hover .resume-section{ opacity:0.35; }
 .resume-container .resume-section:hover{ opacity:1; }
 
@@ -368,7 +358,6 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 .header-text h1{
   transition: color 0.18s ease, text-shadow 0.18s ease;
 }
-
 .header-text h1:hover{
   color: #93c5fd;
   text-shadow:
@@ -376,4 +365,152 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
     0 0 20px rgba(147,197,253,0.18);
   cursor: default;
 }
+
+/* ===== Photo popover styles ===== */
+.profile-popover-wrap{
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  display: none;
+  background: rgba(0,0,0,0.62);
+  backdrop-filter: blur(10px);
+}
+.profile-popover-wrap.is-open{ display:block; }
+
+.profile-popover{
+  position: fixed;
+  top: 92px;
+  left: 56px;
+  width: min(360px, calc(100vw - 28px));
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(255,255,255,0.06);
+  box-shadow:
+    0 0 22px rgba(255,255,255,0.10),
+    0 18px 60px rgba(0,0,0,0.55);
+  padding: 16px 16px 14px 16px;
+  animation: profilePopoverIn 0.18s ease-out 1;
+}
+@keyframes profilePopoverIn{
+  from{ transform: translateY(6px) scale(0.985); opacity: 0; }
+  to{ transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@media (max-width:640px){
+  .profile-popover{
+    top: 86px;
+    left: 14px;
+    right: 14px;
+    width: auto;
+  }
+}
+
+.profile-popover-close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+}
+.profile-popover-close:hover{
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(255,255,255,0.18);
+}
+
+.profile-popover-photo{
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: 0 0 18px rgba(255,255,255,0.14);
+  margin-bottom: 12px;
+}
+
+.profile-popover-links{
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 0 22px rgba(255,255,255,0.08);
+  display: grid;
+  gap: 10px;
+}
+
+.profile-popover-link{
+  color: rgba(255,255,255,0.92);
+  text-decoration: none;
+  font-weight: 800;
+  transition: color 0.18s ease, text-shadow 0.18s ease;
+}
+
+.profile-popover-link.primary{
+  color: #93c5fd;
+  text-shadow:
+    0 0 10px rgba(147,197,253,0.30),
+    0 0 18px rgba(147,197,253,0.15);
+}
+
+.profile-popover-link:hover{
+  color: #93c5fd;
+  text-shadow:
+    0 0 10px rgba(147,197,253,0.35),
+    0 0 20px rgba(147,197,253,0.18);
+}
 </style>
+
+<script>
+  (function () {
+    const photo = document.getElementById('profile-photo');
+    const wrap = document.getElementById('profile-popover-wrap');
+    const closeBtn = document.getElementById('profile-popover-close');
+
+    if (!photo || !wrap || !closeBtn) return;
+
+    function openPopover() {
+      wrap.classList.add('is-open');
+      wrap.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closePopover() {
+      wrap.classList.remove('is-open');
+      wrap.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    photo.addEventListener('click', openPopover);
+
+    // keyboard accessibility: Enter/Space opens
+    photo.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openPopover();
+      }
+    });
+
+    closeBtn.addEventListener('click', closePopover);
+
+    // click outside closes
+    wrap.addEventListener('click', (e) => {
+      if (e.target === wrap) closePopover();
+    });
+
+    // esc closes
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && wrap.classList.contains('is-open')) closePopover();
+    });
+  })();
+</script>
