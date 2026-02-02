@@ -63,21 +63,21 @@ title: Home
   align-items: flex-end;
   pointer-events: none;    /* wave won't block clicks */
   z-index: 0;              /* behind your content */
-  padding-bottom: 0;       /* tweak if you want it to “hug” bottom */
+  padding-bottom: 10px;       /* tweak if you want it to “hug” bottom */
 }
 
 .wave-gif{
-  animation: fadeIn 2s ease-out;
   width: 100%;
-  height: 160px;           /* pick a footer height: 90–160px */
+  height: auto;           /* pick a footer height */
   object-fit: cover;       /* makes it span nicely */
-  opacity: 0.3;
+  opacity: 0.4;
   filter: blur(0.2px);
+  animation: fadeIn 2s ease-out;
 }
 
   @keyframes fadeIn {
   from { opacity: 0; }
-  to { opacity: 0.75; }
+  to { opacity: 0.4; }
 }
 
   
