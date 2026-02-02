@@ -109,11 +109,11 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Coordinated on-site installations, commissioning, and documentation with engineering and operations teams.
 - Tracked development milestones through production and operational handoff.
 - Supported standardization of risk reviews and vendor evaluations.
-
     </div>
 
   <div class="resume-section" markdown="1">
 ## Undergraduate Roles and Internships
+
 
 **Shop Assistant, Machine Shop and Services at ECE Illinois**
 January 2018 – January 2019
