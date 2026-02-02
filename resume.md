@@ -52,13 +52,13 @@ engineering, experimental physics, and geophysical sciences.
   <div class="resume-section" markdown="1">
 ## Education
 
-### Bachelor of Science in Electrical Engineering  
-**University of Illinois at Urbana–Champaign (UIUC)**  
-2015 – 2019
+## Bachelor of Science in Electrical Engineering  
+### University of Illinois at Urbana–Champaign (UIUC) 
+August 2015 – May 2019
 
-Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement
+*Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement*
 
-### Exchange Semester  
+**Exchange Semester**  
 **Technical University of Denmark (DTU)**  
 2017 – 2018
   </div>
