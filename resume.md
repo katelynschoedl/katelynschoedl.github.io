@@ -6,11 +6,9 @@ permalink: /resume
 
 <div class="resume-header">
 
-<a href="/gallery" class="profile-photo-link">
   <img src="/assets/profilephoto.bw.JPG"
        alt="Katelyn Schoedl headshot"
        class="profile-photo">
-</a>
        
   <div class="header-text">
     <h1>Katelyn M. Schoedl</h1>
@@ -25,6 +23,23 @@ permalink: /resume
       <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
       <a href="https://github.com/katelynschoedl">GitHub</a> ·
       <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
+    </div>
+  </div>
+</div>
+
+<!-- Profile Photo Modal -->
+<div id="profile-modal" class="profile-modal" aria-hidden="true">
+  <div class="profile-modal-inner" role="dialog" aria-modal="true" aria-label="Profile photo">
+    <button id="profile-modal-close" class="profile-modal-close" aria-label="Close">×</button>
+
+    <img src="/assets/profilephoto.bw.JPG"
+         alt="Katelyn Schoedl headshot"
+         class="profile-modal-img">
+
+    <div class="profile-modal-caption">
+      <a href="/gallery">Click to View Gallery →</a>
+      <a href="https://www.linkedin.com/in/kmschoedl/">Contact Me On LinkedIn →</a>
+      <a href="mailto:kschoedl8@gmail.com">Send Me and Email →</a>
     </div>
   </div>
 </div>
@@ -167,11 +182,13 @@ Hands-on system deployment, field logistics coordination, remote system monitori
   <div class="resume-section" markdown="1">
 ## Professional Affiliations & Certifications
 
+- Washington State Rare Plant Monitor
+
 - American Mountain Guides Association (AMGA), Professional Member
   
 - American Alpine Club (AAC), Member
 
-- Boeing Alpine Society (BOEALPS), Member  
+- Boeing Alpine Society (BOEALPS), Member
 
 - Wilderness First Responder (WFR) with AED and CPR Certification  
   National Outdoor Leadership School (NOLS) — December 2025 (Yosemite, CA)
@@ -180,9 +197,8 @@ Hands-on system deployment, field logistics coordination, remote system monitori
   Skyward Mountaineering — December 2025 (Silverton, CO)
 
 - Avalanche Companion Rescue Training  
-  SheJumps — January 2025 (Snoqualmie, WA)
+  Alpine Ascents International x SheJumps — January 2025 (Snoqualmie, WA)
 
-- Washington State Rare Plant Monitor
 
 </div>
 
@@ -242,13 +258,9 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   box-shadow:0 0 5px rgba(255,255,255,0.08);
   flex-shrink:0;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
 }
 
-.profile-photo-link{
-  display:inline-block;
-  text-decoration:none;
-}
-  
 .profile-photo:hover{
   transform: scale(1.3);
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
@@ -293,7 +305,10 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
   animation: resumeGlow 5s ease-out 1;
 }
-.resume-float:hover{ background:rgba(255,255,255,0.12); transform: translateY(-1px); }
+.resume-float:hover{
+  background: rgba(255,255,255,0.12);
+  transform: translateX(-50%) translateY(-1px);
+}
 
 @keyframes resumeGlow{
   0%{ box-shadow:0 0 0 rgba(255,255,255,0); }
@@ -318,10 +333,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 .resume-container:hover .resume-section{ opacity:0.35; }
 .resume-container .resume-section:hover{ opacity:1; }
 
-
 /* Section header hover effects */
-
-/* Base transitions */
 .resume-section h2,
 .resume-section h3{
   transition:
@@ -331,7 +343,6 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
     opacity 0.18s ease;
 }
 
-/* ## headers: soft white glow (like resume button) */
 .resume-section:hover h2{
   color: #ffffff;
   text-shadow:
@@ -341,9 +352,8 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   opacity: 1;
 }
 
-/* ### headers: nav-style blue */
 .resume-section:hover h3{
-  color: #93c5fd; /* matches nav tone */
+  color: #93c5fd;
   text-shadow:
     0 0 10px rgba(111,180,255,0.35),
     0 0 20px rgba(111,180,255,0.18);
@@ -363,5 +373,134 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
     0 0 20px rgba(147,197,253,0.18);
   cursor: default;
 }
-  
+
+/* Profile modal (mobile friendly, glowy border) */
+.profile-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(8px);
+}
+
+.profile-modal.is-open{ display: flex; }
+
+.profile-modal-inner{
+  position: relative;
+  width: min(860px, 94vw);
+  max-height: 88vh;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.06);
+  box-shadow:
+    0 0 18px rgba(255,255,255,0.10),
+    0 18px 60px rgba(0,0,0,0.55);
+  overflow: hidden;
+  animation: profileModalIn 0.18s ease-out 1;
+}
+
+@keyframes profileModalIn{
+  from{ transform: translateY(6px) scale(0.985); opacity: 0.0; }
+  to{ transform: translateY(0) scale(1); opacity: 1.0; }
+}
+
+.profile-modal-img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(88vh - 160px);
+  object-fit: contain;
+  background: rgba(0,0,0,0.12);
+}
+
+.profile-modal-close{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.profile-modal-close:hover{
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(255,255,255,0.18);
+}
+
+.profile-modal-caption{
+  padding: 14px 16px 16px 16px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  display: grid;
+  gap: 10px;
+}
+
+.profile-modal-caption a{
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.profile-modal-caption a:hover{
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(255,255,255,0.14);
+}
 </style>
+
+<script>
+  (function () {
+    const photo = document.querySelector('.profile-photo');
+    const modal = document.getElementById('profile-modal');
+    const closeBtn = document.getElementById('profile-modal-close');
+
+    if (!photo || !modal || !closeBtn) return;
+
+    function openModal(e) {
+      // if photo was wrapped in a link previously, prevent navigation
+      if (e) e.preventDefault();
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    photo.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+  })();
+</script>
