@@ -401,19 +401,10 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   .resume-section{
   padding: 1.2rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.18);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.25s ease;
 }
 
-.resume-section.is-active{
-  opacity: 1;
-  transform: translateX(0);
-}
 
-/* subtle highlight effect */
-.resume-section.is-active{
-  box-shadow: inset 3px 0 0 rgba(120,180,255,0.55);
-  padding-left: 0.9rem;
-}
 
 
   
@@ -430,89 +421,37 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   transform: translateY(-1px);
 }
 
-/* MOBILE/SCROLL ACTIVE = same as hover visuals */
-.resume-section.is-active h2{
-  color: #ffffff;
-  text-shadow:
-    0 0 10px rgba(255,255,255,0.22),
-    0 0 22px rgba(255,255,255,0.12);
-  transform: translateY(-1px) scale(1.02);
-  opacity: 1;
-}
 
-.resume-section.is-active h3{
-  color: #93c5fd;
-  text-shadow:
-    0 0 10px rgba(111,180,255,0.35),
-    0 0 20px rgba(111,180,255,0.18);
-  transform: translateY(-1px);
-  opacity: 1;
-}
-
-.resume-section.is-active .highlight-text{
-  color: #93c5fd;
-  text-shadow:
-    0 0 10px rgba(111,180,255,0.35),
-    0 0 20px rgba(111,180,255,0.18);
-  transform: translateY(-1px);
-  opacity: 1;
-}
 
   
 </style>
 
 <script>
 (function () {
-  // 1) Tap/click profile photo -> zoom for 1s -> shrink back
   const photo = document.getElementById('profile-photo');
-  if (photo) {
-    let timer = null;
+  if (!photo) return;
 
-    function zoomOnce() {
-      photo.classList.add('is-zoomed');
-      if (timer) clearTimeout(timer);
-      timer = setTimeout(() => {
-        photo.classList.remove('is-zoomed');
-        timer = null;
-      }, 1000);
+  let timer = null;
+
+  function zoomOnce() {
+    photo.classList.add('is-zoomed');
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      photo.classList.remove('is-zoomed');
+      timer = null;
+    }, 1000);
+  }
+
+  photo.addEventListener('click', zoomOnce);
+  photo.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      zoomOnce();
     }
-
-    photo.addEventListener('click', zoomOnce);
-    photo.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        zoomOnce();
-      }
-    });
-  }
-
-  // 2) Mobile-only: section "active" highlight on scroll (IntersectionObserver)
-  const sections = document.querySelectorAll('.resume-section');
-  if (!sections.length) return;
-
-  function setActive(el) {
-    sections.forEach(s => s.classList.remove('is-active'));
-    el.classList.add('is-active');
-  }
-
-  const isMobile = window.matchMedia('(max-width: 640px)').matches;
-
-  if (isMobile) {
-    const obs = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter(e => e.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-      if (visible) setActive(visible.target);
-    }, { threshold: [0.35, 0.5, 0.65] });
-
-    sections.forEach(s => obs.observe(s));
-  } else {
-    // Desktop: do NOT apply scroll "active" state
-    sections.forEach(s => s.classList.remove('is-active'));
-  }
+  });
 })();
 </script>
+
 
 
 
