@@ -26,6 +26,7 @@ permalink: /resume
     <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a>
   </span>
   
+  
   <span class="contact-secondary">
     <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
     <a href="https://github.com/katelynschoedl">GitHub</a> ·
