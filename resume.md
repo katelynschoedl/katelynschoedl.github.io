@@ -42,7 +42,7 @@ engineering, experimental physics, and geophysical sciences.
 ## Education
 
 ### Bachelor of Science in Electrical Engineering  
-**University of Illinois at Urbana–Champaign**  
+**University of Illinois at Urbana–Champaign (UIUC)**  
 2015 – 2019
 
 Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement
