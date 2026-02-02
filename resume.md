@@ -7,9 +7,12 @@ permalink: /resume
 # Katelyn Schoedl  
 **Electrical Engineer | Research Coordinator**
 
-Seattle, Washington · Open to Relocation 
+Seattle, Washington · Open to Relocation
+Mobile: +1 (847) 961-0243
+kschoedl8@gmail.com
 
 [LinkedIn](https://www.linkedin.com/in/kmschoedl/) · [GitHub](https://github.com/katelynschoedl)  
+[ORCID]([0009-0005-1689-7945](https://orcid.org/0009-0005-1689-7945))
 
 ---
 
