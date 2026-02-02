@@ -5,11 +5,16 @@ permalink: /resume
 ---
 
 # Katelyn M. Schoedl  
-**Electrical Engineer | Research Coordinator**
+**Electrical Engineer** | **Research Coordinator**
 
-+1 (847) 961-0243 · kschoedl8@gmail.com
+<div class="contact-links">
+  <span>+1 (847) 961-0243</span> ·
+  <span>kschoedl8@gmail.com</span> ·
+  <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
+  <a href="https://github.com/katelynschoedl">GitHub</a> ·
+  <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
+</div>
 
-[LinkedIn](https://www.linkedin.com/in/kmschoedl/) · [GitHub](https://github.com/katelynschoedl) · [ORCID](https://orcid.org/0009-0005-1689-7945)
 
 <div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
   <a href="/assets/resume/kschoedl.resume.pdf"
@@ -235,4 +240,22 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
     background: rgba(255,255,255,0.1);
     transform: translateY(-1px);
   }
+
+.contact-links {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.contact-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-links a:hover {
+  color: #dddddd;
+  text-decoration: underline;
+}
+
+  
 </style>
