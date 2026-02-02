@@ -109,9 +109,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Coordinated on-site installations, commissioning, and documentation with engineering and operations teams.
 - Tracked development milestones through production and operational handoff.
 - Supported standardization of risk reviews and vendor evaluations.
-
-
-  </div>
+</div>
 
   <div class="resume-section" markdown="1">
 ## Undergraduate Roles and Internships
@@ -142,9 +140,7 @@ Niskayuna, NY | Summer 2016 & Summer 2017
 - Worked with industrial applications in edge computing and software systems.
 - Contributed to multi-year research initiatives spanning two summer appointments.
 
-
-
-  </div>
+</div>
 
   <div class="resume-section" markdown="1">
 ## Skills
@@ -164,7 +160,7 @@ Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Charac
 **Research & Field Operations**  
 Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation
 
-    </div>
+</div>
 
   <div class="resume-section" markdown="1">
 ## Professional Affiliations & Certifications
