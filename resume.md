@@ -242,10 +242,10 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
 
   .resume-float {
   position: fixed;
-  top: 18px;
-  right: 18px;
-  z-index: 9999;
-
+  top: 110px;            /* move DOWN (increase this) */
+  right: 28px;           /* move LEFT (increase this) */
+  z-index: 999;
+    
   padding: 10px 14px;
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.18);
@@ -260,10 +260,35 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
 }
 
+.resume-float{
+  animation: resumeGlow 5s ease-out 1;
+}
+
 .resume-float:hover {
   background: rgba(255,255,255,0.12);
   transform: translateY(-1px);
+  box-shadow: 0 0 16px rgba(255,255,255,0.16),
+              0 0 30px rgba(255,255,255,0.10);
 }
+
+  @keyframes resumeGlow{
+  0%{
+    box-shadow: 0 0 0 rgba(255,255,255,0);
+    transform: translateY(0);
+  }
+  10%{
+    box-shadow: 0 0 18px rgba(255,255,255,0.18),
+                0 0 36px rgba(255,255,255,0.10);
+  }
+  35%{
+    box-shadow: 0 0 22px rgba(255,255,255,0.22),
+                0 0 44px rgba(255,255,255,0.12);
+  }
+  100%{
+    box-shadow: 0 0 0 rgba(255,255,255,0);
+    transform: translateY(0);
+  }
+  }
 
 
 .contact-links {
