@@ -3,6 +3,15 @@
 // On click, injects Flickr's album embed inline (no lightbox).
 
 const ALBUMS = [
+  // ===== Fieldwork =====
+    {
+    title: "Fieldwork",
+    category: "Fieldwork",
+    href: "https://www.flickr.com/photos/katelynschoedl/albums/72177720331815209",
+    cover: "https://live.staticflickr.com/65535/55074394440_9c4d2ba7c6_c.jpg",
+    alt: "Fieldwork",
+  },
+  
   // ===== Peaks =====
   {
     title: "Mt. Adams",
