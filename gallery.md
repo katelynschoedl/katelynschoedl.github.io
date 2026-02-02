@@ -73,3 +73,83 @@ title: Gallery
       </a>
     </p>
   </div>
+
+<style>
+/* Match resume section separators */
+.gallery-section{
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.gallery-section:last-of-type{
+  border-bottom: none;
+}
+
+/* Titles (Fieldwork, Peaks, etc.) slightly larger */
+.gallery-summary{
+  font-size: 1.18rem;   /* tiny tad larger */
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0;
+  transition: color 0.18s ease, text-shadow 0.18s ease;
+}
+
+/* Optional hover glow similar vibe */
+.gallery-section:hover .gallery-summary{
+  color:#fff;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.18),
+    0 0 22px rgba(255,255,255,0.10);
+}
+
+/* Replace default marker with subtle caret */
+.gallery-summary::-webkit-details-marker{ display:none; }
+.gallery-summary::before{
+  content:"▾";
+  display:inline-block;
+  margin-right:10px;
+  opacity:0.7;
+  transform: translateY(-1px);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.gallery-section:not([open]) .gallery-summary::before{
+  content:"▸";
+}
+
+/* Album grid spacing */
+.album-grid{
+  margin-top: 14px;
+}
+
+/* Hover scale: gently grow album tile image */
+.album-tile{
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+
+.album-tile img{
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  will-change: transform;
+  transform-origin: center;
+}
+
+/* The effect you asked for */
+.album-tile:hover img{
+  transform: scale(1.03);  /* very slight grow */
+  box-shadow: 0 0 18px rgba(255,255,255,0.10);
+}
+
+/* Optional: tiny lift of the whole tile (keeps it feeling responsive) */
+.album-tile:hover{
+  transform: translateY(-1px);
+}
+
+/* Mobile tuning */
+@media (max-width:640px){
+  .gallery-section{ padding: 1rem 0; }
+  .gallery-summary{ font-size: 1.12rem; }
+}
+</style>
