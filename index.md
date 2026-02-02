@@ -69,9 +69,9 @@ title: Home
 .wave-gif{
   animation: fadeIn 2s ease-out;
   width: 100%;
-  height: 130px;           /* pick a footer height: 90–160px */
+  height: 160px;           /* pick a footer height: 90–160px */
   object-fit: cover;       /* makes it span nicely */
-  opacity: 0.65;
+  opacity: 0.3;
   filter: blur(0.2px);
 }
 
