@@ -13,32 +13,30 @@ permalink: /resume
   <div class="header-text">
     <h1>Katelyn M. Schoedl</h1>
 
-      <div class="title-line">
-        <strong>Electrical Engineer</strong> | <strong>Research Coordinator</strong>
-      </div>
+    <div class="title-line">
+      <strong>Electrical Engineer</strong> | <strong>Research Coordinator</strong>
+    </div>
 
-      <div class="contact-links">
-        <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
-        <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a> ·
-        <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
-        <a href="https://github.com/katelynschoedl">GitHub</a> ·
-        <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
-      </div>
+    <div class="contact-links">
+      <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
+      <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
+      <a href="https://github.com/katelynschoedl">GitHub</a> ·
+      <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
+    </div>
   </div>
 </div>
 
 <a class="resume-float"
    href="/assets/resume/kschoedl.resume.pdf"
-     target="_blank"
-     rel="noopener">
-    Download PDF Résumé →
+   target="_blank"
+   rel="noopener">
+  Download PDF Résumé →
 </a>
 
 <div class="resume-container">
 
-<div class="resume-section" markdown="1">
-   
-
+  <div class="resume-section" markdown="1">
 ## Profile
 
 Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication,
@@ -49,9 +47,9 @@ coordination for geophysics and environmental sensing groups at the University o
 design workflows, precision measurement systems, and field operations for high-quality scientific data collection.
 I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
 engineering, experimental physics, and geophysical sciences.
+  </div>
 
-<div class="resume-section" markdown="1">
-   
+  <div class="resume-section" markdown="1">
 ## Education
 
 ### Bachelor of Science in Electrical Engineering  
@@ -60,18 +58,12 @@ engineering, experimental physics, and geophysical sciences.
 
 Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement
 
-   
-<div class="resume-section" markdown="1">
-   
-
 ### Exchange Semester  
 **Technical University of Denmark (DTU)**  
 2017 – 2018
+  </div>
 
-   
-<div class="resume-section" markdown="1">
-   
-
+  <div class="resume-section" markdown="1">
 ## Experience
 
 ### University of Washington — Research Coordinator (Photonics)  
@@ -85,10 +77,6 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Developed and maintained experimental workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations.
 - Maintained project websites and supported data dissemination platforms.
 
-   
-<div class="resume-section" markdown="1">
-   
-
 ### Microsoft — Hardware Engineer II (Signal Integrity)  
 *Cloud AI Hardware and Advanced Signal Engineering*  
 **September 2021 – September 2023**
@@ -101,10 +89,6 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Collaborated with electrical, mechanical, and systems engineering teams to resolve SI and system integration issues.
 - Supported contract PCBA design reviews and monitored progress through manufacturing readiness.
 
-   
-<div class="resume-section" markdown="1">
-   
-
 ### Amazon — Hardware Design Engineer (Satellite Avionics)  
 *Project Kuiper*  
 **April 2020 – September 2021**
@@ -116,10 +100,6 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Performed board bring-up, debugging, and validation.
 - Supported hardware radiation test campaigns.
 
-   
-<div class="resume-section" markdown="1">
-   
-
 ### Amazon — Technical Program Coordinator (Robotic Automation Prototypes)
 *Worldwide Technical Engineering Services*  
 **June 2019 – March 2020**
@@ -129,10 +109,6 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Coordinated on-site installations, commissioning, and documentation with engineering and operations teams.
 - Tracked development milestones through production and operational handoff.
 - Supported standardization of risk reviews and vendor evaluations.
-
-   
-<div class="resume-section" markdown="1">
-   
 
 ### Undergraduate Roles and Internships
 
@@ -160,11 +136,9 @@ Seattle, WA | Summer 2018
 Niskayuna, NY | Summer 2016 & Summer 2017
 - Worked with industrial applications in edge computing and software systems.
 - Contributed to multi-year research initiatives spanning two summer appointments.
+  </div>
 
-   
-<div class="resume-section" markdown="1">
-   
-
+  <div class="resume-section" markdown="1">
 ## Skills
 
 **Communication**  
@@ -181,11 +155,9 @@ Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Charac
 
 **Research & Field Operations**  
 Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation
+  </div>
 
-   
-<div class="resume-section" markdown="1">
-   
-
+  <div class="resume-section" markdown="1">
 ## Professional Affiliations & Certifications
 
 - American Mountain Guides Association (AMGA), Professional Member
@@ -204,21 +176,17 @@ Hands-on system deployment, field logistics coordination, remote system monitori
   SheJumps — January 2025 (Snoqualmie, WA)
 
 - Washington State Rare Plant Monitor
+  </div>
 
-   
-<div class="resume-section" markdown="1">
-   
-
+  <div class="resume-section" markdown="1">
 ## Field & Alpine Activities
 
 - Alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide  
 - SnowGoat Skimo Volunteer for Vertfest and Wy’Easter sanctioned ski mountaineering races  
 - Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
+  </div>
 
-   
-<div class="resume-section" markdown="1">
-   
-
+  <div class="resume-section" markdown="1">
 ## Conferences & Workshops
 
 - **BOAT Ocean Acoustics Workshop**, University of Washington (2025)  
@@ -226,16 +194,14 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 - **DesignCon**, Santa Clara, CA (2022)  
   Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing
+  </div>
 
-   
-<div class="resume-section" markdown="1">
-   
-
+  <div class="resume-section" markdown="1">
 ## Interests
 
 Optical and photonic sensing systems, scientific instrumentation, particle and space physics hardware, precision measurement techniques, applied experimental research, and interdisciplinary scientific collaboration.
+  </div>
 
-   
 </div>
 
 <div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
@@ -247,167 +213,90 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   </a>
 </div>
 
-
-
 <style>
-/* Resume header layout */
-
 .resume-header{
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  margin-bottom: 1.5rem;
-  }
-
-/* Circular headshot */
-.profile-photo{
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 50%;
-
-  border: 2px solid rgba(255,255,255,0.25);
-  box-shadow: 0 0 5px rgba(255,255,255,0.08);
-
-  flex-shrink: 0;
-  }
-
-/* Text block next to photo */
-.header-text h1{
-  margin: 0 0 6px 0;
-  font-size: 2.1rem;
-  }
-
-.title-line{
-  font-size: 1.05rem;
-  margin-bottom: 6px;
-  opacity: 0.95;
-  }
-
-/* Mobile stacking */
-@media (max-width: 640px){
-  .resume-header{
-    flex-direction: column;
-    text-align: center;
-    }
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin-bottom:1.5rem;
+}
 
 .profile-photo{
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 50%;
+  width:110px;
+  height:110px;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid rgba(255,255,255,0.25);
+  box-shadow:0 0 5px rgba(255,255,255,0.08);
+  flex-shrink:0;
 
-  border: 2px solid rgba(255,255,255,0.25);
-  box-shadow: 0 0 5px rgba(255,255,255,0.08);
-
-  flex-shrink: 0;
-
-  /* Add these */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
-/* Hover grow */
 .profile-photo:hover{
-  transform: scale(1.5);
+  transform: scale(1.12);
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
-  
-    }
 
-  
-  .home-card {
-    display: block;
-    padding: 14px 16px;
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.18);
-    background: rgba(255,255,255,0.04);
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.15s ease, transform 0.12s ease;
-    }
+.header-text h1{ margin:0 0 6px 0; font-size:2.1rem; }
+.title-line{ font-size:1.05rem; margin-bottom:6px; opacity:0.95; }
 
-  .home-card:hover {
-    background: rgba(255,255,255,0.1);
-    transform: translateY(-1px);
-    }
+@media (max-width:640px){
+  .resume-header{ flex-direction:column; text-align:center; }
+  .profile-photo{ width:95px; height:95px; }
+}
 
-  .resume-float {
-  position: fixed;
-  top: 110px;            /* move DOWN (increase this) */
-  right: 50px;           /* move LEFT (increase this) */
-  z-index: 999;
-    
-  padding: 10px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.06);
+.home-card{
+  display:block;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.18);
+  background:rgba(255,255,255,0.04);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+.home-card:hover{ background:rgba(255,255,255,0.1); transform: translateY(-1px); }
+
+.resume-float{
+  position:fixed;
+  top:110px;
+  right:50px;
+  z-index:999;
+  padding:10px 14px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.18);
+  background:rgba(255,255,255,0.06);
   backdrop-filter: blur(10px);
-
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:0.95rem;
   transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
   animation: resumeGlow 5s ease-out 1;
-  }
+}
+.resume-float:hover{ background:rgba(255,255,255,0.12); transform: translateY(-1px); }
 
-.resume-float:hover {
-  background: rgba(255,255,255,0.12);
-  transform: translateY(-1px);
-  }
+@keyframes resumeGlow{
+  0%{ box-shadow:0 0 0 rgba(255,255,255,0); }
+  10%{ box-shadow:0 0 18px rgba(255,255,255,0.18), 0 0 36px rgba(255,255,255,0.10); }
+  35%{ box-shadow:0 0 22px rgba(255,255,255,0.22), 0 0 44px rgba(255,255,255,0.12); }
+  100%{ box-shadow:0 0 0 rgba(255,255,255,0); }
+}
 
-  @keyframes resumeGlow{
-  0%{
-    box-shadow: 0 0 0 rgba(255,255,255,0);
-    transform: translateY(0);
-  }
-  10%{
-    box-shadow: 0 0 18px rgba(255,255,255,0.18),
-                0 0 36px rgba(255,255,255,0.10);
-  }
-  35%{
-    box-shadow: 0 0 22px rgba(255,255,255,0.22),
-                0 0 44px rgba(255,255,255,0.12);
-  }
-  100%{
-    box-shadow: 0 0 0 rgba(255,255,255,0);
-    transform: translateY(0);
-  }
-  }
+.contact-links{ font-size:0.95rem; opacity:0.9; }
+.contact-links a{ color:#fff; text-decoration:none; font-weight:500; }
+.contact-links a:hover{ color:#ddd; text-decoration:underline; }
 
-.contact-links {
-  font-size: 0.95rem;
-  opacity: 0.9;
-  }
-
-.contact-links a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  }
-
-.contact-links a:hover {
-  color: #dddddd;
-  text-decoration: underline;
-  }
-.resume-section {
+/* SECTION LINES */
+.resume-section{
   padding: 1.2rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.18);
   transition: opacity 0.25s ease;
 }
+.resume-section:last-child{ border-bottom:none; }
 
-
-
-  /* When hovering ANY section */
-.resume-container:hover .resume-section {
-  opacity: 0.5;
-  }
-
-/* Keep hovered section bright */
-.resume-container .resume-section:hover {
-  opacity: 1;
-  }
-  
+/* HOVER DIM (works once sections are siblings, not nested) */
+.resume-container:hover .resume-section{ opacity:0.35; }
+.resume-container .resume-section:hover{ opacity:1; }
 </style>
