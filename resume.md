@@ -25,8 +25,9 @@ permalink: /resume
     <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
     <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a>
   </span>
+  
   <span class="contact-secondary">
-    · <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
+    <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
     <a href="https://github.com/katelynschoedl">GitHub</a> ·
     <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
   </span>
