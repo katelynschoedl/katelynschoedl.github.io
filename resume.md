@@ -11,7 +11,6 @@ permalink: /resume
        class="profile-photo"
        id="profile-photo"
        aria-label="Open profile links"
-       role="button"
        tabindex="0">
        
   <div class="header-text">
@@ -236,11 +235,10 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   box-shadow:0 0 5px rgba(255,255,255,0.08);
   flex-shrink:0;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
 }
 
 .profile-photo:hover{
-  transform: scale(1.12);
+  transform: scale(1.5);
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
@@ -344,6 +342,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   text-shadow:
     0 0 10px rgba(111,180,255,0.35),
     0 0 20px rgba(111,180,255,0.18);
+  transform: translateY(-1px);
   opacity: 1;
 }
 
@@ -357,6 +356,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
     0 0 10px rgba(147,197,253,0.35),
     0 0 20px rgba(147,197,253,0.18);
   cursor: default;
+  transform: translateY(-1px);
 }
 
 </style>
