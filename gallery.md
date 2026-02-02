@@ -93,6 +93,10 @@ title: Gallery
   cursor: pointer;
   margin: 0;
   transition: color 0.18s ease, text-shadow 0.18s ease;
+
+  /* IMPORTANT: makes summary behave consistently */
+  list-style: none;
+  display: block;
 }
 
 /* Optional hover glow */
@@ -103,15 +107,24 @@ title: Gallery
     0 0 22px rgba(255,255,255,0.10);
 }
 
-/* === REMOVE ALL DETAILS ARROWS === */
-/* Chromium/Safari */
+/* === CARETS BACK (custom ▾ / ▸) === */
+/* Hide browser default marker */
 .gallery-summary::-webkit-details-marker{ display:none; }
-/* Firefox + general marker */
-.gallery-summary::marker{ content:""; display:none; }
-/* Extra insurance: stop list-marker rendering entirely */
-.gallery-summary{
-  list-style: none;
-  display: block;
+.gallery-summary::marker{ display:none; }
+
+/* Custom caret */
+.gallery-summary::before{
+  content:"▾";
+  display:inline-block;
+  margin-right:10px;
+  opacity:0.7;
+  transform: translateY(-1px);
+  transition: opacity 0.18s ease;
+}
+
+/* Closed state */
+.gallery-section:not([open]) .gallery-summary::before{
+  content:"▸";
 }
 
 /* === Album tile hover grow === */
@@ -157,9 +170,4 @@ title: Gallery
 .album-panel{ overflow: hidden; }
 .album-embed{ padding: 10px 0; }
 
-/* Mobile tuning */
-@media (max-width:640px){
-  .gallery-section{ padding: 1rem 0; }
-  .gallery-summary{ font-size: 1.12rem; }
-}
-</style>
+/* ==*
