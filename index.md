@@ -19,8 +19,8 @@ title: Home
     gap: 14px;
   ">
     <a href="/resume" class="home-card">Resume →</a>
-    <a href="/projects" class="home-card">Projects →</a>
-    <a href="/alpine" class="home-card">Alpine →</a>
+    <!--<a href="/projects" class="home-card">Projects →</a>
+    <a href="/alpine" class="home-card">Alpine →</a>-->
     <a href="/gallery" class="home-card">Gallery →</a>
   </div>
 
