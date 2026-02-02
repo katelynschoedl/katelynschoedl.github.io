@@ -4,15 +4,28 @@ title: Resume
 permalink: /resume
 ---
 
-# Katelyn M. Schoedl  
-**Electrical Engineer** | **Research Coordinator**
+<div class="resume-header">
 
-<div class="contact-links">
-  <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
-  <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a> ·
-  <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
-  <a href="https://github.com/katelynschoedl">GitHub</a> ·
-  <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
+  <img src="/assets/profilephoto.bw.JPG"
+       alt="Katelyn Schoedl headshot"
+       class="profile-photo">
+       
+  <div class="header-text">
+    <h1>Katelyn M. Schoedl</h1>
+
+    <div class="title-line">
+      <strong>Electrical Engineer</strong> | <strong>Research Coordinator</strong>
+    </div>
+
+    <div class="contact-links">
+      <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
+      <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
+      <a href="https://github.com/katelynschoedl">GitHub</a> ·
+      <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
+    </div>
+  </div>
+
 </div>
 
 
@@ -223,6 +236,55 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
 </div>
 
 <style>
+
+/* Resume header layout */
+
+.resume-header{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 1.5rem;
+}
+
+/* Circular headshot */
+.profile-photo{
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: 0 0 18px rgba(255,255,255,0.08);
+
+  flex-shrink: 0;
+}
+
+/* Text block next to photo */
+.header-text h1{
+  margin: 0 0 6px 0;
+  font-size: 2.1rem;
+}
+
+.title-line{
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  opacity: 0.95;
+}
+
+/* Mobile stacking */
+@media (max-width: 640px){
+  .resume-header{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-photo{
+    width: 95px;
+    height: 95px;
+  }
+}
+
+  
   .home-card {
     display: block;
     padding: 14px 16px;
@@ -267,7 +329,6 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
 .resume-float:hover {
   background: rgba(255,255,255,0.12);
   transform: translateY(-1px);
-
 }
 
   @keyframes resumeGlow{
