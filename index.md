@@ -18,7 +18,7 @@ title: Home
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 14px;
   ">
-    <a href="/resume" class="home-card">Resume →</a>
+    <a href="/resume" class="home-card">Résumé →</a>
     <!--<a href="/projects" class="home-card">Projects →</a>
     <a href="/alpine" class="home-card">Alpine →</a>-->
     <a href="/gallery" class="home-card">Gallery →</a>
