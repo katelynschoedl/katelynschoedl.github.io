@@ -36,8 +36,10 @@ permalink: /resume
 </a>
 
 <div class="resume-container">
-  
-<div class="resume-section">
+
+  <div class="resume-section">
+  {% markdown %}
+
 ## Profile
 
 Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication,
@@ -48,9 +50,13 @@ coordination for geophysics and environmental sensing groups at the University o
 design workflows, precision measurement systems, and field operations for high-quality scientific data collection.
 I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
 engineering, experimental physics, and geophysical sciences.
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ## Education
 
 ### Bachelor of Science in Electrical Engineering  
@@ -58,15 +64,23 @@ engineering, experimental physics, and geophysical sciences.
 2015 – 2019
 
 Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ### Exchange Semester  
 **Technical University of Denmark (DTU)**  
 2017 – 2018
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ## Experience
 
 ### University of Washington, College of the Environment — Research Coordinator (Photonics)  
@@ -79,9 +93,13 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Supported safety planning and permitting for remote field deployments and instrumentation campaigns.
 - Developed and maintained experimental workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations.
 - Maintained project websites and supported data dissemination platforms.
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ### Microsoft — Hardware Engineer II (Signal Integrity)  
 *Cloud AI Hardware and Advanced Signal Engineering*  
 **September 2021 – September 2023**
@@ -93,9 +111,13 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Executed laboratory measurements, including S-parameters and eye-diagram analysis, using VNA and time-domain methods.
 - Collaborated with electrical, mechanical, and systems engineering teams to resolve SI and system integration issues.
 - Supported contract PCBA design reviews and monitored progress through manufacturing readiness.
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ### Amazon — Hardware Design Engineer (Satellite Avionics)  
 *Project Kuiper*  
 **April 2020 – September 2021**
@@ -106,9 +128,13 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Designed and reviewed schematics, PCB layouts, and housings for sensor prototypes.
 - Performed board bring-up, debugging, and validation.
 - Supported hardware radiation test campaigns.
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ### Amazon — Technical Program Coordinator (Robotic Automation Prototypes)
 *Worldwide Technical Engineering Services*  
 **June 2019 – March 2020**
@@ -118,9 +144,13 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Coordinated on-site installations, commissioning, and documentation with engineering and operations teams.
 - Tracked development milestones through production and operational handoff.
 - Supported standardization of risk reviews and vendor evaluations.
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ### Undergraduate Roles and Internships
 
 **Shop Assistant, Machine Shop and Services at ECE Illinois**
@@ -147,9 +177,13 @@ Seattle, WA | Summer 2018
 Niskayuna, NY | Summer 2016 & Summer 2017
 - Worked with industrial applications in edge computing and software systems.
 - Contributed to multi-year research initiatives spanning two summer appointments.
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ## Skills
 
 **Communication**  
@@ -166,9 +200,13 @@ Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Charac
 
 **Research & Field Operations**  
 Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ## Professional Affiliations & Certifications
 
 - American Mountain Guides Association (AMGA), Professional Member
@@ -187,17 +225,25 @@ Hands-on system deployment, field logistics coordination, remote system monitori
   SheJumps — January 2025 (Snoqualmie, WA)
 
 - Washington State Rare Plant Monitor
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ## Field & Alpine Activities
 
 - Alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide  
 - SnowGoat Skimo Volunteer for Vertfest and Wy’Easter sanctioned ski mountaineering races  
 - Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ## Conferences & Workshops
 
 - **BOAT Ocean Acoustics Workshop**, University of Washington (2025)  
@@ -205,16 +251,22 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 - **DesignCon**, Santa Clara, CA (2022)  
   Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing
-</div>
----
-<div class="resume-section">
+
+  {% endmarkdown %}
+  </div>
+
+  <div class="resume-section">
+  {% markdown %}
+
 ## Interests
 
 Optical and photonic sensing systems, scientific instrumentation, particle and space physics hardware, precision measurement techniques, applied experimental research, and interdisciplinary scientific collaboration.
+
+  {% endmarkdown %}
+  </div>
+
 </div>
----
-</div> 
-</div>
+
 
 <div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
   <a href="/assets/resume/kschoedl.resume.pdf"
@@ -354,9 +406,13 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   text-decoration: underline;
   }
 .resume-section {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
   transition: opacity 0.25s ease;
-  }
-
+}
+.resume-section:last-child {
+  border-bottom: none;
+}
 /* When hovering ANY section */
 .resume-container:hover .resume-section {
   opacity: 0.5;
