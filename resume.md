@@ -6,9 +6,11 @@ permalink: /resume
 
 <div class="resume-header">
 
+<a href="/gallery" class="profile-photo-link">
   <img src="/assets/profilephoto.bw.JPG"
        alt="Katelyn Schoedl headshot"
        class="profile-photo">
+</a>
        
   <div class="header-text">
     <h1>Katelyn M. Schoedl</h1>
@@ -53,8 +55,8 @@ engineering, experimental physics, and geophysical sciences.
 ## Education
 
 ### University of Illinois at Urbana–Champaign
-*Bachelor of Science in Electrical Engineering*
-**August 2015 – May 2019**
+*Bachelor of Science in Electrical Engineering*  
+**August 2015 – May 2019**  
 
 - Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement
 - Exchange Semester, **Technical University of Denmark,**  Autumn 2017
@@ -134,7 +136,7 @@ Seattle, WA | Summer 2018
 - Worked on documentation of controls-related engineering tasks in a production-oriented environment.
 
 
-**GE Global Research Intern**
+**GE Global Research Intern**  
 *Edge Software*  
 Niskayuna, NY | Summer 2016 & Summer 2017  
 - Worked with industrial applications in edge computing and software systems.
@@ -208,7 +210,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
   <div class="resume-section" markdown="1">
 ## Interests
 
-Optical and photonic sensing systems, precision scientific instrumentation, particle physics hardware and measurement techniques, physical properties of ice, applied experimental research, and interdisciplinary scientific collaboration.
+Optical and photonic sensing systems, precision scientific instrumentation, particle physics hardware and measurement techniques, radiation effects, physical properties of ice, experimental field research, mentorship and interdisciplinary scientific collaboration.
 
 </div>
 
@@ -227,7 +229,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 .resume-header{
   display:flex;
   align-items:center;
-  gap:22px;
+  gap:32px;
   margin-bottom:1.5rem;
 }
 
@@ -239,9 +241,14 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   border:2px solid rgba(255,255,255,0.25);
   box-shadow:0 0 5px rgba(255,255,255,0.08);
   flex-shrink:0;
-
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.profile-photo-link{
+  display:inline-block;
+  text-decoration:none;
+}
+  
 .profile-photo:hover{
   transform: scale(1.3);
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
@@ -271,7 +278,8 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 .resume-float{
   position:fixed;
   top:110px;
-  right:200px;
+  left:66%;
+  transform: translateX(-50%);
   z-index:999;
   padding:10px 14px;
   border-radius:14px;
@@ -343,6 +351,17 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   opacity: 1;
 }
 
+/* Name hover = nav blue */
+.header-text h1{
+  transition: color 0.18s ease, text-shadow 0.18s ease;
+}
 
+.header-text h1:hover{
+  color: #93c5fd;
+  text-shadow:
+    0 0 10px rgba(147,197,253,0.35),
+    0 0 20px rgba(147,197,253,0.18);
+  cursor: default;
+}
   
 </style>
