@@ -67,7 +67,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Coordinated technical activities with external research partners and funding agencies.
 - Acted as operational liaison between research groups and departmental administration by managing procurement, inventory, shipping, customs documentation, and field logistics.
 - Supported safety planning and permitting for remote field deployments and instrumentation campaigns.
-- CDeveloped and maintained experimental workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations.
+- Developed and maintained experimental workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations.
 - Maintained project websites and supported data dissemination platforms.
 
 ---
