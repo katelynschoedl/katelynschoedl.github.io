@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<section style="max-width: 720px; margin: 0 auto; padding-top: 3rem;">
+<section style="max-width: 720px; margin: 0 auto; padding-top: 3rem; position: relative; z-index: 1;">
 
   <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">
     Hi, I’m Katelyn
@@ -26,11 +26,12 @@ title: Home
 
 </section>
 
-<div class="wave-container">
+<div class="wave-container" aria-hidden="true">
   <img src="/assets/wavegif.gif"
-       alt="Animated waveform"
+       alt=""
        class="wave-gif">
 </div>
+
 
 <style>
   .home-card {
@@ -50,18 +51,34 @@ title: Home
     transform: translateY(-1px);
   }
 
-  .wave-container {
-  width: 100%;
-  margin: 3rem 0 -1.5rem 0;
+.wave-container{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;               /* pins to bottom of viewport */
+  width: 100vw;            /* full browser width */
+  height: 130px;
   display: flex;
   justify-content: center;
-  }
+  align-items: flex-end;
+  pointer-events: none;    /* wave won't block clicks */
+  z-index: 0;              /* behind your content */
+  padding-bottom: 0;       /* tweak if you want it to “hug” bottom */
+}
 
-  .wave-gif {
+.wave-gif{
+  animation: fadeIn 2s ease-out;
   width: 100%;
-  max-width: 1100px;   /* matches your content width */
-  height: auto;
-  opacity: 0.75;       /* subtle blend */
-  }
+  height: 130px;           /* pick a footer height: 90–160px */
+  object-fit: cover;       /* makes it span nicely */
+  opacity: 0.65;
+  filter: blur(0.2px);
+}
+
+  @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.75; }
+}
+
   
 </style>
