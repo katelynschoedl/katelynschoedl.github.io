@@ -128,14 +128,14 @@ February 2017 – May 2017
 January 2016 – May 2017
 - Operated a high-volume campus café serving the ECE community.
 
-**Amazon**
-*Controls Engineering Intern*
+**Amazon Intern**
+*Controls Engineering*
 Seattle, WA | Summer 2018
 - Supported alpha and beta robotics and automation systems within Amazon fulfillment infrastructure.
 - Worked on documentation of controls-related engineering tasks in a production-oriented environment.
 
-**GE Global Research**
-*Edge Software Intern*
+**GE Global Research Intern**
+*Edge Software*
 Niskayuna, NY | Summer 2016 & Summer 2017
 - Worked with industrial applications in edge computing and software systems.
 - Contributed to multi-year research initiatives spanning two summer appointments.
@@ -182,6 +182,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 - Washington State Rare Plant Monitor
 
+
   </div>
 
   <div class="resume-section" markdown="1">
@@ -190,6 +191,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 - Alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide  
 - SnowGoat Skimo Volunteer for Vertfest and Wy’Easter sanctioned ski mountaineering races  
 - Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
+
 
   </div>
 
@@ -201,6 +203,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 - **DesignCon**, Santa Clara, CA (2022)  
   Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing
+
 
 </div>
 
