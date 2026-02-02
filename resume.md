@@ -36,7 +36,7 @@ permalink: /resume
 
 <div class="resume-container">
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ## Profile
@@ -53,7 +53,7 @@ engineering, experimental physics, and geophysical sciences.
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ## Education
@@ -67,7 +67,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ### Exchange Semester  
@@ -77,7 +77,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ## Experience
@@ -96,7 +96,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ### Microsoft — Hardware Engineer II (Signal Integrity)  
@@ -114,7 +114,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ### Amazon — Hardware Design Engineer (Satellite Avionics)  
@@ -131,7 +131,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ### Amazon — Technical Program Coordinator (Robotic Automation Prototypes)
@@ -147,7 +147,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ### Undergraduate Roles and Internships
@@ -180,7 +180,7 @@ Niskayuna, NY | Summer 2016 & Summer 2017
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ## Skills
@@ -203,7 +203,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ## Professional Affiliations & Certifications
@@ -228,7 +228,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ## Field & Alpine Activities
@@ -240,7 +240,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ## Conferences & Workshops
@@ -254,7 +254,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
    
   </div>
 
-  <div class="resume-section">
+  <div class="resume-section", markdown="1">
    
 
 ## Interests
