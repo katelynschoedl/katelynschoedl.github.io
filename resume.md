@@ -181,6 +181,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
   SheJumps — January 2025 (Snoqualmie, WA)
 
 - Washington State Rare Plant Monitor
+
 </div>
 
 
@@ -190,6 +191,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 - Alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide  
 - SnowGoat Skimo Volunteer for Vertfest and Wy’Easter sanctioned ski mountaineering races  
 - Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
+
 </div>
 
   <div class="resume-section" markdown="1">
@@ -200,6 +202,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 - **DesignCon**, Santa Clara, CA (2022)  
   Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing
+
 </div>
 
   <div class="resume-section" markdown="1">
