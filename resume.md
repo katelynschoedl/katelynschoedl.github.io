@@ -74,8 +74,8 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 
 ## Experience
 
-### University of Washington, College of the Environment — Research Coordinator (Photonics)  
-*Department of Earth & Space Sciences*  
+### University of Washington — Research Coordinator (Photonics)  
+*College of the Environment, Department of Earth & Space Sciences*  
 **May 2024 – May 2025**
 
 - Supported deployment, operation, and maintenance of photonics-based Distributed Acoustic Sensing (DAS) and data acquisition systems for seismic, oceanic, and cryospheric research.
@@ -238,7 +238,6 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
    
 </div>
 
-
 <div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
   <a href="/assets/resume/kschoedl.resume.pdf"
      class="home-card"
@@ -309,7 +308,7 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
 
 /* Hover grow */
 .profile-photo:hover{
-  transform: scale(1.15);
+  transform: scale(1.5);
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
   
@@ -398,13 +397,8 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   border-bottom: 1px solid rgba(255,255,255,0.18);
   transition: opacity 0.25s ease;
 }
-.resume-section:last-child {
-  border-bottom: none;
-}
 
-.resume-container {
-  position: relative;
-}
+
 
   /* When hovering ANY section */
 .resume-container:hover .resume-section {
