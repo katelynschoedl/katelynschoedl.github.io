@@ -13,18 +13,19 @@ permalink: /resume
   <div class="header-text">
     <h1>Katelyn M. Schoedl</h1>
 
-    <div class="title-line">
-      <strong>Electrical Engineer</strong> | <strong>Research Coordinator</strong>
-    </div>
+      <div class="title-line">
+        <strong>Electrical Engineer</strong> | <strong>Research Coordinator</strong>
+      </div>
 
-    <div class="contact-links">
-      <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
-      <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a> ·
-      <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
-      <a href="https://github.com/katelynschoedl">GitHub</a> ·
-      <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
-    </div>
+      <div class="contact-links">
+        <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
+        <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
+        <a href="https://github.com/katelynschoedl">GitHub</a> ·
+        <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
+      </div>
   </div>
+  
 </div>
 
 <a class="resume-float"
@@ -32,7 +33,7 @@ permalink: /resume
      target="_blank"
      rel="noopener">
     Download PDF Résumé →
-  </a>
+</a>
 
 <div class="resume-container">
   
@@ -213,8 +214,7 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
 </div>
 ---
 </div> 
-
-
+</div>
 
 <div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
   <a href="/assets/resume/kschoedl.resume.pdf"
@@ -225,8 +225,9 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   </a>
 </div>
 
-<style>
 
+
+<style>
 /* Resume header layout */
 
 .resume-header{
@@ -234,7 +235,7 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   align-items: center;
   gap: 22px;
   margin-bottom: 1.5rem;
-}
+  }
 
 /* Circular headshot */
 .profile-photo{
@@ -247,32 +248,32 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   box-shadow: 0 0 5px rgba(255,255,255,0.08);
 
   flex-shrink: 0;
-}
+  }
 
 /* Text block next to photo */
 .header-text h1{
   margin: 0 0 6px 0;
   font-size: 2.1rem;
-}
+  }
 
 .title-line{
   font-size: 1.05rem;
   margin-bottom: 6px;
   opacity: 0.95;
-}
+  }
 
 /* Mobile stacking */
 @media (max-width: 640px){
   .resume-header{
     flex-direction: column;
     text-align: center;
-  }
+    }
 
   .profile-photo{
     width: 95px;
     height: 95px;
-  }
-}
+    }
+    }
 
   
   .home-card {
@@ -285,12 +286,12 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
     text-decoration: none;
     font-weight: 600;
     transition: background 0.15s ease, transform 0.12s ease;
-  }
+    }
 
   .home-card:hover {
     background: rgba(255,255,255,0.1);
     transform: translateY(-1px);
-  }
+    }
 
   .resume-float {
   position: fixed;
@@ -310,16 +311,13 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   font-size: 0.95rem;
 
   transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
-}
-
-.resume-float{
   animation: resumeGlow 5s ease-out 1;
-}
+  }
 
 .resume-float:hover {
   background: rgba(255,255,255,0.12);
   transform: translateY(-1px);
-}
+  }
 
   @keyframes resumeGlow{
   0%{
@@ -340,34 +338,33 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
   }
   }
 
-
 .contact-links {
   font-size: 0.95rem;
   opacity: 0.9;
-}
+  }
 
 .contact-links a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-}
+  }
 
 .contact-links a:hover {
   color: #dddddd;
   text-decoration: underline;
-}
+  }
 .resume-section {
   transition: opacity 0.25s ease;
-}
+  }
 
 /* When hovering ANY section */
 .resume-container:hover .resume-section {
   opacity: 0.5;
-}
+  }
 
 /* Keep hovered section bright */
 .resume-container .resume-section:hover {
   opacity: 1;
-}
+  }
   
 </style>
