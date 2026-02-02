@@ -110,10 +110,10 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Tracked development milestones through production and operational handoff.
 - Supported standardization of risk reviews and vendor evaluations.
 
-</div>
+    </div>
 
   <div class="resume-section" markdown="1">
-### Undergraduate Roles and Internships
+## Undergraduate Roles and Internships
 
 **Shop Assistant, Machine Shop and Services at ECE Illinois**
 January 2018 – January 2019
@@ -140,7 +140,7 @@ Niskayuna, NY | Summer 2016 & Summer 2017
 - Worked with industrial applications in edge computing and software systems.
 - Contributed to multi-year research initiatives spanning two summer appointments.
 
-</div>
+    </div>
 
   <div class="resume-section" markdown="1">
 ## Skills
@@ -160,7 +160,7 @@ Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Charac
 **Research & Field Operations**  
 Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation
 
-</div>
+    </div>
 
   <div class="resume-section" markdown="1">
 ## Professional Affiliations & Certifications
@@ -182,7 +182,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 - Washington State Rare Plant Monitor
 
-</div>
+  </div>
 
   <div class="resume-section" markdown="1">
 ## Field & Alpine Activities
@@ -191,7 +191,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 - SnowGoat Skimo Volunteer for Vertfest and Wy’Easter sanctioned ski mountaineering races  
 - Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
 
-</div>
+  </div>
 
   <div class="resume-section" markdown="1">
 ## Conferences & Workshops
@@ -208,8 +208,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 ## Interests
 
 Optical and photonic sensing systems, scientific instrumentation, particle and space physics hardware, precision measurement techniques, applied experimental research, and interdisciplinary scientific collaboration.
-  
-</div>
+  </div>
 
 </div>
 
