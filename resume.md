@@ -6,9 +6,11 @@ permalink: /resume
 
 <div class="resume-header">
 
-  <img src="/assets/profilephoto.bw.JPG"
-       alt="Katelyn Schoedl headshot"
-       class="profile-photo">
+  <a href="/gallery" class="profile-photo-link" aria-label="View Gallery">
+    <img src="/assets/profilephoto.bw.JPG"
+         alt="Katelyn Schoedl headshot"
+         class="profile-photo">
+  </a>
        
   <div class="header-text">
     <h1>Katelyn M. Schoedl</h1>
@@ -18,6 +20,7 @@ permalink: /resume
     </div>
 
     <div class="contact-links">
+      <a href="/gallery" class="gallery-link">View Gallery</a> ·
       <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
       <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a> ·
       <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
@@ -26,30 +29,6 @@ permalink: /resume
     </div>
   </div>
 </div>
-
-<!-- Profile Photo Modal -->
-<div id="profile-modal" class="profile-modal" aria-hidden="true">
-  <div class="profile-popover" role="dialog" aria-modal="true" aria-label="Contact links">
-    <button id="profile-modal-close" class="profile-popover-close" aria-label="Close">×</button>
-
-    <div class="profile-popover-header">
-      <img src="/assets/profilephoto.bw.JPG"
-           alt="Katelyn Schoedl headshot"
-           class="profile-popover-photo">
-      <div class="profile-popover-text">
-        <div class="profile-popover-name">Katelyn M. Schoedl</div>
-        <div class="profile-popover-sub">Quick links</div>
-      </div>
-    </div>
-
-    <div class="profile-popover-links">
-      <a href="mailto:kschoedl8@gmail.com">Send me an email.</a>
-      <a href="/gallery">Click to View Gallery.</a>
-      <a href="https://www.linkedin.com/in/kmschoedl/">Contact Me On LinkedIn.</a>
-    </div>
-  </div>
-</div>
-
 
 <a class="resume-float"
    href="/assets/resume/kschoedl.resume.pdf"
@@ -252,13 +231,18 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 .resume-header{
   display:flex;
   align-items:center;
-  gap:32px;
+  gap:36px;
   margin-bottom:1.5rem;
 }
 
+.profile-photo-link{
+  display:inline-block;
+  text-decoration:none;
+}
+
 .profile-photo{
-  width:110px;
-  height:110px;
+  width:150px;
+  height:150px;
   object-fit:cover;
   border-radius:50%;
   border:2px solid rgba(255,255,255,0.25);
@@ -269,7 +253,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 }
 
 .profile-photo:hover{
-  transform: scale(1.3);
+  transform: scale(1.12);
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
@@ -278,7 +262,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 
 @media (max-width:640px){
   .resume-header{ flex-direction:column; text-align:center; }
-  .profile-photo{ width:95px; height:95px; }
+  .profile-photo{ width:130px; height:130px; }
 }
 
 .home-card{
@@ -327,6 +311,18 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 .contact-links{ font-size:0.95rem; opacity:0.9; }
 .contact-links a{ color:#fff; text-decoration:none; font-weight:500; }
 .contact-links a:hover{ color:#ddd; text-decoration:underline; }
+
+/* Top link = blue by default */
+.contact-links a.gallery-link{
+  color:#93c5fd;
+  text-shadow:
+    0 0 10px rgba(147,197,253,0.28),
+    0 0 20px rgba(147,197,253,0.14);
+}
+.contact-links a.gallery-link:hover{
+  color:#93c5fd;
+  text-decoration:underline;
+}
 
 /* SECTION LINES */
 .resume-section{
@@ -380,168 +376,4 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
     0 0 20px rgba(147,197,253,0.18);
   cursor: default;
 }
-
-/* Profile modal: small info-focused popover */
-.profile-modal{
-  position: fixed;
-  inset: 0;
-  z-index: 2500;
-  display: none;
-  background: rgba(0,0,0,0.72);
-  backdrop-filter: blur(10px);
-}
-
-.profile-modal.is-open{ display: block; }
-
-/* Popover card near upper-left */
-.profile-popover{
-  position: fixed;
-  top: 92px;
-  left: 56px;
-  width: min(420px, calc(100vw - 32px));
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,0.20);
-  background: rgba(255,255,255,0.06);
-  box-shadow:
-    0 0 22px rgba(255,255,255,0.10),
-    0 18px 60px rgba(0,0,0,0.55);
-  padding: 16px 16px 14px 16px;
-  overflow: hidden;
-  animation: profilePopoverIn 0.18s ease-out 1;
-}
-
-@keyframes profilePopoverIn{
-  from{ transform: translateY(6px) scale(0.985); opacity: 0; }
-  to{ transform: translateY(0) scale(1); opacity: 1; }
-}
-
-/* Mobile: center-ish and lower a bit so it’s not under nav */
-@media (max-width:640px){
-  .profile-popover{
-    top: 86px;
-    left: 16px;
-    right: 16px;
-    width: auto;
-  }
-}
-
-/* Close button */
-.profile-popover-close{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.08);
-  color: #fff;
-  font-size: 26px;
-  line-height: 1;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: background 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
-}
-
-.profile-popover-close:hover{
-  background: rgba(255,255,255,0.14);
-  transform: translateY(-1px);
-  box-shadow: 0 0 18px rgba(255,255,255,0.18);
-}
-
-/* Header row with round avatar */
-.profile-popover-header{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding-right: 44px; /* room for X */
-  margin-bottom: 12px;
-}
-
-.profile-popover-photo{
-  width: 84px;   /* bigger than header photo, but not huge */
-  height: 84px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.25);
-  box-shadow: 0 0 18px rgba(255,255,255,0.14);
-}
-
-.profile-popover-name{
-  font-weight: 800;
-  font-size: 1.05rem;
-  margin-bottom: 2px;
-}
-
-.profile-popover-sub{
-  opacity: 0.8;
-  font-size: 0.95rem;
-}
-
-/* Links: no boxes, just glow area */
-.profile-popover-links{
-  position: relative;
-  padding: 10px 12px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.05);
-  border: 0;
-  box-shadow: 0 0 22px rgba(255,255,255,0.08);
-  display: grid;
-  gap: 10px;
-}
-
-.profile-popover-links a{
-  color: rgba(255,255,255,0.92);
-  text-decoration: none;
-  font-weight: 700;
-  transition: color 0.18s ease, text-shadow 0.18s ease;
-}
-
-/* Hover = blue emphasis */
-.profile-popover-links a:hover{
-  color: #93c5fd;
-  text-shadow:
-    0 0 10px rgba(147,197,253,0.35),
-    0 0 20px rgba(147,197,253,0.18);
-}
-
 </style>
-
-<script>
-  (function () {
-    const photo = document.querySelector('.profile-photo');
-    const modal = document.getElementById('profile-modal');
-    const closeBtn = document.getElementById('profile-modal-close');
-
-    if (!photo || !modal || !closeBtn) return;
-
-    function openModal(e) {
-      // if photo was wrapped in a link previously, prevent navigation
-      if (e) e.preventDefault();
-      modal.classList.add('is-open');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      closeBtn.focus();
-    }
-
-    function closeModal() {
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-
-    photo.addEventListener('click', openModal);
-    closeBtn.addEventListener('click', closeModal);
-
-    modal.addEventListener('click', function (e) {
-      if (e.target === modal) closeModal();
-    });
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
-        closeModal();
-      }
-    });
-  })();
-</script>
