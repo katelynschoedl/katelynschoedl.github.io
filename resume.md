@@ -18,8 +18,7 @@ Seattle, Washington · Open to Relocation
   </a>
 </div>
 
-Contact:
-Mobile: +1 (847) 961-0243 · Email: kschoedl8@gmail.com
++1 (847) 961-0243 · kschoedl8@gmail.com
 
 [LinkedIn](https://www.linkedin.com/in/kmschoedl/) · [GitHub](https://github.com/katelynschoedl) · [ORCID](https://orcid.org/0009-0005-1689-7945)
 
@@ -218,3 +217,22 @@ Optical and photonic sensing systems, scientific instrumentation, particle and s
     Download PDF Résumé →
   </a>
 </div>
+
+<style>
+  .home-card {
+    display: block;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.04);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.15s ease, transform 0.12s ease;
+  }
+
+  .home-card:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-1px);
+  }
+</style>
