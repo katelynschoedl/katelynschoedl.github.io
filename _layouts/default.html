@@ -34,28 +34,16 @@
       color: white;
     }
 
-    
-    .gallery-section {
-      padding: 1.25rem 0;
+    /* Gallery sections: match resume separators (single thin line) */
+    .gallery-section{
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+  }
+
+    .gallery-section:last-of-type{
+    border-bottom: none;
     }
 
-    .gallery-section::before {
-      content: "";
-      display: block;
-      background: rgba(255,255,255,0.5);
-      height: 4px;
-      border-radius: 6px;
-
-      /* tighter left/right margins, centered */
-      margin: 0 auto 1.25rem auto;
-      width: calc(100% - 6rem); /* adjust for tighter sides */
-      max-width: 900px;
-    }
-
-    /* No divider before the first section */
-    .gallery-section:first-of-type::before {
-      display: none;
-    }
 
     
     /*GALLERY GRID */
