@@ -36,8 +36,6 @@ permalink: /resume
   </div>
 </div>
 
-
-
 <a class="resume-float"
    href="/assets/resume/kschoedl.resume.pdf"
    target="_blank"
@@ -180,11 +178,11 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 - American Alpine Club (AAC), Member
 - Boeing Alpine Society (BOEALPS), Member
 - Wilderness First Responder (WFR) with AED and CPR Certification  
-  National Outdoor Leadership School (NOLS) — December 2025 (Yosemite, CA)
+  *National Outdoor Leadership School (NOLS) - Yosemite, CA (December 2025)*
 - AIARE 1 Avalanche Training Certification  
-  Skyward Mountaineering — December 2025 (Silverton, CO)
+  *Skyward Mountaineering - Silverton, CO (December 2025)*
 - Avalanche Companion Rescue Training  
-  Alpine Ascents International x SheJumps — January 2025 (Snoqualmie, WA)
+  *Alpine Ascents International x SheJumps - Snoqualmie, WA (January 2025)*
 
 </div>
 
@@ -250,7 +248,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 }
 
 .profile-photo:hover{
-  transform: scale(1.4);
+  /* transform: scale(1.4); REMOVE THIS */
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
@@ -320,7 +318,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 }
 
   .profile-photo.is-zoomed{
-  transform: scale(1.15);
+  /* transform: scale(1.15); REMOVE THIS */
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
@@ -405,53 +403,19 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 }
 
 
-
-
-  
-/* Name hover = nav blue */
-.header-text h1{
-  transition: color 0.18s ease, text-shadow 0.18s ease;
-}
-.header-text h1:hover{
-  color: #93c5fd;
-  text-shadow:
-    0 0 10px rgba(147,197,253,0.35),
-    0 0 20px rgba(147,197,253,0.18);
-  cursor: default;
-  transform: translateY(-1px);
-}
-
-
-
-  
-</style>
-
-<script>
-(function () {
-  const photo = document.getElementById('profile-photo');
-  if (!photo) return;
-
-  let timer = null;
-
-  function zoomOnce() {
-    photo.classList.add('is-zoomed');
-    if (timer) clearTimeout(timer);
-    timer = setTimeout(() => {
-      photo.classList.remove('is-zoomed');
-      timer = null;
-    }, 1000);
+@media (max-width:640px){
+  .profile-photo,
+  .profile-photo:hover,
+  .profile-photo.is-zoomed{
+    transform: none !important;
   }
+}
 
-  photo.addEventListener('click', zoomOnce);
-  photo.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      zoomOnce();
-    }
-  });
-})();
-</script>
+/* Target lines that start with organization names */
+.resume-section li:has(+ li) {
+  font-style: normal;
+}
 
-
+</style>
 
 

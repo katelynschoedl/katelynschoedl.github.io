@@ -170,72 +170,31 @@ title: Gallery
 .album-panel{ overflow: hidden; }
 .album-embed{ padding: 10px 0; }
 
-
-  .album-panel-nav{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 12px;
+/* === Make Fieldwork album larger === */
+.album-grid[data-category="Fieldwork"] .album-tile{
+  grid-column: span 2; /* takes up 2 columns */
 }
 
-/* Prev/Next buttons match your glassy style */
-.album-nav-btn{
-  flex: 0 0 auto;
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.06);
-  color: #fff;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.15s ease, transform 0.12s ease;
+.album-grid[data-category="Fieldwork"] .album-tile img{
+  height: 280px; /* taller than default */
+  object-fit: cover;
 }
 
-.album-nav-btn:hover{
-  background: rgba(255,255,255,0.12);
-  transform: translateY(-1px);
+/* Hide the Fieldwork title caption */
+.album-grid[data-category="Fieldwork"] .album-tile-title{
+  display: none;
 }
 
-/* Caption strip scroll area */
-.album-caption-strip{
-  flex: 1 1 auto;
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding: 4px 2px;
-  scrollbar-width: none;
-}
-.album-caption-strip::-webkit-scrollbar{ display: none; }
-
-/* Caption pills */
-.album-caption-btn{
-  flex: 0 0 auto;
-  padding: 7px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: rgba(255,255,255,0.05);
-  color: #fff;
-  cursor: pointer;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  transition: background 0.15s ease;
-}
-
-.album-caption-btn:hover{
-  background: rgba(255,255,255,0.10);
-}
-
-.album-caption-btn.is-active{
-  background: rgba(147,197,253,0.22);
-  border-color: rgba(147,197,253,0.55);
-  color: #93c5fd;
-  box-shadow: 0 0 12px rgba(147,197,253,0.20);
-}
-
-/* Optional: tighten on mobile */
+/* Mobile: reset to normal size */
 @media (max-width: 640px){
-  .album-nav-btn{ padding: 7px 10px; font-size: 0.9rem; }
+  .album-grid[data-category="Fieldwork"] .album-tile{
+    grid-column: span 1;
+  }
+  .album-grid[data-category="Fieldwork"] .album-tile img{
+    height: auto;
+  }
 }
 
+</style>
 
-/* ==*
+
