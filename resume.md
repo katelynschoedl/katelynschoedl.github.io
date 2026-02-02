@@ -53,7 +53,7 @@ photonic systems, and academic research processes for geophysical science applic
 
 My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research
 coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental
-design workflows, precision measurement systems, and field operations for high-quality scientific data collection.
+design workflows, precision measurement systems, and field operations for high-quality scientific data collection. 
 <p class="highlight-text">I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
 engineering, experimental physics, and geophysical sciences.</p>
   </div>
@@ -248,7 +248,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 }
 
 .profile-photo:hover{
-  transform: scale(1.5);
+  transform: scale(1.4);
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
