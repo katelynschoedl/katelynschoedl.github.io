@@ -54,13 +54,12 @@ engineering, experimental physics, and geophysical sciences.
 
 ## Bachelor of Science in Electrical Engineering  
 ### University of Illinois at Urbana–Champaign (UIUC) 
+*Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement*
 August 2015 – May 2019
 
-*Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement*
-
-**Exchange Semester**  
-**Technical University of Denmark (DTU)**  
-2017 – 2018
+#### Technical University of Denmark (DTU)
+**Exchange Semester**
+*Fall 2017*
   </div>
 
   <div class="resume-section" markdown="1">
@@ -271,7 +270,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 .resume-float{
   position:fixed;
   top:110px;
-  right:50px;
+  right:150px;
   z-index:999;
   padding:10px 14px;
   border-radius:14px;
