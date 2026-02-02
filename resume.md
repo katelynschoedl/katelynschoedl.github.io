@@ -10,7 +10,7 @@ permalink: /resume
        alt="Katelyn Schoedl headshot"
        class="profile-photo"
        id="profile-photo"
-       aria-label="Open profile links"
+       aria-label="Profile photo"
        tabindex="0">
        
   <div class="header-text">
@@ -20,13 +20,17 @@ permalink: /resume
       <strong>Electrical Engineer</strong> | <strong>Research Coordinator</strong>
     </div>
 
-    <div class="contact-links">
-      <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
-      <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a> ·
-      <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
-      <a href="https://github.com/katelynschoedl">GitHub</a> ·
-      <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
-    </div>
+<div class="contact-links">
+  <span class="contact-primary">
+    <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
+    <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a>
+  </span>
+  <span class="contact-secondary">
+    · <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
+    <a href="https://github.com/katelynschoedl">GitHub</a> ·
+    <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
+  </span>
+</div>
   </div>
 </div>
 
@@ -50,8 +54,8 @@ photonic systems, and academic research processes for geophysical science applic
 My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research
 coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental
 design workflows, precision measurement systems, and field operations for high-quality scientific data collection.
-I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
-engineering, experimental physics, and geophysical sciences.
+<p class="highlight-text">I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
+engineering, experimental physics, and geophysical sciences.</p>
   </div>
 
   <div class="resume-section" markdown="1">
@@ -115,7 +119,7 @@ engineering, experimental physics, and geophysical sciences.
 </div>
 
   <div class="resume-section" markdown="1">
-## Undergraduate Roles and Internships
+## Undergraduate Roles 
 
 **Shop Assistant, Machine Shop and Services at ECE Illinois**  
 January 2018 – January 2019
@@ -129,6 +133,8 @@ February 2017 – May 2017
 **Barista, Daily Byte at ECE Illinois**  
 January 2016 – May 2017
 - Operated a high-volume campus café serving the ECE community.
+
+## Internships
 
 **Amazon Intern**  
 *Controls Engineering*  
@@ -226,6 +232,10 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   margin-bottom:1.5rem;
 }
 
+.resume-header{ position: relative; }
+.profile-photo{ position: relative; z-index: 3; cursor: pointer; }
+
+  
 .profile-photo{
   width:150px;
   height:150px;
@@ -262,29 +272,56 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   transition: background 0.15s ease, transform 0.12s ease;
 }
 .home-card:hover{ background:rgba(255,255,255,0.1); transform: translateY(-1px); }
-
 .resume-float{
-  position:fixed;
-  top:110px;
-  left:66%;
-  transform: translateX(-50%);
-  z-index:999;
-  padding:10px 14px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,0.18);
-  background:rgba(255,255,255,0.06);
+  position: fixed;
+  top: 110px;
+  right: 50px;
+  z-index: 999;
+
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
   backdrop-filter: blur(10px);
+
   color:#fff;
   text-decoration:none;
   font-weight:600;
   font-size:0.95rem;
+
   transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
   animation: resumeGlow 5s ease-out 1;
 }
+
 .resume-float:hover{
   background: rgba(255,255,255,0.12);
-  transform: translateX(-50%) translateY(-1px);
+  transform: translateY(-1px);
 }
+
+/* MOBILE: centered pill under nav, less overlap */
+@media (max-width:640px){
+  .resume-float{
+    top: 72px;                 /* less overlap with header/photo */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    border-radius: 999px;      /* pill */
+    max-width: calc(100vw - 28px);
+    text-align: center;
+    white-space: nowrap;
+    padding: 10px 14px;
+  }
+
+  .resume-float:hover{
+    transform: translateX(-50%) translateY(-1px);
+  }
+}
+
+  .profile-photo.is-zoomed{
+  transform: scale(1.15);
+  box-shadow: 0 0 18px rgba(255,255,255,0.25);
+}
+
 
 @keyframes resumeGlow{
   0%{ box-shadow:0 0 0 rgba(255,255,255,0); }
@@ -293,16 +330,20 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   100%{ box-shadow:0 0 0 rgba(255,255,255,0); }
 }
 
-.contact-links{ font-size:0.95rem; opacity:0.9; }
+.contact-links{ font-size:0.95rem; display: block; opacity:0.9; }
 .contact-links a{ color:#fff; text-decoration:none; font-weight:500; }
 .contact-links a:hover{ color:#ddd; text-decoration:underline; }
 
-/* SECTION LINES */
-.resume-section{
-  padding: 1.2rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.18);
-  transition: opacity 0.25s ease;
+
+
+.contact-secondary{
+  display: block;
+  margin-top: 6px;
+  opacity: 0.9;
 }
+
+/* SECTION LINES */
+
 .resume-section:last-child{ border-bottom:none; }
 
 /* HOVER DIM */
@@ -337,6 +378,15 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   opacity: 1;
 }
 
+.highlight-text{
+  transition:
+    color 0.18s ease,
+    text-shadow 0.18s ease,
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+  
 .resume-section:hover .highlight-text{
     color: #93c5fd;
   text-shadow:
@@ -346,6 +396,25 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   opacity: 1;
 }
 
+  .resume-section{
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.resume-section.is-active{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* subtle highlight effect */
+.resume-section.is-active{
+  box-shadow: inset 3px 0 0 rgba(120,180,255,0.55);
+  padding-left: 0.9rem;
+}
+
+
+  
 /* Name hover = nav blue */
 .header-text h1{
   transition: color 0.18s ease, text-shadow 0.18s ease;
@@ -359,49 +428,87 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   transform: translateY(-1px);
 }
 
+/* MOBILE/SCROLL ACTIVE = same as hover visuals */
+.resume-section.is-active h2{
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.22),
+    0 0 22px rgba(255,255,255,0.12);
+  transform: translateY(-1px) scale(1.02);
+  opacity: 1;
+}
+
+.resume-section.is-active h3{
+  color: #93c5fd;
+  text-shadow:
+    0 0 10px rgba(111,180,255,0.35),
+    0 0 20px rgba(111,180,255,0.18);
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+.resume-section.is-active .highlight-text{
+  color: #93c5fd;
+  text-shadow:
+    0 0 10px rgba(111,180,255,0.35),
+    0 0 20px rgba(111,180,255,0.18);
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+  
 </style>
 
 <script>
-  (function () {
-    const photo = document.getElementById('profile-photo');
-    const wrap = document.getElementById('profile-popover-wrap');
-    const closeBtn = document.getElementById('profile-popover-close');
+(function () {
+  // 1) Tap/click profile photo -> zoom for 1s -> shrink back
+  const photo = document.getElementById('profile-photo');
+  if (photo) {
+    let timer = null;
 
-    if (!photo || !wrap || !closeBtn) return;
-
-    function openPopover() {
-      wrap.classList.add('is-open');
-      wrap.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      closeBtn.focus();
+    function zoomOnce() {
+      photo.classList.add('is-zoomed');
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        photo.classList.remove('is-zoomed');
+        timer = null;
+      }, 1000);
     }
 
-    function closePopover() {
-      wrap.classList.remove('is-open');
-      wrap.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-
-    photo.addEventListener('click', openPopover);
-
-    // keyboard accessibility: Enter/Space opens
+    photo.addEventListener('click', zoomOnce);
     photo.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        openPopover();
+        zoomOnce();
       }
     });
+  }
 
-    closeBtn.addEventListener('click', closePopover);
+  // 2) Mobile-only: section "active" highlight on scroll (IntersectionObserver)
+  const sections = document.querySelectorAll('.resume-section');
+  if (!sections.length) return;
 
-    // click outside closes
-    wrap.addEventListener('click', (e) => {
-      if (e.target === wrap) closePopover();
-    });
+  function setActive(el) {
+    sections.forEach(s => s.classList.remove('is-active'));
+    el.classList.add('is-active');
+  }
 
-    // esc closes
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && wrap.classList.contains('is-open')) closePopover();
-    });
-  })();
+  const isMobile = window.matchMedia('(max-width: 640px)').matches;
+
+  if (isMobile) {
+    const obs = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visible) setActive(visible.target);
+    }, { threshold: [0.35, 0.5, 0.65] });
+
+    sections.forEach(s => obs.observe(s));
+  } else {
+    // Desktop: do NOT apply scroll "active" state
+    sections.forEach(s => s.classList.remove('is-active'));
+  }
+})();
 </script>
+
