@@ -198,6 +198,7 @@
   </style>
 </head>
 
+
 <body>
   <nav>
     <a href="/">Home</a>
@@ -212,5 +213,41 @@
   <main>
     {{ content }}
   </main>
+
+
+<script>
+  (function () {
+    const btn = document.querySelector(".resume-float");
+    if (!btn) return;
+
+    function onScroll() {
+      const y = window.scrollY || document.documentElement.scrollTop;
+      // Fade after ~140px. Fully gone after ~240px.
+      const start = 140;
+      const end = 240;
+
+      if (y <= start) {
+        btn.style.opacity = "1";
+        btn.style.pointerEvents = "auto";
+        return;
+      }
+
+      const t = Math.min(1, (y - start) / (end - start));
+      const opacity = String(1 - t);
+      btn.style.opacity = opacity;
+
+      // Once mostly faded, disable clicking so it doesn't “block” text.
+      if (t > 0.9) {
+        btn.style.pointerEvents = "none";
+      } else {
+        btn.style.pointerEvents = "auto";
+      }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
 </body>
 </html>
