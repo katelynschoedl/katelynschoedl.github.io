@@ -31,22 +31,7 @@ permalink: /resume
   </div>
 </div>
 
-<!-- Photo Click Popover -->
-<div id="profile-popover-wrap" class="profile-popover-wrap" aria-hidden="true">
-  <div class="profile-popover" role="dialog" aria-modal="true" aria-label="Profile links">
-    <button id="profile-popover-close" class="profile-popover-close" aria-label="Close">×</button>
 
-    <img src="/assets/profilephoto.bw.JPG"
-         alt="Katelyn Schoedl headshot"
-         class="profile-popover-photo">
-
-    <div class="profile-popover-links">
-      <a class="profile-popover-link primary" href="/gallery">View Gallery</a>
-      <a class="profile-popover-link" href="mailto:kschoedl8@gmail.com">Email me</a>
-      <a class="profile-popover-link" href="tel:+18479610243">+1 (847) 961-0243</a>
-    </div>
-  </div>
-</div>
 
 <a class="resume-float"
    href="/assets/resume/kschoedl.resume.pdf"
@@ -366,108 +351,6 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   cursor: default;
 }
 
-/* ===== Photo popover styles ===== */
-.profile-popover-wrap{
-  position: fixed;
-  inset: 0;
-  z-index: 2500;
-  display: none;
-  background: rgba(0,0,0,0.62);
-  backdrop-filter: blur(10px);
-}
-.profile-popover-wrap.is-open{ display:block; }
-
-.profile-popover{
-  position: fixed;
-  top: 92px;
-  left: 56px;
-  width: min(360px, calc(100vw - 28px));
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,0.20);
-  background: rgba(255,255,255,0.06);
-  box-shadow:
-    0 0 22px rgba(255,255,255,0.10),
-    0 18px 60px rgba(0,0,0,0.55);
-  padding: 16px 16px 14px 16px;
-  animation: profilePopoverIn 0.18s ease-out 1;
-}
-@keyframes profilePopoverIn{
-  from{ transform: translateY(6px) scale(0.985); opacity: 0; }
-  to{ transform: translateY(0) scale(1); opacity: 1; }
-}
-
-@media (max-width:640px){
-  .profile-popover{
-    top: 86px;
-    left: 14px;
-    right: 14px;
-    width: auto;
-  }
-}
-
-.profile-popover-close{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.08);
-  color: #fff;
-  font-size: 26px;
-  line-height: 1;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: background 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
-}
-.profile-popover-close:hover{
-  background: rgba(255,255,255,0.14);
-  transform: translateY(-1px);
-  box-shadow: 0 0 18px rgba(255,255,255,0.18);
-}
-
-.profile-popover-photo{
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.25);
-  box-shadow: 0 0 18px rgba(255,255,255,0.14);
-  margin-bottom: 12px;
-}
-
-.profile-popover-links{
-  padding: 10px 12px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 0 22px rgba(255,255,255,0.08);
-  display: grid;
-  gap: 10px;
-}
-
-.profile-popover-link{
-  color: rgba(255,255,255,0.92);
-  text-decoration: none;
-  font-weight: 800;
-  transition: color 0.18s ease, text-shadow 0.18s ease;
-}
-
-.profile-popover-link.primary{
-  color: #93c5fd;
-  text-shadow:
-    0 0 10px rgba(147,197,253,0.30),
-    0 0 18px rgba(147,197,253,0.15);
-}
-
-.profile-popover-link:hover{
-  color: #93c5fd;
-  text-shadow:
-    0 0 10px rgba(147,197,253,0.35),
-    0 0 20px rgba(147,197,253,0.18);
-}
 </style>
 
 <script>
