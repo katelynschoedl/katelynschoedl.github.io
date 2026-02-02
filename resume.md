@@ -25,18 +25,17 @@ permalink: /resume
       <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
     </div>
   </div>
-
 </div>
 
 <a class="resume-float"
    href="/assets/resume/kschoedl.resume.pdf"
-   target="_blank"
-   rel="noopener">
-  Download PDF Résumé →
-</a>
+     target="_blank"
+     rel="noopener">
+    Download PDF Résumé →
+  </a>
 
 <div class="resume-container">
-
+  
 <div class="resume-section">
 ## Profile
 
@@ -49,9 +48,7 @@ design workflows, precision measurement systems, and field operations for high-q
 I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
 engineering, experimental physics, and geophysical sciences.
 </div>
-
 ---
-
 <div class="resume-section">
 ## Education
 
@@ -61,17 +58,13 @@ engineering, experimental physics, and geophysical sciences.
 
 Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement
 </div>
-
 ---
-
 <div class="resume-section">
 ### Exchange Semester  
 **Technical University of Denmark (DTU)**  
 2017 – 2018
 </div>
-
 ---
-
 <div class="resume-section">
 ## Experience
 
@@ -86,9 +79,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Developed and maintained experimental workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations.
 - Maintained project websites and supported data dissemination platforms.
 </div>
-
 ---
-
 <div class="resume-section">
 ### Microsoft — Hardware Engineer II (Signal Integrity)  
 *Cloud AI Hardware and Advanced Signal Engineering*  
@@ -102,9 +93,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Collaborated with electrical, mechanical, and systems engineering teams to resolve SI and system integration issues.
 - Supported contract PCBA design reviews and monitored progress through manufacturing readiness.
 </div>
-
 ---
-
 <div class="resume-section">
 ### Amazon — Hardware Design Engineer (Satellite Avionics)  
 *Project Kuiper*  
@@ -117,9 +106,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Performed board bring-up, debugging, and validation.
 - Supported hardware radiation test campaigns.
 </div>
-
 ---
-
 <div class="resume-section">
 ### Amazon — Technical Program Coordinator (Robotic Automation Prototypes)
 *Worldwide Technical Engineering Services*  
@@ -131,9 +118,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Tracked development milestones through production and operational handoff.
 - Supported standardization of risk reviews and vendor evaluations.
 </div>
-
 ---
-
 <div class="resume-section">
 ### Undergraduate Roles and Internships
 
@@ -162,9 +147,7 @@ Niskayuna, NY | Summer 2016 & Summer 2017
 - Worked with industrial applications in edge computing and software systems.
 - Contributed to multi-year research initiatives spanning two summer appointments.
 </div>
-
 ---
-
 <div class="resume-section">
 ## Skills
 
@@ -183,9 +166,7 @@ Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Charac
 **Research & Field Operations**  
 Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation
 </div>
-
 ---
-
 <div class="resume-section">
 ## Professional Affiliations & Certifications
 
@@ -206,9 +187,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 - Washington State Rare Plant Monitor
 </div>
-
 ---
-
 <div class="resume-section">
 ## Field & Alpine Activities
 
@@ -216,9 +195,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 - SnowGoat Skimo Volunteer for Vertfest and Wy’Easter sanctioned ski mountaineering races  
 - Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
 </div>
-
 ---
-
 <div class="resume-section">
 ## Conferences & Workshops
 
@@ -228,18 +205,14 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 - **DesignCon**, Santa Clara, CA (2022)  
   Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing
 </div>
-
 ---
-
 <div class="resume-section">
 ## Interests
 
 Optical and photonic sensing systems, scientific instrumentation, particle and space physics hardware, precision measurement techniques, applied experimental research, and interdisciplinary scientific collaboration.
 </div>
-
 ---
-
-</div>
+</div> 
 
 
 
