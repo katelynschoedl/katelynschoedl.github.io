@@ -110,7 +110,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 
 ### Undergraduate Roles and Internships
 
-**Shop Assistant, ECE Illinois Machine Shop and Services**
+**Shop Assistant, Machine Shop and Services at ECE Illinois**
 January 2018 – January 2019
 - Supported machining, inventory, repair, and prototyping for ECE research and instructional labs.
 - Assisted students and staff.
@@ -122,6 +122,8 @@ February 2017 – May 2017
 **Barista, Daily Byte at ECE Illinois**
 January 2016 – May 2017
 - Operated a high-volume campus café serving the ECE community.
+
+
 
 **Amazon**
 *Controls Engineering Intern*
