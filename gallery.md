@@ -44,7 +44,7 @@ title: Gallery
 <script src="{{ site.baseurl }}/assets/js/gallery.js"></script>
 <script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
-<div class="embed-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-top:16px; align-items:start;">
+<div class="embed-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-top:16px; margin-bottom:16px; align-items:start;">
 
   <!-- Mountain Project -->
   <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03);">
@@ -73,6 +73,8 @@ title: Gallery
       </a>
     </p>
   </div>
+
+
 
 <style>
 /* Match resume section separators */
