@@ -100,7 +100,7 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Performed board bring-up, debugging, and validation.
 - Supported hardware radiation test campaigns.
 
-### Amazon — Technical Program Coordinator (Robotic Automation Prototypes)
+### Amazon — Technical Program Manager (Robotic Automation Prototypes)
 *Worldwide Technical Engineering Services*  
 **June 2019 – March 2020**
 
@@ -110,6 +110,9 @@ Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circui
 - Tracked development milestones through production and operational handoff.
 - Supported standardization of risk reviews and vendor evaluations.
 
+  </div>
+
+  <div class="resume-section" markdown="1">
 ### Undergraduate Roles and Internships
 
 **Shop Assistant, Machine Shop and Services at ECE Illinois**
@@ -166,16 +169,17 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 - Boeing Alpine Society (BOEALPS), Member  
 
-- **Wilderness First Responder (WFR) with AED and CPR Certification**  
+- Wilderness First Responder (WFR) with AED and CPR Certification  
   National Outdoor Leadership School (NOLS) — December 2025 (Yosemite, CA)
 
-- **AIARE 1 Avalanche Training Certification**  
+- AIARE 1 Avalanche Training Certification  
   Skyward Mountaineering — December 2025 (Silverton, CO)
 
-- **Avalanche Companion Rescue Training**  
+- Avalanche Companion Rescue Training  
   SheJumps — January 2025 (Snoqualmie, WA)
 
 - Washington State Rare Plant Monitor
+
   </div>
 
   <div class="resume-section" markdown="1">
@@ -184,6 +188,7 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 - Alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide  
 - SnowGoat Skimo Volunteer for Vertfest and Wy’Easter sanctioned ski mountaineering races  
 - Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
+
   </div>
 
   <div class="resume-section" markdown="1">
@@ -194,12 +199,14 @@ Hands-on system deployment, field logistics coordination, remote system monitori
 
 - **DesignCon**, Santa Clara, CA (2022)  
   Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing
+
   </div>
 
   <div class="resume-section" markdown="1">
 ## Interests
 
 Optical and photonic sensing systems, scientific instrumentation, particle and space physics hardware, precision measurement techniques, applied experimental research, and interdisciplinary scientific collaboration.
+  
   </div>
 
 </div>
