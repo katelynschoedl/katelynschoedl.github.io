@@ -252,6 +252,22 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
+<script>
+// When hovering profile photo, also highlight blue text
+const profilePhoto = document.getElementById('profile-photo');
+const highlightTexts = document.querySelectorAll('.highlight-text');
+
+if (profilePhoto) {
+  profilePhoto.addEventListener('mouseenter', () => {
+    highlightTexts.forEach(el => el.classList.add('photo-hover-active'));
+  });
+  
+  profilePhoto.addEventListener('mouseleave', () => {
+    highlightTexts.forEach(el => el.classList.remove('photo-hover-active'));
+  });
+}
+</script>
+
 .header-text h1{ margin:0 0 6px 0; font-size:2.1rem; }
 .title-line{ font-size:1.05rem; margin-bottom:6px; opacity:0.95; }
 
@@ -394,6 +410,15 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
     0 0 20px rgba(111,180,255,0.18);
   transform: translateY(-1px);
   opacity: 1;
+}
+
+.highlight-text.photo-hover-active{
+  color: #93c5fd !important;
+  text-shadow:
+    0 0 10px rgba(111,180,255,0.35),
+    0 0 20px rgba(111,180,255,0.18) !important;
+  transform: translateY(-1px) !important;
+  opacity: 1 !important;
 }
 
   .resume-section{
