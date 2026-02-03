@@ -4,7 +4,7 @@ title: Gallery
 ---
 
 <h1>Gallery</h1>
-<p>Albums are hosted on Flickr. Click an album to browse. <a href="#bottom">Scroll to bottom</a></p>
+<p>Photos are hosted on Flickr, click an album to browse. <a href="#bottom">Scroll to bottom.</a></p>
 
 <details class="gallery-section" open>
   <summary class="gallery-summary">Fieldwork</summary>
