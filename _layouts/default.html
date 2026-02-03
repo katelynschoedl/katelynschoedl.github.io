@@ -45,33 +45,34 @@
       color: white;
     }
 
-    /* Language toggle button - on the right */
+    /* Language toggle button - match nav style */
     .lang-toggle{
       display: inline-block;
-      margin-left: auto; /* pushes it to the right */
+      margin-left: 1.5rem; /* same gap as nav links */
     }
 
     .lang-btn{
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 999px;
-      padding: 6px 12px;
+      background: transparent; /* remove bubble */
+      border: none; /* remove border */
+      padding: 0;
       cursor: pointer;
-      font-size: 1.2rem;
-      transition: background 0.15s ease, transform 0.12s ease;
-      display: flex;
+      font-size: 0.95rem; /* match nav font size */
+      color: #93c5fd; /* match nav link color */
+      transition: color 0.15s ease, transform 0.12s ease;
+      display: inline-flex;
       align-items: center;
-      gap: 6px;
+      font-family: system-ui, sans-serif;
     }
 
     .lang-btn:hover{
-      background: rgba(255,255,255,0.12);
+      color: white; /* match nav hover */
       transform: translateY(-1px);
     }
 
     .lang-flag{
       display: inline-block;
       transition: transform 0.3s ease;
+      font-size: 1.1rem; /* slightly bigger for visibility */
     }
 
     /* Flip animation when switching */
