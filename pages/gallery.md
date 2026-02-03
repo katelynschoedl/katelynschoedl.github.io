@@ -50,9 +50,9 @@ permalink: /gallery
 <div id="bottom" class="embed-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-top:16px; margin-bottom:16px; align-items:start;">
 
   <!-- Mountain Project -->
-  <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); display: flex; gap: 12px; align-items: center;">
+  <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); display: flex; gap: 16px; align-items: center;">
     <a href="https://www.mountainproject.com/user/201701798/katelyn-schoedl" target="_blank" rel="noopener">
-      <img src="/assets/media/mplogo.svg" alt="Mountain Project" style="width: 2.5rem; height: 2.5rem; opacity: 0.75; transition: opacity 0.2s ease; flex-shrink: 0;">
+      <img src="/assets/media/mplogo.png" alt="Mountain Project" style="width: 2.5rem; height: 2.5rem; opacity: 0.75; transition: opacity 0.2s ease; flex-shrink: 0;">
     </a>
     <div>
       <h2 style="margin:0 0 4px 0;">Mountain Project</h2>
@@ -65,7 +65,7 @@ permalink: /gallery
   </div>
 
   <!-- Strava -->
-  <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); display: flex; gap: 12px; align-items: center;">
+  <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); display: flex; gap: 16px; align-items: center;">
     <a href="https://www.strava.com/athletes/64982141" target="_blank" rel="noopener">
       <img src="/assets/media/stravalogo.svg" alt="Strava" style="width: 2.5rem; height: 2.5rem; opacity: 0.75; transition: opacity 0.2s ease; flex-shrink: 0;">
     </a>
