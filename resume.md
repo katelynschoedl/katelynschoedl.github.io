@@ -257,6 +257,8 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 @media (max-width:640px){
   .resume-header{ flex-direction:column; text-align:center; }
   .profile-photo{ width:130px; height:130px; }
+  .title-line{ font-size:0.9rem; white-space: nowrap; }
+  .contact-links{ font-size:0.85rem; }
 }
 
 .home-card{
@@ -300,7 +302,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 /* MOBILE: centered pill under nav, less overlap */
 @media (max-width:640px){
   .resume-float{
-    top: 72px;                 /* less overlap with header/photo */
+    top: 95px;                 /* more space above profile photo */
     left: 50%;
     right: auto;
     transform: translateX(-50%);

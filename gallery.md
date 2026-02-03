@@ -3,8 +3,8 @@ layout: default
 title: Gallery
 ---
 
-<h1>Gallery</h1>
-<p>Photos are hosted on Flickr, click an album to browse. <a href="#bottom" style="color: #93c5fd; text-decoration: none;">Scroll to bottom.</a></p>
+<h1 id="top">Gallery</h1>
+<p>Click an album to browse. <a href="#bottom" style="color: #93c5fd; text-decoration: none;">Click to scroll to bottom.</a></p>
 
 <details class="gallery-section" open>
   <summary class="gallery-summary">Fieldwork</summary>
@@ -77,6 +77,10 @@ title: Gallery
   </div>
 
 </div>
+
+<p style="margin-top: 1.5rem; text-align: center;">
+  <a href="#top" style="color: #93c5fd; text-decoration: none;">Click to scroll to top.</a>
+</p>
 
 <style>
 /* === SECTION SEPARATORS: match resume (single bottom line) === */
@@ -160,17 +164,19 @@ title: Gallery
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 0;
 }
 
 /* Flickr injects iframe/content; keep centered */
 .album-embed > a,
 .album-embed iframe{
   max-width: 100%;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6), 0 0 60px rgba(0,0,0,0.4);
+  border-radius: 8px;
 }
 
 /* Optional: prevents weird overflow from embeds */
 .album-panel{ overflow: hidden; }
-.album-embed{ padding: 10px 0; }
 
 /* === Make Fieldwork album larger === */
 .album-grid[data-category="Fieldwork"] .album-tile{
