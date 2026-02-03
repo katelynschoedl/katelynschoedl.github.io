@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Gallery
+permalink: /gallery
 ---
 
 <h1 id="top">Gallery</h1>
