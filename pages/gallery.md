@@ -49,31 +49,33 @@ title: Gallery
 <div id="bottom" class="embed-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-top:16px; margin-bottom:16px; align-items:start;">
 
   <!-- Mountain Project -->
-  <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03);">
-    <h2 style="margin:0 0 8px 0;">Mountain Project</h2>
-    <p style="margin:0 0 14px 0; color:rgba(255,255,255,0.75);">
-      Ticks, routes, and climbing history.
-    </p>
-    <p style="margin:0;">
-      <a class="button" style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#fff; text-decoration:none; font-size:0.95rem;"
-         href="https://www.mountainproject.com/user/201701798/katelyn-schoedl" target="_blank" rel="noopener">
-        View my Mountain Project profile →
+  <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); display: flex; gap: 12px; align-items: center;">
+    <a href="https://www.mountainproject.com/user/201701798/katelyn-schoedl" target="_blank" rel="noopener">
+      <img src="/assets/media/mplogo.svg" alt="Mountain Project" style="width: 2.5rem; height: 2.5rem; opacity: 0.75; transition: opacity 0.2s ease; flex-shrink: 0;">
+    </a>
+    <div>
+      <h2 style="margin:0 0 4px 0;">Mountain Project</h2>
+      <a href="https://www.mountainproject.com/user/201701798/katelyn-schoedl" 
+         style="color: #93c5fd; text-decoration: none; transition: color 0.2s ease; font-size: 0.9rem;"
+         target="_blank" rel="noopener">
+        View my ticks, routes, and climbing history →
       </a>
-    </p>
+    </div>
   </div>
 
   <!-- Strava -->
-  <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03);">
-    <h2 style="margin:0 0 8px 0;">Strava</h2>
-    <p style="margin:0 0 14px 0; color:rgba(255,255,255,0.75);">
-      Latest public activity.
-    </p>
-    <p style="margin:0;">
-      <a class="button" style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#fff; text-decoration:none; font-size:0.95rem;"
-         href="https://www.strava.com/athletes/64982141" target="_blank" rel="noopener">
-        View my Strava profile →
+  <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); display: flex; gap: 12px; align-items: center;">
+    <a href="https://www.strava.com/athletes/64982141" target="_blank" rel="noopener">
+      <img src="/assets/media/stravalogo.svg" alt="Strava" style="width: 2.5rem; height: 2.5rem; opacity: 0.75; transition: opacity 0.2s ease; flex-shrink: 0;">
+    </a>
+    <div>
+      <h2 style="margin:0 0 4px 0;">Strava</h2>
+      <a href="https://www.strava.com/athletes/64982141" 
+         style="color: #93c5fd; text-decoration: none; transition: color 0.2s ease; font-size: 0.9rem;"
+         target="_blank" rel="noopener">
+        View my latest public activity →
       </a>
-    </p>
+    </div>
   </div>
 
 </div>

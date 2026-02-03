@@ -6,7 +6,7 @@ permalink: /resume
 
 <div class="resume-header">
 
-  <img src="/assets/profilephoto.bw.JPG"
+  <img src="/assets/media/profilephoto.bw.JPG"
        alt="Katelyn Schoedl headshot"
        class="profile-photo"
        id="profile-photo"

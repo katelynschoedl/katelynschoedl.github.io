@@ -28,7 +28,7 @@ title: Home
 </section>
 
 <div class="wave-container" aria-hidden="true">
-  <img src="/assets/wavegif.gif"
+  <img src="/assets/media/wavegif.gif"
        alt=""
        class="wave-gif">
 </div>
