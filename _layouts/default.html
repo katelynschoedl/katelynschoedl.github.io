@@ -59,6 +59,29 @@ header {
   gap: 1rem;
 }
 
+/* Footer layout */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+footer a:hover {
+  color: #93c5fd;
+}
+
 .site-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -201,8 +224,6 @@ main {
   padding: 16px;
   position: relative;
 
-  /* roughly “two rows tall” feel */
-  min-height: 520px;
 }
 
 .album-panel-left {
@@ -414,6 +435,14 @@ window.addEventListener('load', () => {
 <!-- Google Translate Script -->
 <div id="google_translate_element" style="display:none;"></div>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<footer>
+  <div>
+    <a href="tel:+18479610243">+1 (847) 961-0243</a> · 
+    <a href="{{ site.baseurl }}/resume">Katelyn Schoedl</a> · 
+    <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a>
+  </div>
+</footer>
 
 </body>
 </html>
