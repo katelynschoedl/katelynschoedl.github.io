@@ -214,7 +214,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 </div>
 
 <div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
-  <a href="/assets/resume/kschoedl.resume.pdf"
+  <a href="/resume/kschoedl.resume.pdf"
      class="home-card"
      target="_blank"
      rel="noopener">
