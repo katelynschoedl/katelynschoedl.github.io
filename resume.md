@@ -245,13 +245,29 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.profile-photo:hover{
+.profile-photo:hover,
+.profile-photo.photo-glow-active{
   transform: scale(1.08); /* slight zoom */
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
 
-.header-text h1{ margin:0 0 6px 0; font-size:2.1rem; }
+.header-text h1{ 
+  margin:0 0 6px 0; 
+  font-size:2.1rem;
+  cursor: pointer;
+  transition: color 0.18s ease, text-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.header-text h1:hover,
+.header-text h1.name-hover-active{
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.22),
+    0 0 22px rgba(255,255,255,0.12);
+  transform: translateY(-1px);
+}
+
 .title-line{ font-size:1.05rem; margin-bottom:6px; opacity:0.95; }
 
 @media (max-width:640px){
@@ -370,6 +386,15 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   opacity: 1;
 }
 
+.resume-section h2.profile-title-active{
+  color: #ffffff !important;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.22),
+    0 0 22px rgba(255,255,255,0.12) !important;
+  transform: translateY(-1px) scale(1.02) !important;
+  opacity: 1 !important;
+}
+
 .resume-section:hover h3{
   color: #93c5fd;
   text-shadow:
@@ -444,14 +469,36 @@ body .bold-text.photo-hover-active,
 <script>
 const profilePhoto = document.getElementById('profile-photo');
 const highlightTexts = document.querySelectorAll('.highlight-text');
+const userName = document.querySelector('.header-text h1');
+const profileTitle = document.querySelector('.resume-section h2');
 
+// Photo hover: highlight blue text, name glow, and Profile title shift
 if (profilePhoto) {
   profilePhoto.addEventListener('mouseenter', () => {
     highlightTexts.forEach(el => el.classList.add('photo-hover-active'));
+    if (userName) userName.classList.add('name-hover-active');
+    if (profileTitle) profileTitle.classList.add('profile-title-active');
   });
   
   profilePhoto.addEventListener('mouseleave', () => {
     highlightTexts.forEach(el => el.classList.remove('photo-hover-active'));
+    if (userName) userName.classList.remove('name-hover-active');
+    if (profileTitle) profileTitle.classList.remove('profile-title-active');
+  });
+}
+
+// Name hover: trigger all effects (name glow, photo glow, blue text, Profile title)
+if (userName) {
+  userName.addEventListener('mouseenter', () => {
+    highlightTexts.forEach(el => el.classList.add('photo-hover-active'));
+    if (profilePhoto) profilePhoto.classList.add('photo-glow-active');
+    if (profileTitle) profileTitle.classList.add('profile-title-active');
+  });
+  
+  userName.addEventListener('mouseleave', () => {
+    highlightTexts.forEach(el => el.classList.remove('photo-hover-active'));
+    if (profilePhoto) profilePhoto.classList.remove('photo-glow-active');
+    if (profileTitle) profileTitle.classList.remove('profile-title-active');
   });
 }
 </script>
