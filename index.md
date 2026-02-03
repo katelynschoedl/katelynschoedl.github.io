@@ -52,6 +52,11 @@ title: Home
     transform: translateY(-1px);
   }
 
+/* Hide footer on homepage since wave is there */
+footer {
+  display: none;
+}
+
 .wave-container{
   position: fixed;
   left: 0;
