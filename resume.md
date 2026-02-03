@@ -302,7 +302,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 /* MOBILE: centered pill under nav, below contact links */
 @media (max-width:640px){
   .resume-float{
-    top: 400px;                /* positioned below LinkedIn/GitHub/ORCID line */
+    top: 390px;                /* positioned below LinkedIn/GitHub/ORCID line */
     left: 50%;
     right: auto;
     transform: translateX(-50%);
