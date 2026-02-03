@@ -51,8 +51,15 @@ permalink: /resume
 <p class="highlight-text">Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication,
 photonic systems, and academic research processes for geophysical science applications.</p>
 
-My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research
-coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental design workflows, precision measurement systems, and field operations for high-quality scientific data collection. <p class="bold-text">I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware engineering, experimental physics, and geophysical sciences.</p>
+<div class="resume-section">
+<h2>Profile (continued)</h2>
+
+<p>My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research
+coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental design workflows, precision measurement systems, and field operations for high-quality scientific data collection.</p>
+
+<p class="bold-text">I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
+engineering, experimental physics, and geophysical sciences.</p>
+  </div>
   </div>
 
   <div class="resume-section" markdown="1">
