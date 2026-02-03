@@ -48,18 +48,13 @@ permalink: /resume
   <div class="resume-section" markdown="1">
 ## Profile
 
-<p class="highlight-text">Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication,
-photonic systems, and academic research processes for geophysical science applications.</p>
+<h2>Profile</h2>
 
-<div class="resume-section">
-<h2>Profile (continued)</h2>
+<p class="highlight-text">Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication, photonic systems, and academic research processes for geophysical science applications.</p>
 
-<p>My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research
-coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental design workflows, precision measurement systems, and field operations for high-quality scientific data collection.</p>
+<p>My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental design workflows, precision measurement systems, and field operations for high-quality scientific data collection.</p>
 
-<p class="bold-text">I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
-engineering, experimental physics, and geophysical sciences.</p>
-  </div>
+<p><span class="highlight-text">I am actively seeking roles</span> in applied research and instrumentation alongside future graduate study at the intersection of hardware engineering, experimental physics, and geophysical sciences.</p>
   </div>
 
   <div class="resume-section" markdown="1">
@@ -257,21 +252,6 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
-.bold-text{
-  transition: font-weight 0.18s ease, opacity 0.18s ease;
-}
-
-.resume-section:hover .bold-text{
-  font-weight: 700;
-  opacity: 1;
-}
-
-.bold-text.photo-hover-active,
-body .bold-text.photo-hover-active,
-.resume-container .bold-text.photo-hover-active{
-  font-weight: 700 !important;
-  opacity: 1 !important;
-}
 
 .header-text h1{ margin:0 0 6px 0; font-size:2.1rem; }
 .title-line{ font-size:1.05rem; margin-bottom:6px; opacity:0.95; }
@@ -463,7 +443,7 @@ body .bold-text.photo-hover-active,
 
 <script>
 const profilePhoto = document.getElementById('profile-photo');
-const highlightTexts = document.querySelectorAll('.highlight-text, .bold-text');
+const highlightTexts = document.querySelectorAll('.highlight-text');
 
 if (profilePhoto) {
   profilePhoto.addEventListener('mouseenter', () => {
