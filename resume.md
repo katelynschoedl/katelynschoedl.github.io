@@ -299,10 +299,10 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   transform: translateY(-1px);
 }
 
-/* MOBILE: centered pill under nav, less overlap */
+/* MOBILE: centered pill under nav, below contact links */
 @media (max-width:640px){
   .resume-float{
-    top: 95px;                 /* more space above profile photo */
+    top: 520px;                /* positioned below LinkedIn/GitHub/ORCID line */
     left: 50%;
     right: auto;
     transform: translateX(-50%);
