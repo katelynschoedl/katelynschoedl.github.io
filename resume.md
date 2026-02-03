@@ -48,8 +48,6 @@ permalink: /resume
   <div class="resume-section" markdown="1">
 ## Profile
 
-<h2>Profile</h2>
-
 <p class="highlight-text">Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication, photonic systems, and academic research processes for geophysical science applications.</p>
 
 <p>My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental design workflows, precision measurement systems, and field operations for high-quality scientific data collection.</p>
