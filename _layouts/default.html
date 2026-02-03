@@ -10,6 +10,87 @@
   <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/ks.icon.jpg">
 
   <style>
+
+    /* ADD THIS SECTION - Header layout */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .site-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin: 0;
+    }
+
+    nav a {
+      margin-right: 1.5rem;
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    /* Language toggle button */
+    .lang-toggle{
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    .lang-btn{
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background 0.15s ease, transform 0.12s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lang-btn:hover{
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-1px);
+    }
+
+    .lang-flag{
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    /* Flip animation when switching */
+    .lang-flag.flip{
+      animation: flipFlag 0.4s ease;
+    }
+
+    @keyframes flipFlag{
+      0%{ transform: rotateY(0deg); }
+      50%{ transform: rotateY(90deg); opacity: 0.3; }
+      100%{ transform: rotateY(0deg); }
+    }
+
+    /* Mobile: stack or keep inline */
+    @media (max-width: 640px){
+      .lang-toggle{ margin-left: auto; }
+    }
+
     body {
       font-family: system-ui, sans-serif;
       margin: 0;
@@ -23,6 +104,7 @@
       margin: 0 auto;
     }
 
+    /* DELETE THESE DUPLICATE NAV STYLES ↓ */
     nav {
       margin-bottom: 2rem;
     }
@@ -37,6 +119,7 @@
     nav a:hover {
       color: white;
     }
+    /* ↑ DELETE TO HERE - already defined above */
 
     /* Gallery sections: match resume separators (single thin line) */
     .gallery-section{
@@ -192,13 +275,21 @@
 
 
 <body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/resume">Résumé</a>
-<!-- <a href="/projects">Projects</a> -->
-<!-- <a href="/alpine">Alpine</a> -->
-    <a href="/gallery">Gallery</a>
-  </nav>
+  <header>
+    <a href="{{ site.baseurl }}/" class="site-title">Katelyn Schoedl</a>
+    <nav>
+      <a href="{{ site.baseurl }}/">Home</a>
+      <a href="{{ site.baseurl }}/resume">Resume</a>
+      <a href="{{ site.baseurl }}/gallery">Gallery</a>
+      
+      <!-- Language toggle -->
+      <div class="lang-toggle">
+        <button id="lang-btn" class="lang-btn" aria-label="Toggle language">
+          <span class="lang-flag" id="current-flag">🇺🇸</span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
 
   
@@ -241,5 +332,56 @@
   })();
 </script>
 
-</body>
-</html>
+
+<script>
+// Language toggle functionality
+const langBtn = document.getElementById('lang-btn');
+const flagSpan = document.getElementById('current-flag');
+let currentLang = 'en';
+
+// Initialize Google Translate
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,fr',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+
+// Toggle language on button click
+langBtn.addEventListener('click', () => {
+  flagSpan.classList.add('flip');
+  
+  setTimeout(() => {
+    if (currentLang === 'en') {
+      // Switch to French
+      flagSpan.textContent = '🇫🇷';
+      currentLang = 'fr';
+      
+      // Trigger Google Translate to French
+      const selectElement = document.querySelector('.goog-te-combo');
+      if (selectElement) {
+        selectElement.value = 'fr';
+        selectElement.dispatchEvent(new Event('change'));
+      }
+    } else {
+      // Switch back to English
+      flagSpan.textContent = '🇺🇸';
+      currentLang = 'en';
+      
+      const selectElement = document.querySelector('.goog-te-combo');
+      if (selectElement) {
+        selectElement.value = 'en';
+        selectElement.dispatchEvent(new Event('change'));
+      }
+    }
+    
+    flagSpan.classList.remove('flip');
+  }, 150);
+});
+</script>
+
+<!-- Google Translate Script -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
