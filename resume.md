@@ -116,6 +116,7 @@ engineering, experimental physics, and geophysical sciences.</p>
 - Coordinated on-site installations, commissioning, and documentation with engineering and operations teams.
 - Tracked development milestones through production and operational handoff.
 - Supported standardization of risk reviews and vendor evaluations.
+
 </div>
 
   <div class="resume-section" markdown="1">
@@ -252,20 +253,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
-<script>
-const profilePhoto = document.getElementById('profile-photo');
-const highlightTexts = document.querySelectorAll('.highlight-text');
 
-if (profilePhoto) {
-  profilePhoto.addEventListener('mouseenter', () => {
-    highlightTexts.forEach(el => el.classList.add('photo-hover-active'));
-  });
-  
-  profilePhoto.addEventListener('mouseleave', () => {
-    highlightTexts.forEach(el => el.classList.remove('photo-hover-active'));
-  });
-}
-</script>
 
 .header-text h1{ margin:0 0 6px 0; font-size:2.1rem; }
 .title-line{ font-size:1.05rem; margin-bottom:6px; opacity:0.95; }
@@ -439,3 +427,17 @@ if (profilePhoto) {
 </style>
 
 
+<script>
+const profilePhoto = document.getElementById('profile-photo');
+const highlightTexts = document.querySelectorAll('.highlight-text');
+
+if (profilePhoto) {
+  profilePhoto.addEventListener('mouseenter', () => {
+    highlightTexts.forEach(el => el.classList.add('photo-hover-active'));
+  });
+  
+  profilePhoto.addEventListener('mouseleave', () => {
+    highlightTexts.forEach(el => el.classList.remove('photo-hover-active'));
+  });
+}
+</script>
