@@ -431,12 +431,20 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 const profilePhoto = document.getElementById('profile-photo');
 const highlightTexts = document.querySelectorAll('.highlight-text');
 
+console.log('Profile photo element:', profilePhoto);
+console.log('Found highlight texts:', highlightTexts.length);
+
 if (profilePhoto) {
   profilePhoto.addEventListener('mouseenter', () => {
-    highlightTexts.forEach(el => el.classList.add('photo-hover-active'));
+    console.log('Photo hovered! Adding active class...');
+    highlightTexts.forEach(el => {
+      el.classList.add('photo-hover-active');
+      console.log('Added class to:', el);
+    });
   });
   
   profilePhoto.addEventListener('mouseleave', () => {
+    console.log('Photo unhovered! Removing active class...');
     highlightTexts.forEach(el => el.classList.remove('photo-hover-active'));
   });
 }
