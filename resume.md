@@ -52,10 +52,7 @@ permalink: /resume
 photonic systems, and academic research processes for geophysical science applications.</p>
 
 My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research
-coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental
-design workflows, precision measurement systems, and field operations for high-quality scientific data collection. 
-<p class="highlight-text">I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware
-engineering, experimental physics, and geophysical sciences.</p>
+coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental design workflows, precision measurement systems, and field operations for high-quality scientific data collection. <p class="bold-text">I am seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware engineering, experimental physics, and geophysical sciences.</p>
   </div>
 
   <div class="resume-section" markdown="1">
@@ -249,11 +246,25 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 }
 
 .profile-photo:hover{
-  /* transform: scale(1.4); REMOVE THIS */
+  transform: scale(1.08); /* slight zoom */
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
+.bold-text{
+  transition: font-weight 0.18s ease, opacity 0.18s ease;
+}
 
+.resume-section:hover .bold-text{
+  font-weight: 700;
+  opacity: 1;
+}
+
+.bold-text.photo-hover-active,
+body .bold-text.photo-hover-active,
+.resume-container .bold-text.photo-hover-active{
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
 
 .header-text h1{ margin:0 0 6px 0; font-size:2.1rem; }
 .title-line{ font-size:1.05rem; margin-bottom:6px; opacity:0.95; }
@@ -388,7 +399,6 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
     transform 0.18s ease,
     opacity 0.18s ease;
 }
-
   
 .resume-section:hover .highlight-text{
     color: #93c5fd;
@@ -408,7 +418,24 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   opacity: 1 !important;
 }
 
-  .resume-section{
+/* Add this NEW section for bold-text */
+.bold-text{
+  transition: font-weight 0.18s ease, opacity 0.18s ease;
+}
+
+.resume-section:hover .bold-text{
+  font-weight: 700;
+  opacity: 1;
+}
+
+.bold-text.photo-hover-active,
+body .bold-text.photo-hover-active,
+.resume-container .bold-text.photo-hover-active{
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.resume-section{
   padding: 1.2rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.18);
   transition: opacity 0.25s ease;
@@ -429,22 +456,14 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 
 <script>
 const profilePhoto = document.getElementById('profile-photo');
-const highlightTexts = document.querySelectorAll('.highlight-text');
-
-console.log('Profile photo element:', profilePhoto);
-console.log('Found highlight texts:', highlightTexts.length);
+const highlightTexts = document.querySelectorAll('.highlight-text, .bold-text');
 
 if (profilePhoto) {
   profilePhoto.addEventListener('mouseenter', () => {
-    console.log('Photo hovered! Adding active class...');
-    highlightTexts.forEach(el => {
-      el.classList.add('photo-hover-active');
-      console.log('Added class to:', el);
-    });
+    highlightTexts.forEach(el => el.classList.add('photo-hover-active'));
   });
   
   profilePhoto.addEventListener('mouseleave', () => {
-    console.log('Photo unhovered! Removing active class...');
     highlightTexts.forEach(el => el.classList.remove('photo-hover-active'));
   });
 }

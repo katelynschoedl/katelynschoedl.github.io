@@ -109,8 +109,17 @@ nav a:hover {
 
 .lang-flag{
   display: inline-block;
-  transition: transform 0.3s ease;
-  font-size: 1.1rem; /* slightly bigger for visibility */
+  transition: opacity 0.25s ease, transform 0.12s ease;
+  opacity: 0.1; /* much more dimmed */
+}
+
+.lang-flag.active{
+  opacity: 1; /* active language at full brightness */
+}
+
+.lang-separator{
+  opacity: 0.25; /* keep separator dim */
+  margin: 0 4px;
 }
 
 /* Flip animation when switching */
