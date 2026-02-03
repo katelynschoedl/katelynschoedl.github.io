@@ -170,6 +170,7 @@ title: Gallery
 /* Flickr injects iframe/content; keep centered */
 .album-embed > a,
 .album-embed iframe{
+  width: 640px;
   max-width: 100%;
   box-shadow: 0 0 30px rgba(0,0,0,0.6), 0 0 60px rgba(0,0,0,0.4);
   border-radius: 8px;
