@@ -5,6 +5,7 @@ title: Gallery
 
 <h1>Gallery</h1>
 <p>Albums are hosted on Flickr. Click an album to browse.</p>
+<p><a href="#bottom" style="color: #4a9eff;">Scroll to bottom</a></p>
 
 <details class="gallery-section" open>
   <summary class="gallery-summary">Fieldwork</summary>
@@ -44,7 +45,9 @@ title: Gallery
 <script src="{{ site.baseurl }}/assets/js/gallery.js"></script>
 <script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
-<div class="embed-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-top:16px; margin-bottom:16px; align-items:start;">
+<hr style="border: none; border-top: 1px solid rgba(255,255,255,0.18); margin: 2rem 0;">
+
+<div id="bottom" class="embed-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-top:16px; margin-bottom:16px; align-items:start;">
 
   <!-- Mountain Project -->
   <div class="card" style="padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03);">
