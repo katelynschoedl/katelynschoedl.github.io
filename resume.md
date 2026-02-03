@@ -37,7 +37,7 @@ permalink: /resume
 </div>
 
 <a class="resume-float"
-   href="/assets/resume/kschoedl.resume.pdf"
+   href="/resume/kschoedl.resume.pdf"
    target="_blank"
    rel="noopener">
   Download PDF Résumé →
