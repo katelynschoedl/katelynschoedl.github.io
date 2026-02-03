@@ -253,7 +253,6 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 }
 
 <script>
-// When hovering profile photo, also highlight blue text
 const profilePhoto = document.getElementById('profile-photo');
 const highlightTexts = document.querySelectorAll('.highlight-text');
 
@@ -436,10 +435,6 @@ if (profilePhoto) {
   }
 }
 
-/* Target lines that start with organization names */
-.resume-section li:has(+ li) {
-  font-style: normal;
-}
 
 </style>
 
