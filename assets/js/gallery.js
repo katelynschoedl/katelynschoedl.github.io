@@ -1,7 +1,7 @@
 // assets/js/gallery.js
 // Renders a grid of Flickr albums from a local list (no API key needed).
 // On click, injects Flickr's album embed inline (no lightbox).
-<script src="{{ site.baseurl }}/assets/js/gallery.js?v=3"></script>
+
 const ALBUMS = [
   // ===== Fieldwork =====
     {
