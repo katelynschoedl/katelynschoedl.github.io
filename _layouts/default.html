@@ -321,31 +321,30 @@
 const langBtn = document.getElementById('lang-btn');
 const flagSpan = document.getElementById('current-flag');
 let currentLang = 'en';
-let googleTranslateReady = false;
 
 // Initialize Google Translate
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
     pageLanguage: 'en',
-    includedLanguages: 'en,fr',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
+    includedLanguages: 'en,fr'
   }, 'google_translate_element');
   
-  // Wait for Google Translate to be ready
-  setTimeout(() => {
-    googleTranslateReady = true;
-    console.log('Google Translate ready!');
-  }, 1500);
+  console.log('Google Translate initialized');
+}
+
+// Function to trigger translation via cookie
+function translatePage(lang) {
+  // Set Google Translate cookie
+  const domain = window.location.hostname;
+  document.cookie = `googtrans=/en/${lang}; path=/; domain=${domain}`;
+  document.cookie = `googtrans=/en/${lang}; path=/;`;
+  
+  // Reload page to apply translation
+  window.location.reload();
 }
 
 // Toggle language on button click
 langBtn.addEventListener('click', () => {
-  if (!googleTranslateReady) {
-    console.log('Google Translate not ready yet, please wait...');
-    return;
-  }
-  
   flagSpan.classList.add('flip');
   
   setTimeout(() => {
@@ -353,29 +352,27 @@ langBtn.addEventListener('click', () => {
       // Switch to French
       flagSpan.textContent = '🇫🇷';
       currentLang = 'fr';
-      
-      // Trigger Google Translate to French
-      const selectElement = document.querySelector('.goog-te-combo');
-      if (selectElement) {
-        selectElement.value = 'fr';
-        selectElement.dispatchEvent(new Event('change'));
-      } else {
-        console.log('Translation dropdown not found');
-      }
+      translatePage('fr');
+      console.log('Switching to French');
     } else {
       // Switch back to English
       flagSpan.textContent = '🇺🇸';
       currentLang = 'en';
-      
-      const selectElement = document.querySelector('.goog-te-combo');
-      if (selectElement) {
-        selectElement.value = 'en';
-        selectElement.dispatchEvent(new Event('change'));
-      }
+      translatePage('en');
+      console.log('Switching to English');
     }
     
     flagSpan.classList.remove('flip');
   }, 150);
+});
+
+// Check if page is already translated on load
+window.addEventListener('load', () => {
+  const cookies = document.cookie;
+  if (cookies.includes('googtrans=/en/fr')) {
+    currentLang = 'fr';
+    flagSpan.textContent = '🇫🇷';
+  }
 });
 </script>
 
