@@ -6,7 +6,7 @@ permalink: /resume
 
 <div class="resume-header">
 
-  <img src="/assets/media/profilephoto.bw.JPG"
+  <img src="{{ site.data.resume.contact.profile_photo }}"
        alt="Katelyn Schoedl headshot"
        class="profile-photo"
        id="profile-photo"
@@ -46,7 +46,7 @@ permalink: /resume
 <div class="resume-container">
 
   <div class="resume-section" markdown="1">
-## Profile
+## {{ site.data.resume.section_titles.profile }}
 
 <p class="highlight-text">{{ site.data.resume.profile.objective }}</p>
 
@@ -56,7 +56,7 @@ permalink: /resume
   </div>
 
   <div class="resume-section" markdown="1">
-## Education
+## {{ site.data.resume.section_titles.education }}
 
 {% for edu in site.data.resume.education %}
 ### {{ edu.institution }}
@@ -71,7 +71,7 @@ permalink: /resume
 </div>
 
   <div class="resume-section" markdown="1">
-## Experience
+## {{ site.data.resume.section_titles.experience }}
 
 {% for exp in site.data.resume.experience %}
 ### {{ exp.organization }} — {{ exp.title }}  
@@ -86,7 +86,7 @@ permalink: /resume
 </div>
 
   <div class="resume-section" markdown="1">
-## Undergraduate Roles 
+## {{ site.data.resume.section_titles.undergraduate_roles }}
 
 {% for role in site.data.resume.undergraduate_roles %}
 **{{ role.title }}, {{ role.organization }}**  
@@ -97,7 +97,7 @@ permalink: /resume
 
 {% endfor %}
 
-## Internships
+## {{ site.data.resume.section_titles.internships }}
 
 {% for intern in site.data.resume.internships %}
 **{{ intern.title }}**  
@@ -111,7 +111,7 @@ permalink: /resume
 </div>
 
   <div class="resume-section" markdown="1">
-## Skills
+## {{ site.data.resume.section_titles.skills }}
 
 {% for skill_key in site.data.resume.skills %}{% assign skill = skill_key[1] %}**{{ skill.name }}**  
 {{ skill.items }}
@@ -120,7 +120,7 @@ permalink: /resume
 </div>
 
   <div class="resume-section" markdown="1">
-## Professional Affiliations & Certifications
+## {{ site.data.resume.section_titles.affiliations }}
 
 {% for affiliation in site.data.resume.affiliations %}
 - {{ affiliation }}
@@ -129,7 +129,7 @@ permalink: /resume
 </div>
 
   <div class="resume-section" markdown="1">
-## Field & Alpine Activities
+## {{ site.data.resume.section_titles.activities }}
 
 {% for activity in site.data.resume.activities %}
 - {{ activity }}
@@ -138,7 +138,7 @@ permalink: /resume
 </div>
 
   <div class="resume-section" markdown="1">
-## Conferences & Workshops
+## {{ site.data.resume.section_titles.conferences }}
 
 {% for conf in site.data.resume.conferences %}
 - **{{ conf.name }}**, {{ conf.location }} ({{ conf.year }})  
@@ -148,7 +148,7 @@ permalink: /resume
 </div>
 
   <div class="resume-section" markdown="1">
-## Interests
+## {{ site.data.resume.section_titles.interests }}
 
 {{ site.data.resume.interests }}
 
