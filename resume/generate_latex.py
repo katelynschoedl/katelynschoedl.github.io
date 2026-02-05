@@ -123,27 +123,38 @@ def generate_latex_content(data):
     latex.append("%====================\n")
     latex.append("\\section{Activities}\n")
     
-    # Professional Affiliations
-    latex.append("\\subsection{{Professional Affiliations \\& Certifications}}")
-    latex.append("\\begin{zitemize}")
-    for affiliation in data['affiliations']:
-        # Check if there's an em dash (additional detail)
-        em_dash = '\u2014'  # Em dash character
-        if f' {em_dash} ' in affiliation:
-            parts = affiliation.split(f' {em_dash} ', 1)
-            main_text = escape_latex(parts[0])
-            detail_text = escape_latex(parts[1])
-            latex.append(f"    \\item {main_text}\\\\\n        {{\\footnotesize \\textit{{{detail_text}}}}}")
-        else:
-            latex.append(f"    \\item {escape_latex(affiliation)}")
-    latex.append("\\end{zitemize}\n")
-    
     # Field & Alpine Activities
     latex.append("\\subsection{{Field \\& Alpine Activities}}")
     latex.append("\\begin{zitemize}")
     for activity in data['activities']:
         latex.append(f"    \\item {escape_latex(activity)}")
-    latex.append("\\end{zitemize}\n")
+    latex.append("\\end{zitemize}")
+    
+    # Professional Affiliations & Certifications (two columns, no section title)
+    latex.append("\\vspace{-0.5em}")
+    latex.append("\\begin{multicols}{2}[")
+    latex.append("\\raggedcolumns")
+    latex.append("]")
+    
+    # Left column: Certifications
+    latex.append("\\noindent\\textbf{Certifications}")
+    latex.append("\\vspace{-0.5em}")
+    latex.append("\\begin{zitemize}")
+    for cert in data['affiliations']['certifications']:
+        latex.append(f"    \\item {escape_latex(cert)}")
+    latex.append("\\end{zitemize}")
+    
+    latex.append("\\columnbreak")
+    
+    # Right column: Professional Affiliations
+    latex.append("\\noindent\\textbf{Professional Affiliations}")
+    latex.append("\\vspace{-0.5em}")
+    latex.append("\\begin{zitemize}")
+    for affiliation in data['affiliations']['professional']:
+        latex.append(f"    \\item {escape_latex(affiliation)}")
+    latex.append("\\end{zitemize}")
+    
+    latex.append("\\end{multicols}\n")
     
     # Conferences & Workshops
     latex.append("\\subsection{{Conferences \\& Workshops}}")

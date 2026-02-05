@@ -154,17 +154,20 @@ skills:
     items: "Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation"
 
 affiliations:
-  - "Washington State Rare Plant Monitor"
-  - "American Mountain Guides Association (AMGA), Professional Member"
-  - "American Alpine Club (AAC), Member"
-  - "Boeing Alpine Society (BOEALPS), Member"
-  - "Wilderness First Responder (WFR) with AED and CPR Certification — National Outdoor Leadership School (NOLS) - Yosemite, CA (December 2025)"
-  - "AIARE 1 Avalanche Training Certification — Skyward Mountaineering - Silverton, CO (December 2025)"
-  - "Avalanche Companion Rescue Training — Alpine Ascents International x SheJumps - Snoqualmie, WA (January 2025)"
+  professional:
+    - "American Mountain Guides Association (AMGA) Professional Member"
+    - "American Alpine Club (AAC) Member"
+    - "Boeing Alpine Society (BOEALPS) Member"
+    - "SnowGoat Skimo Volunteer"
+    - "Washington State Rare Plant Monitor"
+  
+  certifications:
+    - "Wilderness First Responder (WFR) with AED and CPR Certification, Yosemite, CA (December 2025)"
+    - "AIARE 1 Avalanche Training Certification, Skyward Mountaineering - Silverton, CO (December 2025)"
+    - "Avalanche Companion Rescue Training, Alpine Ascents International x SheJumps - Snoqualmie, WA (January 2025)"
 
 activities:
-  - "Alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide"
-  - "SnowGoat Skimo Volunteer for Vertfest and Wy'Easter sanctioned ski mountaineering races"
+  - "Glacier travel, alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide"
   - "Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments"
 
 conferences:
