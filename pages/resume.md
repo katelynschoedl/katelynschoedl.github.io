@@ -120,19 +120,25 @@ permalink: /resume
 </div>
 
   <div class="resume-section" markdown="1">
-## {{ site.data.resume.section_titles.affiliations }}
+## {{ site.data.resume.section_titles.activities }}
 
-{% for affiliation in site.data.resume.affiliations %}
-- {{ affiliation }}
+{% for activity in site.data.resume.activities %}
+- {{ activity }}
 {% endfor %}
 
 </div>
 
   <div class="resume-section" markdown="1">
-## {{ site.data.resume.section_titles.activities }}
+## {{ site.data.resume.section_titles.affiliations }}
 
-{% for activity in site.data.resume.activities %}
-- {{ activity }}
+**Professional Affiliations**
+{% for affiliation in site.data.resume.affiliations.professional %}
+- {{ affiliation }}
+{% endfor %}
+
+**Certifications**
+{% for cert in site.data.resume.affiliations.certifications %}
+- {{ cert }}
 {% endfor %}
 
 </div>
