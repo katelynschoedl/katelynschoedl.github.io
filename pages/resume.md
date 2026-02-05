@@ -14,23 +14,23 @@ permalink: /resume
        tabindex="0">
        
   <div class="header-text">
-    <h1>Katelyn M. Schoedl</h1>
+    <h1>{{ site.data.resume.contact.name }}</h1>
 
     <div class="title-line">
-      <strong>Electrical Engineer</strong> | <strong>Research Coordinator</strong>
+      <strong>{{ site.data.resume.contact.title }}</strong>
     </div>
 
 <div class="contact-links">
   <span class="contact-primary">
-    <a href="tel:+18479610243">+1 (847) 961-0243</a> ·
-    <a href="mailto:kschoedl8@gmail.com">kschoedl8@gmail.com</a>
+    <a href="tel:{{ site.data.resume.contact.phone_link }}">{{ site.data.resume.contact.phone }}</a> ·
+    <a href="mailto:{{ site.data.resume.contact.email }}">{{ site.data.resume.contact.email }}</a>
   </span>
   
   
   <span class="contact-secondary">
-    <a href="https://www.linkedin.com/in/kmschoedl/">LinkedIn</a> ·
-    <a href="https://github.com/katelynschoedl">GitHub</a> ·
-    <a href="https://orcid.org/0009-0005-1689-7945">ORCID</a>
+    <a href="{{ site.data.resume.contact.linkedin_url }}">LinkedIn</a> ·
+    <a href="{{ site.data.resume.contact.github_url }}">GitHub</a> ·
+    <a href="{{ site.data.resume.contact.orcid_url }}">ORCID</a>
   </span>
 </div>
   </div>
@@ -48,166 +48,109 @@ permalink: /resume
   <div class="resume-section" markdown="1">
 ## Profile
 
-<p class="highlight-text">Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication, photonic systems, and academic research processes for geophysical science applications.</p>
+<p class="highlight-text">{{ site.data.resume.profile.objective }}</p>
 
-<p>My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental design workflows, precision measurement systems, and field operations for high-quality scientific data collection.</p>
+<p>{{ site.data.resume.profile.background }}</p>
 
-<p><span class="highlight-text">I am actively seeking roles</span> in applied research and instrumentation alongside future graduate study at the intersection of hardware engineering, experimental physics, and geophysical sciences.</p>
+<p><span class="highlight-text">{{ site.data.resume.profile.seeking }}</span></p>
   </div>
 
   <div class="resume-section" markdown="1">
 ## Education
 
-### University of Illinois at Urbana–Champaign
-*Bachelor of Science in Electrical Engineering*  
-**August 2015 – May 2019**  
+{% for edu in site.data.resume.education %}
+### {{ edu.institution }}
+*{{ edu.degree }}*  
+**{{ edu.dates }}**  
 
-- Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement
-- Exchange Semester, **Technical University of Denmark,**  Autumn 2017
+{% for detail in edu.details %}
+- {{ detail }}
+{% endfor %}
 
+{% endfor %}
 </div>
 
   <div class="resume-section" markdown="1">
 ## Experience
 
-### University of Washington — Research Coordinator (Photonics)  
-*College of the Environment, Department of Earth & Space Sciences*  
-**May 2024 – May 2025**
+{% for exp in site.data.resume.experience %}
+### {{ exp.organization }} — {{ exp.title }}  
+*{{ exp.department }}*  
+**{{ exp.dates }}**
 
-- Supported deployment, operation, and maintenance of photonics-based Distributed Acoustic Sensing (DAS) and data acquisition systems for seismic, oceanic, and cryospheric research.
-- Coordinated technical activities with external research partners and funding agencies.
-- Acted as operational liaison between research groups and departmental administration by managing procurement, inventory, shipping, customs documentation, and field logistics.
-- Supported safety planning and permitting for remote field deployments and instrumentation campaigns.
-- Developed and maintained experimental workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations.
-- Maintained project websites and supported data dissemination platforms.
+{% for resp in exp.responsibilities %}
+- {{ resp }}
+{% endfor %}
 
-### Microsoft — Hardware Engineer II (Signal Integrity)  
-*Cloud AI Hardware and Advanced Signal Engineering*  
-**September 2021 – September 2023**
-
-- Modeled and analyzed end-to-end signal integrity performance across FPGA die, packages, connectors, and board-level interconnects.
-- Conducted high-speed hardware validation and SI characterization for enterprise AI and cloud infrastructure platforms.
-- Performed electromagnetic and circuit-level simulations using tools such as ANSYS HFSS and Keysight ADS.
-- Supported board-level stackup design, routing constraints, and interference mitigation strategies.
-- Executed laboratory measurements, including S-parameters and eye-diagram analysis, using VNA and time-domain methods.
-- Collaborated with electrical, mechanical, and systems engineering teams to resolve SI and system integration issues.
-- Supported contract PCBA design reviews and monitored progress through manufacturing readiness.
-
-### Amazon — Hardware Design Engineer (Satellite Avionics)  
-*Project Kuiper*  
-**April 2020 – September 2021**
-
-- Supported early-phase (pre-PDR) satellite avionics sensor subsystem design and development.
-- Authored design review documents and test validation for electrical, thermal, and mechanical performance.
-- Defined early avionics sensor requirements from component to system level.
-- Designed and reviewed schematics, PCB layouts, and housings for sensor prototypes.
-- Performed board bring-up, debugging, and validation.
-- Supported hardware radiation test campaigns.
-
-### Amazon — Technical Program Manager (Robotic Automation Prototypes)
-*Worldwide Technical Engineering Services*  
-**June 2019 – March 2020**
-
-- Supported nationwide deployment of PLC-based robotic automation prototypes across fulfillment centers.
-- Managed schedules, logistics, and readiness planning for pilot programs.
-- Coordinated on-site installations, commissioning, and documentation with engineering and operations teams.
-- Tracked development milestones through production and operational handoff.
-- Supported standardization of risk reviews and vendor evaluations.
-
+{% endfor %}
 </div>
 
   <div class="resume-section" markdown="1">
 ## Undergraduate Roles 
 
-**Shop Assistant, Machine Shop and Services at ECE Illinois**  
-January 2018 – January 2019
-- Supported machining, inventory, repair, and prototyping for ECE research and instructional labs.
-- Assisted students and staff.
+{% for role in site.data.resume.undergraduate_roles %}
+**{{ role.title }}, {{ role.organization }}**  
+{{ role.dates }}
+{% for detail in role.details %}
+- {{ detail }}
+{% endfor %}
 
-**Student Research Assistant, Illinois REU Program**  
-February 2017 – May 2017
-- Supported a UIUC Civil Engineering graduate student with prototype construction and research bibliography.
-
-**Barista, Daily Byte at ECE Illinois**  
-January 2016 – May 2017
-- Operated a high-volume campus café serving the ECE community.
+{% endfor %}
 
 ## Internships
 
-**Amazon Intern**  
-*Controls Engineering*  
-Seattle, WA | Summer 2018
-- Supported alpha and beta robotics and automation systems within Amazon fulfillment infrastructure.
-- Worked on documentation of controls-related engineering tasks in a production-oriented environment.
+{% for intern in site.data.resume.internships %}
+**{{ intern.title }}**  
+*{{ intern.department }}*  
+{{ intern.location }} | {{ intern.dates }}
+{% for detail in intern.details %}
+- {{ detail }}
+{% endfor %}
 
-**GE Global Research Intern**  
-*Edge Software*  
-Niskayuna, NY | Summer 2016 & Summer 2017  
-- Worked with industrial applications in edge computing and software systems.
-- Contributed to multi-year research initiatives spanning two summer appointments.
-
+{% endfor %}
 </div>
 
   <div class="resume-section" markdown="1">
 ## Skills
 
-**Communication**  
-English (native), Spanish (A2), French (beginner)
+{% for skill_key in site.data.resume.skills %}{% assign skill = skill_key[1] %}**{{ skill.name }}**  
+{{ skill.items }}
 
-**Programming**  
-Python, C/C++, MATLAB, JavaScript, LaTeX, Markdown
-
-**Systems & Development**  
-Git, Jupyter, Linux (Bash/Shell), Microcontrollers, ArcGIS, Docker, HW/SW RAID storage, HPC remote systems
-
-**Measurement & Instrumentation**  
-Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Characterization, Sensor Calibration, Signal Integrity Analysis, Channel Simulation, Schematic Design, PCB Layout
-
-**Research & Field Operations**  
-Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation
-
+{% endfor %}
 </div>
 
   <div class="resume-section" markdown="1">
 ## Professional Affiliations & Certifications
 
-- Washington State Rare Plant Monitor
-- American Mountain Guides Association (AMGA), Professional Member
-- American Alpine Club (AAC), Member
-- Boeing Alpine Society (BOEALPS), Member
-- Wilderness First Responder (WFR) with AED and CPR Certification  
-  *National Outdoor Leadership School (NOLS) - Yosemite, CA (December 2025)*
-- AIARE 1 Avalanche Training Certification  
-  *Skyward Mountaineering - Silverton, CO (December 2025)*
-- Avalanche Companion Rescue Training  
-  *Alpine Ascents International x SheJumps - Snoqualmie, WA (January 2025)*
+{% for affiliation in site.data.resume.affiliations %}
+- {{ affiliation }}
+{% endfor %}
 
 </div>
 
   <div class="resume-section" markdown="1">
 ## Field & Alpine Activities
 
-- Alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide  
-- SnowGoat Skimo Volunteer for Vertfest and Wy’Easter sanctioned ski mountaineering races  
-- Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments
+{% for activity in site.data.resume.activities %}
+- {{ activity }}
+{% endfor %}
 
 </div>
 
   <div class="resume-section" markdown="1">
 ## Conferences & Workshops
 
-- **BOAT Ocean Acoustics Workshop**, University of Washington (2025)  
-  Two-day intensive workshop on ocean acoustics theory and experimental practice
-
-- **DesignCon**, Santa Clara, CA (2022)  
-  Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing
+{% for conf in site.data.resume.conferences %}
+- **{{ conf.name }}**, {{ conf.location }} ({{ conf.year }})  
+  {{ conf.description }}
+{% endfor %}
 
 </div>
 
   <div class="resume-section" markdown="1">
 ## Interests
 
-Optical and photonic sensing systems, precision scientific instrumentation, particle physics hardware and measurement techniques, radiation effects, physical properties of ice, experimental field research, mentorship and interdisciplinary scientific collaboration.
+{{ site.data.resume.interests }}
 
 </div>
 
@@ -222,6 +165,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   </a>
 </div>
 
+<!-- All styles and scripts from original resume.md -->
 <style>
 .resume-header{
   display:flex;
@@ -247,7 +191,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 
 .profile-photo:hover,
 .profile-photo.photo-glow-active{
-  transform: scale(1.08); /* slight zoom */
+  transform: scale(1.08);
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
@@ -315,14 +259,13 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   transform: translateY(-1px);
 }
 
-/* MOBILE: centered pill under nav, below contact links */
 @media (max-width:640px){
   .resume-float{
-    top: 386px;                /* positioned below LinkedIn/GitHub/ORCID line */
+    top: 386px;
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    border-radius: 999px;      /* pill */
+    border-radius: 999px;
     max-width: calc(100vw - 28px);
     text-align: center;
     white-space: nowrap;
@@ -334,8 +277,7 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   }
 }
 
-  .profile-photo.is-zoomed{
-  /* transform: scale(1.15); REMOVE THIS */
+.profile-photo.is-zoomed{
   box-shadow: 0 0 18px rgba(255,255,255,0.25);
 }
 
@@ -351,23 +293,17 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
 .contact-links a{ color:#fff; text-decoration:none; font-weight:500; }
 .contact-links a:hover{ color:#ddd; text-decoration:underline; }
 
-
-
 .contact-secondary{
   display: block;
   margin-top: 6px;
   opacity: 0.9;
 }
 
-/* SECTION LINES */
-
 .resume-section:last-child{ border-bottom:none; }
 
-/* HOVER DIM */
 .resume-container:hover .resume-section{ opacity:0.35; }
 .resume-container .resume-section:hover{ opacity:1; }
 
-/* Section header hover effects */
 .resume-section h2,
 .resume-section h3{
   transition:
@@ -430,7 +366,6 @@ Optical and photonic sensing systems, precision scientific instrumentation, part
   opacity: 1 !important;
 }
 
-/* Add this NEW section for bold-text */
 .bold-text{
   transition: font-weight 0.18s ease, opacity 0.18s ease;
 }
@@ -461,10 +396,7 @@ body .bold-text.photo-hover-active,
     transform: none !important;
   }
 }
-
-
 </style>
-
 
 <script>
 const profilePhoto = document.getElementById('profile-photo');
@@ -472,7 +404,6 @@ const highlightTexts = document.querySelectorAll('.highlight-text');
 const userName = document.querySelector('.header-text h1');
 const profileTitle = document.querySelector('.resume-section h2');
 
-// Photo hover: highlight blue text, name glow, and Profile title shift
 if (profilePhoto) {
   profilePhoto.addEventListener('mouseenter', () => {
     highlightTexts.forEach(el => el.classList.add('photo-hover-active'));
@@ -487,7 +418,6 @@ if (profilePhoto) {
   });
 }
 
-// Name hover: trigger all effects (name glow, photo glow, blue text, Profile title)
 if (userName) {
   userName.addEventListener('mouseenter', () => {
     highlightTexts.forEach(el => el.classList.add('photo-hover-active'));
