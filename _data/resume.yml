@@ -1,0 +1,165 @@
+contact:
+  name: "Katelyn M. Schoedl"
+  title: "Electrical Engineer | Research Coordinator"
+  phone: "+1 (847) 961-0243"
+  phone_link: "+18479610243"
+  email: "kschoedl8@gmail.com"
+  linkedin: "kmschoedl"
+  linkedin_url: "https://www.linkedin.com/in/kmschoedl/"
+  github: "katelynschoedl"
+  github_url: "https://github.com/katelynschoedl"
+  orcid: "0009-0005-1689-7945"
+  orcid_url: "https://orcid.org/0009-0005-1689-7945"
+  website: "katelynschoedl.github.io"
+
+profile:
+  objective: "Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication, photonic systems, and academic research processes for geophysical science applications."
+  background: "My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental design workflows, precision measurement systems, and field operations for high-quality scientific data collection."
+  seeking: "I am actively seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware engineering, experimental physics, and geophysical sciences."
+
+education:
+  - degree: "Bachelor of Science in Electrical Engineering"
+    institution: "University of Illinois at Urbana–Champaign"
+    location: "Urbana, IL"
+    dates: "August 2015 – May 2019"
+    details:
+      - "Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement"
+      - "Exchange Semester, Technical University of Denmark, Autumn 2017"
+
+experience:
+  - title: "Research Coordinator (Photonics)"
+    organization: "University of Washington"
+    department: "College of the Environment, Department of Earth & Space Sciences"
+    location: "Seattle, WA"
+    dates: "May 2024 – May 2025"
+    responsibilities:
+      - "Supported deployment, operation, and maintenance of photonics-based Distributed Acoustic Sensing (DAS) and data acquisition systems for seismic, oceanic, and cryospheric research."
+      - "Coordinated technical activities with external research partners and funding agencies."
+      - "Acted as operational liaison between research groups and departmental administration by managing procurement, inventory, shipping, customs documentation, and field logistics."
+      - "Supported safety planning and permitting for remote field deployments and instrumentation campaigns."
+      - "Developed and maintained experimental workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations."
+      - "Maintained project websites and supported data dissemination platforms."
+
+  - title: "Hardware Engineer II (Signal Integrity)"
+    organization: "Microsoft"
+    department: "Cloud AI Hardware and Advanced Signal Engineering"
+    location: "Seattle, WA"
+    dates: "September 2021 – September 2023"
+    responsibilities:
+      - "Modeled and analyzed end-to-end signal integrity performance across FPGA die, packages, connectors, and board-level interconnects."
+      - "Conducted high-speed hardware validation and SI characterization for enterprise AI and cloud infrastructure platforms."
+      - "Performed electromagnetic and circuit-level simulations using tools such as ANSYS HFSS and Keysight ADS."
+      - "Supported board-level stackup design, routing constraints, and interference mitigation strategies."
+      - "Executed laboratory measurements, including S-parameters and eye-diagram analysis, using VNA and time-domain methods."
+      - "Collaborated with electrical, mechanical, and systems engineering teams to resolve SI and system integration issues."
+      - "Supported contract PCBA design reviews and monitored progress through manufacturing readiness."
+
+  - title: "Hardware Design Engineer (Satellite Avionics)"
+    organization: "Amazon"
+    department: "Project Kuiper"
+    location: "Seattle, WA"
+    dates: "April 2020 – September 2021"
+    responsibilities:
+      - "Supported early-phase (pre-PDR) satellite avionics sensor subsystem design and development."
+      - "Authored design review documents and test validation for electrical, thermal, and mechanical performance."
+      - "Defined early avionics sensor requirements from component to system level."
+      - "Designed and reviewed schematics, PCB layouts, and housings for sensor prototypes."
+      - "Performed board bring-up, debugging, and validation."
+      - "Supported hardware radiation test campaigns."
+
+  - title: "Technical Program Manager (Robotic Automation Prototypes)"
+    organization: "Amazon"
+    department: "Worldwide Technical Engineering Services"
+    location: "Seattle, WA"
+    dates: "June 2019 – March 2020"
+    responsibilities:
+      - "Supported nationwide deployment of PLC-based robotic automation prototypes across fulfillment centers."
+      - "Managed schedules, logistics, and readiness planning for pilot programs."
+      - "Coordinated on-site installations, commissioning, and documentation with engineering and operations teams."
+      - "Tracked development milestones through production and operational handoff."
+      - "Supported standardization of risk reviews and vendor evaluations."
+
+undergraduate_roles:
+  - title: "Shop Assistant"
+    organization: "Machine Shop and Services at ECE Illinois"
+    dates: "January 2018 – January 2019"
+    details:
+      - "Supported machining, inventory, repair, and prototyping for ECE research and instructional labs."
+      - "Assisted students and staff."
+
+  - title: "Student Research Assistant"
+    organization: "Illinois REU Program"
+    dates: "February 2017 – May 2017"
+    details:
+      - "Supported a UIUC Civil Engineering graduate student with prototype construction and research bibliography."
+
+  - title: "Barista"
+    organization: "Daily Byte at ECE Illinois"
+    dates: "January 2016 – May 2017"
+    details:
+      - "Operated a high-volume campus café serving the ECE community."
+
+internships:
+  - title: "Amazon Intern"
+    department: "Controls Engineering"
+    location: "Seattle, WA"
+    dates: "Summer 2018"
+    details:
+      - "Supported alpha and beta robotics and automation systems within Amazon fulfillment infrastructure."
+      - "Worked on documentation of controls-related engineering tasks in a production-oriented environment."
+
+  - title: "GE Global Research Intern"
+    department: "Edge Software"
+    location: "Niskayuna, NY"
+    dates: "Summer 2016 & Summer 2017"
+    details:
+      - "Worked with industrial applications in edge computing and software systems."
+      - "Contributed to multi-year research initiatives spanning two summer appointments."
+
+skills:
+  communication:
+    name: "Communication"
+    items: "English (native), Spanish (A2), French (beginner)"
+  
+  programming:
+    name: "Programming"
+    items: "Python, C/C++, MATLAB, JavaScript, LaTeX, Markdown"
+  
+  development:
+    name: "Systems & Development"
+    items: "Git, Jupyter, Linux (Bash/Shell), Microcontrollers, ArcGIS, Docker, HW/SW RAID storage, HPC remote systems"
+  
+  instrumentation:
+    name: "Measurement & Instrumentation"
+    items: "Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Characterization, Sensor Calibration, Signal Integrity Analysis, Channel Simulation, Schematic Design, PCB Layout"
+  
+  field:
+    name: "Research & Field Operations"
+    items: "Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation"
+
+affiliations:
+  - "Washington State Rare Plant Monitor"
+  - "American Mountain Guides Association (AMGA), Professional Member"
+  - "American Alpine Club (AAC), Member"
+  - "Boeing Alpine Society (BOEALPS), Member"
+  - "Wilderness First Responder (WFR) with AED and CPR Certification — National Outdoor Leadership School (NOLS) - Yosemite, CA (December 2025)"
+  - "AIARE 1 Avalanche Training Certification — Skyward Mountaineering - Silverton, CO (December 2025)"
+  - "Avalanche Companion Rescue Training — Alpine Ascents International x SheJumps - Snoqualmie, WA (January 2025)"
+
+activities:
+  - "Alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide"
+  - "SnowGoat Skimo Volunteer for Vertfest and Wy'Easter sanctioned ski mountaineering races"
+  - "Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments"
+
+conferences:
+  - name: "BOAT Ocean Acoustics Workshop"
+    location: "University of Washington"
+    year: "2025"
+    description: "Two-day intensive workshop on ocean acoustics theory and experimental practice"
+  
+  - name: "DesignCon"
+    location: "Santa Clara, CA"
+    year: "2022"
+    description: "Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing"
+
+interests: "Optical and photonic sensing systems, precision scientific instrumentation, particle physics hardware and measurement techniques, radiation effects, physical properties of ice, experimental field research, mentorship and interdisciplinary scientific collaboration."
