@@ -11,6 +11,19 @@ contact:
   orcid: "0009-0005-1689-7945"
   orcid_url: "https://orcid.org/0009-0005-1689-7945"
   website: "katelynschoedl.github.io"
+  profile_photo: "/assets/media/profilephoto.bw.JPG"
+
+section_titles:
+  profile: "Profile"
+  education: "Education"
+  experience: "Experience"
+  undergraduate_roles: "Undergraduate Roles"
+  internships: "Internships"
+  skills: "Skills"
+  affiliations: "Professional Affiliations & Certifications"
+  activities: "Field & Alpine Activities"
+  conferences: "Conferences & Workshops"
+  interests: "Interests"
 
 profile:
   objective: "Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication, photonic systems, and academic research processes for geophysical science applications."
@@ -20,7 +33,7 @@ profile:
 education:
   - degree: "Bachelor of Science in Electrical Engineering"
     institution: "University of Illinois at Urbana–Champaign"
-    location: "Urbana, IL"
+    location: "Champaign-Urbana, IL"
     dates: "August 2015 – May 2019"
     details:
       - "Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement"
@@ -127,14 +140,17 @@ skills:
   
   development:
     name: "Systems & Development"
+    pdf_name: "Development"
     items: "Git, Jupyter, Linux (Bash/Shell), Microcontrollers, ArcGIS, Docker, HW/SW RAID storage, HPC remote systems"
   
   instrumentation:
     name: "Measurement & Instrumentation"
+    pdf_name: "Instrumentation"
     items: "Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Characterization, Sensor Calibration, Signal Integrity Analysis, Channel Simulation, Schematic Design, PCB Layout"
   
   field:
     name: "Research & Field Operations"
+    pdf_name: "Field Operations"
     items: "Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation"
 
 affiliations:

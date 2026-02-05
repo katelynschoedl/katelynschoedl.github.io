@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Generate LaTeX resume content from YAML data source.
 Usage: python generate_latex.py
@@ -24,6 +24,33 @@ def escape_latex(text):
         text = text.replace(old, new)
     return text
 
+def generate_header_definitions(data):
+    """Generate LaTeX header definitions from YAML contact data."""
+    contact = data['contact']
+    
+    # Extract just the ORCID number from the full URL
+    orcid_number = contact['orcid']
+    
+    header = []
+    header.append("%====================")
+    header.append("% CONTACT INFORMATION")
+    header.append("% Auto-generated from YAML")
+    header.append("%====================")
+    header.append(f"\\def\\name{{{escape_latex(contact['name'])}}}")
+    header.append(f"\\def\\phone{{{contact['phone']}}}")
+    header.append(f"\\def\\city{{Seattle, USA - Grenoble, FR}}")  # Keep as-is or add to YAML if needed
+    header.append(f"\\def\\email{{{contact['email']}}}")
+    header.append(f"\\def\\LinkedIn{{{contact['linkedin']}}}")
+    header.append(f"\\def\\github{{ }}")  # Empty for now
+    header.append(f"\\def\\role{{{escape_latex(contact['title'])}}}")
+    header.append(f"\\def\\orcidnumber{{{orcid_number}}}")
+    header.append(f"\\def\\orcidurl{{{contact['orcid_url']}}}")
+    header.append(f"\\def\\websiteurl{{{contact['website']}}}")
+    header.append(f"\\def\\portfoliourl{{ }}")
+    header.append(f"\\def\\portfolioname{{ }}")
+    
+    return '\n'.join(header)
+
 def generate_latex_content(data):
     """Generate LaTeX content from YAML data."""
     latex = []
@@ -36,8 +63,8 @@ def generate_latex_content(data):
     latex.append(f"\\textbf{{{escape_latex(data['profile']['objective'])}}}")
     latex.append("\\end{center}\n")
     latex.append("\\setlength{\\parindent}{1.5em}")
-    latex.append(f"{escape_latex(data['profile']['background'])}\n")
-    latex.append(f"{escape_latex(data['profile']['seeking'])}")
+    # Combine background and seeking as a single paragraph, smaller font
+    latex.append(f"\\small {escape_latex(data['profile']['background'])} {escape_latex(data['profile']['seeking'])}")
     latex.append("\\vspace{8pt}\n")
     
     # Education
@@ -78,7 +105,8 @@ def generate_latex_content(data):
     latex.append("\\begin{tabularx}{\\linewidth}{p{3.2cm} X}\n")
     
     for key, skill in data['skills'].items():
-        name = escape_latex(skill['name'])
+        # Use pdf_name if available, otherwise use name
+        name = escape_latex(skill.get('pdf_name', skill['name']))
         items = escape_latex(skill['items'])
         # Handle LaTeX command in items
         items = items.replace('\\LaTeX', '\\LaTeX')
@@ -99,11 +127,15 @@ def generate_latex_content(data):
     latex.append("\\subsection{{Professional Affiliations \\& Certifications}}")
     latex.append("\\begin{zitemize}")
     for affiliation in data['affiliations']:
-        # Replace em dash with proper format
-        affiliation = affiliation.replace(' — ', '\\\\\n        {\\footnotesize \\textit{ ')
-        if '\\\\' in affiliation:
-            affiliation += '}}'
-        latex.append(f"    \\item {escape_latex(affiliation)}")
+        # Check if there's an em dash (additional detail)
+        em_dash = '\u2014'  # Em dash character
+        if f' {em_dash} ' in affiliation:
+            parts = affiliation.split(f' {em_dash} ', 1)
+            main_text = escape_latex(parts[0])
+            detail_text = escape_latex(parts[1])
+            latex.append(f"    \\item {main_text}\\\\\n        {{\\footnotesize \\textit{{{detail_text}}}}}")
+        else:
+            latex.append(f"    \\item {escape_latex(affiliation)}")
     latex.append("\\end{zitemize}\n")
     
     # Field & Alpine Activities
@@ -133,6 +165,13 @@ def main():
     with open(yaml_path, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
     
+    # Generate LaTeX header definitions
+    header_content = generate_header_definitions(data)
+    header_path = Path(__file__).parent / 'header.tex'
+    with open(header_path, 'w', encoding='utf-8') as f:
+        f.write(header_content)
+    print(f"Generated {header_path}")
+    
     # Generate LaTeX content
     latex_content = generate_latex_content(data)
     
@@ -141,7 +180,35 @@ def main():
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(latex_content)
     
-    print(f"✓ Generated {output_path}")
+    print(f"Generated {output_path}")
+    
+    # Compile PDF with custom output name
+    import subprocess
+    import os
+    
+    resume_dir = Path(__file__).parent
+    os.chdir(resume_dir)
+    
+    # Run pdflatex to generate resume.pdf
+    print("\n Compiling LaTeX to PDF...")
+    result = subprocess.run(['pdflatex', '-interaction=nonstopmode', 'resume.tex'],
+                          capture_output=True, text=True)
+    
+    if result.returncode == 0:
+        # Rename resume.pdf to kschoedl.resume.pdf
+        pdf_original = resume_dir / 'resume.pdf'
+        pdf_target = resume_dir / 'kschoedl.resume.pdf'
+        
+        if pdf_original.exists():
+            if pdf_target.exists():
+                pdf_target.unlink()
+            pdf_original.rename(pdf_target)
+            print(f" Generated {pdf_target}")
+        else:
+            print(" Warning: resume.pdf not found")
+    else:
+        print(" LaTeX compilation failed")
+        print(result.stdout)
 
 if __name__ == '__main__':
     main()
