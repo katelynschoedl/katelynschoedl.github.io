@@ -65,7 +65,7 @@ def generate_latex_content(data):
     latex.append("\\setlength{\\parindent}{1.5em}")
     # Combine background and seeking as a single paragraph, smaller font
     latex.append(f"\\small {escape_latex(data['profile']['background'])} {escape_latex(data['profile']['seeking'])}")
-    latex.append("\\vspace{8pt}\n")
+    latex.append("\\vspace{4pt}\n")
     
     # Education
     latex.append("%====================")
@@ -79,37 +79,22 @@ def generate_latex_content(data):
         latex.append("\\begin{zitemize}")
         for detail in edu['details']:
             latex.append(f"    \\item {escape_latex(detail)}")
-        latex.append("\\end{zitemize}")
+        latex.append("\\end{zitemize}\n")
     
-    latex.append("\\vspace{6pt}\n")
-    
-    # Technical Experience (only first 3 roles for 1-page resume)
+    # Technical Experience
     latex.append("%====================")
     latex.append("% TECHNICAL EXPERIENCE")
     latex.append("%====================\n")
     latex.append("\\section{Technical Experience}\n")
     
-    # Only include first 3 experience entries
-    for i, exp in enumerate(data['experience'][:3]):
+    for exp in data['experience']:
         latex.append(f"\\subsection{{{{{escape_latex(exp['title'])} \\hfill {escape_latex(exp['dates'])}}}}}")
         org = f"{escape_latex(exp['organization'])}, {escape_latex(exp['department'])}" if exp.get('department') else escape_latex(exp['organization'])
         latex.append(f"\\subtext{{{org} \\hfill {escape_latex(exp['location'])}}}")
         latex.append("\\begin{zitemize}")
         for resp in exp['responsibilities']:
             latex.append(f"    \\item {escape_latex(resp)}")
-        
-        # Add conference as last bullet for specific roles
-        if i == 0:  # UW Research Coordinator - add BOAT workshop
-            latex.append(f"    \\item BOAT Ocean Acoustics Workshop, University of Washington (2025): Two-day intensive workshop on experimental acoustics theory.")
-        elif i == 1:  # Microsoft Hardware Engineer - add DesignCon
-            latex.append(f"    \\item DesignCon, Santa Clara, CA (2022): Industry conference on high-speed signal integrity measurement and PCB manufacturing.")
-        
-        latex.append("\\end{zitemize}")
-        
-        if i < 2:  # Add extra spacing between roles (but not after the last one)
-            latex.append("\\vspace{4pt}")
-    
-    latex.append("\\vspace{6pt}\n")
+        latex.append("\\end{zitemize}\n")
     
     # Skills
     latex.append("%====================")
@@ -132,13 +117,56 @@ def generate_latex_content(data):
     
     latex.append("\\end{tabularx}\n")
     
-    # Certifications (compact list)
-    latex.append("\\vspace{6pt}\n")
-    latex.append("\\subsection{Certifications}")
+    # Activities
+    latex.append("%====================")
+    latex.append("% ACTIVITIES")
+    latex.append("%====================\n")
+    latex.append("\\section{Activities}\n")
+    
+    # Field & Alpine Activities
+    latex.append("\\subsection{{Field \\& Alpine Activities}}")
+    latex.append("\\begin{zitemize}")
+    for activity in data['activities']:
+        latex.append(f"    \\item {escape_latex(activity)}")
+    latex.append("\\end{zitemize}")
+    
+    # Professional Affiliations & Certifications (two columns, no section title)
+    latex.append("\\vspace{-0.5em}")
+    latex.append("\\begin{multicols}{2}[")
+    latex.append("\\raggedcolumns")
+    latex.append("]")
+    
+    # Left column: Certifications
+    latex.append("\\noindent\\textbf{Certifications}")
+    latex.append("\\vspace{-0.5em}")
     latex.append("\\begin{zitemize}")
     for cert in data['affiliations']['certifications']:
         latex.append(f"    \\item {escape_latex(cert)}")
-    latex.append("\\end{zitemize}\n")
+    latex.append("\\end{zitemize}")
+    
+    latex.append("\\columnbreak")
+    
+    # Right column: Professional Affiliations
+    latex.append("\\noindent\\textbf{Professional Affiliations}")
+    latex.append("\\vspace{-0.5em}")
+    latex.append("\\begin{zitemize}")
+    for affiliation in data['affiliations']['professional']:
+        latex.append(f"    \\item {escape_latex(affiliation)}")
+    latex.append("\\end{zitemize}")
+    
+    latex.append("\\end{multicols}\n")
+    
+    # Conferences & Workshops
+    latex.append("\\subsection{{Conferences \\& Workshops}}")
+    latex.append("\\begin{zitemize}")
+    for conf in data['conferences']:
+        name = escape_latex(conf['name'])
+        location = escape_latex(conf['location'])
+        year = conf['year']
+        desc = escape_latex(conf['description'])
+        latex.append(f"    \\item {name}, {location} ({year})")
+        latex.append(f"    {desc}")
+    latex.append("\\end{zitemize}")
     
     return '\n'.join(latex)
 
@@ -178,9 +206,9 @@ def main():
                           capture_output=True, text=True)
     
     if result.returncode == 0:
-        # Rename resume.pdf to kschoedl.resume.pdf
+        # Rename resume.pdf to kschoedl.cv.pdf
         pdf_original = resume_dir / 'resume.pdf'
-        pdf_target = resume_dir / 'kschoedl.resume.pdf'
+        pdf_target = resume_dir / 'kschoedl.cv.pdf'
         
         if pdf_original.exists():
             if pdf_target.exists():

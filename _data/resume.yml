@@ -36,8 +36,9 @@ education:
     location: "Champaign-Urbana, IL"
     dates: "August 2015 – May 2019"
     details:
-      - "Relevant coursework: Electromagnetics, Signal Processing, Device Physics, Circuits, Experimental Measurement"
-      - "Exchange Semester, Technical University of Denmark, Autumn 2017"
+      - "Relevant coursework: Electromagnetics, Signal Processing, Semiconductor Physics, Analog and Digital Circuits, IC Theory & Fabrication."
+      - "Internships: GE Global Research (Summer 2016 & 2017), Amazon (Summer 2018)."
+      - "Exchange Semester: Technical University of Denmark (Autumn 2017)."
 
 experience:
   - title: "Research Coordinator (Photonics)"
@@ -46,12 +47,10 @@ experience:
     location: "Seattle, WA"
     dates: "May 2024 – May 2025"
     responsibilities:
-      - "Supported deployment, operation, and maintenance of photonics-based Distributed Acoustic Sensing (DAS) and data acquisition systems for seismic, oceanic, and cryospheric research."
-      - "Coordinated technical activities with external research partners and funding agencies."
-      - "Acted as operational liaison between research groups and departmental administration by managing procurement, inventory, shipping, customs documentation, and field logistics."
-      - "Supported safety planning and permitting for remote field deployments and instrumentation campaigns."
-      - "Developed and maintained experimental workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations."
-      - "Maintained project websites and supported data dissemination platforms."
+      - "Supported deployment, operation, testing, and maintenance of photonics-based Distributed Acoustic Sensing (DAS) data acquisition systems for seismic, oceanic, and cryospheric research."
+      - "Coordinated technical activities with external research partners and funding agencies; acted as operational liaison between research groups and departmental administration by managing procurement, inventory, shipping, and customs documentation."
+      - "Developed and maintained experimental system workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations; maintained project websites and supported data dissemination platforms."
+      - "Supported safety and logistical planning and permitting for remote field deployments and instrumentation campaigns."
 
   - title: "Hardware Engineer II (Signal Integrity)"
     organization: "Microsoft"
@@ -62,10 +61,9 @@ experience:
       - "Modeled and analyzed end-to-end signal integrity performance across FPGA die, packages, connectors, and board-level interconnects."
       - "Conducted high-speed hardware validation and SI characterization for enterprise AI and cloud infrastructure platforms."
       - "Performed electromagnetic and circuit-level simulations using tools such as ANSYS HFSS and Keysight ADS."
-      - "Supported board-level stackup design, routing constraints, and interference mitigation strategies."
+      - "Supported board-level stackup design, routing constraints, and interference mitigation strategies to resolve system integration issues."
       - "Executed laboratory measurements, including S-parameters and eye-diagram analysis, using VNA and time-domain methods."
-      - "Collaborated with electrical, mechanical, and systems engineering teams to resolve SI and system integration issues."
-      - "Supported contract PCBA design reviews and monitored progress through manufacturing readiness."
+      - "Supported contract PCB design reviews and monitored progress through manufacturing readiness."
 
   - title: "Hardware Design Engineer (Satellite Avionics)"
     organization: "Amazon"
@@ -146,12 +144,12 @@ skills:
   instrumentation:
     name: "Measurement & Instrumentation"
     pdf_name: "Instrumentation"
-    items: "Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Characterization, Sensor Calibration, Signal Integrity Analysis, Channel Simulation, Schematic Design, PCB Layout"
+    items: "Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Characterization, Sensor Calibration, Signal Integrity Analysis, Channel Simulation, Schematic Design, PCB Layout, Cyclotron Hardware Radiation Effects Testing"
   
   field:
     name: "Research & Field Operations"
     pdf_name: "Field Operations"
-    items: "Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation"
+    items: "Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation, American Mountain Guides Association (AMGA) Professional Member"
 
 affiliations:
   professional:
@@ -162,23 +160,23 @@ affiliations:
     - "Washington State Rare Plant Monitor"
   
   certifications:
-    - "Wilderness First Responder (WFR) with AED and CPR Certification, Yosemite, CA (December 2025)"
-    - "AIARE 1 Avalanche Training Certification, Skyward Mountaineering - Silverton, CO (December 2025)"
-    - "Avalanche Companion Rescue Training, Alpine Ascents International x SheJumps - Snoqualmie, WA (January 2025)"
+    - "Wilderness First Responder (WFR) with AED and CPR Certification, Yosemite, CA (November 2025)"
+    - "AIARE 1 Avalanche Training Certification, Skyward Mountaineering, Silverton, CO (December 2025)"
+    - "Avalanche Companion Rescue Training, Alpine Ascents International x SheJumps, Snoqualmie, WA (January 2026)"
 
 activities:
-  - "Glacier travel, alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide"
-  - "Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments"
+  - "Glacier travel, alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide."
+  - "Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments."
 
 conferences:
   - name: "BOAT Ocean Acoustics Workshop"
     location: "University of Washington"
     year: "2025"
-    description: "Two-day intensive workshop on ocean acoustics theory and experimental practice"
+    description: "Two-day intensive workshop on experimental signal processing theory."
   
   - name: "DesignCon"
     location: "Santa Clara, CA"
     year: "2022"
-    description: "Industry conference on high-speed signal integrity, measurement-driven hardware, and PCB manufacturing"
+    description: "Industry conference on high-speed signal integrity measurement and PCB manufacturing."
 
 interests: "Optical and photonic sensing systems, precision scientific instrumentation, particle physics hardware and measurement techniques, radiation effects, physical properties of ice, experimental field research, mentorship and interdisciplinary scientific collaboration."
