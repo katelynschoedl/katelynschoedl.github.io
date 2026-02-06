@@ -1,7 +1,7 @@
 ---
 layout: default
-title: CV
-permalink: /cv
+title: Resume
+permalink: /resume
 ---
 
 <div class="resume-header">
