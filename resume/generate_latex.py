@@ -38,7 +38,7 @@ def generate_header_definitions(data):
     header.append("%====================")
     header.append(f"\\def\\name{{{escape_latex(contact['name'])}}}")
     header.append(f"\\def\\phone{{{contact['phone']}}}")
-    header.append(f"\\def\\city{{Seattle, USA - Grenoble, FR}}")  # Keep as-is or add to YAML if needed
+    header.append(f"\\def\\city{{Seattle, USA}}")  # Keep as-is or add to YAML if needed
     header.append(f"\\def\\email{{{contact['email']}}}")
     header.append(f"\\def\\LinkedIn{{{contact['linkedin']}}}")
     header.append(f"\\def\\github{{ }}")  # Empty for now
