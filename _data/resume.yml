@@ -37,14 +37,14 @@ education:
     location: "Champaign-Urbana, IL"
     dates: "August 2015 – May 2019"
     details:
-      - "Relevant coursework: Computer Programming, Electromagnetics, Semiconductor Physics, Analog and Digital Circuits."
+      - "Relevant coursework: <a href='https://ece.illinois.edu/academics/ugrad/curriculum/ee/before-fa2021' class='sneaky-link'>Computer Programming, Electromagnetics, Semiconductor Physics, Analog and Digital Circuits.</a>"
       - "Internships: GE Global Research (Summer 2016 & 2017), Amazon (Summer 2018)."
       - "Exchange Semester: Technical University of Denmark (Autumn 2017)."
 
 experience:
   - title: "Research Coordinator (Photonics)"
     organization: "University of Washington"
-    department: "College of the Environment, Department of Earth & Space Sciences"
+    department: "<a href='https://fiberlab.uw.edu/' class='sneaky-link'>College of the Environment, Department of Earth & Space Sciences</a>"
     location: "Seattle, WA"
     dates: "May 2024 – May 2025"
     responsibilities:
@@ -52,7 +52,7 @@ experience:
       - "Conducted field deployments across six sites including offshore fiber installations in Homer AK, San Juan Islands WA, and Morro Bay CA, and seismic monitoring deployments at Mt. Rainier and Alpental Ski Resort WA; handled all pre-deployment acceptance testing, independent equipment transport, live-buffer drive swaps, and ferry and vehicle logistics."
       - "Maintained daily operational oversight of concurrent DAS deployments across domestic and international field sites, managing data acquisition systems, remote monitoring infrastructure, and storage logistics across petabyte-scale datasets."
       - "Configured remote network access for deployed interrogator systems, coordinated RAID storage architecture decisions with university IT, and ensured federal data handling compliance including Navy data scrubbing protocols for oceanographic datasets."
-      - "Coordinated international equipment shipments and customs carnets for Antarctic and Greenland deployments; managed procurement and lab inventory; facilitated dataset publication through DOI creation with UW Libraries; collaborated closely with USGS, EarthScope, and PNSN; contributed to and credited in Shi et al. 2025, Seismological Research Letters."
+      - "Coordinated international equipment shipments and customs carnets for Antarctic and Greenland deployments; managed procurement and lab inventory; facilitated dataset publication through DOI creation with UW Libraries; collaborated closely with USGS, EarthScope, and PNSN; contributed to and credited in <a href='https://pubs.geoscienceworld.org/ssa/srl/article/96/2A/784/652443/Multiplexed-Distributed-Acoustic-Sensing-Offshore' class='sneaky-link'>Shi et al. 2025, Seismological Research Letters.</a>"
       - "Actively participated in research group colloquia and engaged in future planning discussions; contributed to signal analysis including data cross-correlation and live characterization datasets."
 
   - title: "Hardware Engineer II (Signal Integrity)"
@@ -75,7 +75,7 @@ experience:
       - "Owned end-to-end hardware development for magnetometer and sun sensor subsystems during early-phase pre-PDR program development (prior to launch provider selection and during initial lab standup) including electrical, mechanical, and functional requirements definition, FOV analysis, and ConOps documentation."
       - "Led component selection, schematic design, and PCB layout for avionics sensor prototypes; coordinated with contract manufacturers on assembly requirements and parts library verification."
       - "Performed sensor bring-up, functional validation, and photodiode characterization using test tools such as sun emulator, thermal chamber, vibration test bed, and Helmholtz coil; conducted field validation with standalone prototype hardware."
-      - "Designed and populated custom test boards for heavy-ion single-event effects (SEE) characterization at the Lawrence Berkeley National Laboratory 88-Inch Cyclotron; prepared delidded commercial components, coordinated beamline exposure parameters, and performed pre- and post-irradiation functional testing of semiconductor devices; contributed to Kuiper's internal COTS component radiation qualification library."
+      - "Designed and populated custom test boards for heavy-ion single-event effects (SEE) characterization at the Lawrence Berkeley National Laboratory <a href='https://cyclotron.lbl.gov/home' class='sneaky-link'>88-Inch Cyclotron;</a> prepared delidded commercial components, coordinated beamline exposure parameters, and performed pre- and post-irradiation functional testing of semiconductor devices; contributed to Kuiper's internal COTS component radiation qualification library."
       - "Supported PDR and CDR design reviews and contributed to cross-team integration reviews for bus avionics sensor suite."
       - "Maintained comprehensive engineering documentation across requirements, design decisions, test results, and manufacturing handoff throughout full hardware development lifecycle."
 

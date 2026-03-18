@@ -120,12 +120,12 @@ permalink: /resume
 
 {% if skill.subcategories %}
 {% for subcat in skill.subcategories %}
-{{ subcat.name }}: *{{ subcat.items }}*
+**{{ subcat.name }}**: *{{ subcat.items }}*
 {: .skill-subcategory}
 
 {% endfor %}
 {% else %}
-*{{ skill.items }}*
+{{ skill.items }}
 {: .skill-items}
 
 {% endif %}
@@ -422,6 +422,22 @@ body .bold-text.photo-hover-active,
   }
 }
 
+/* Sneaky Links - invisible styling */
+a.sneaky-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+a.sneaky-link:hover {
+  opacity: 0.8;
+}
+
+a.sneaky-link:visited {
+  color: inherit;
+}
+
 /* Skills Section Styling */
 .skills-section strong {
   font-size: 1.1rem;
@@ -430,6 +446,7 @@ body .bold-text.photo-hover-active,
   margin-top: 0.8rem;
   margin-bottom: 0.6rem;
   transition: color 0.18s ease, text-shadow 0.18s ease;
+  font-weight: 700;
 }
 
 .skills-section strong:first-child {
@@ -446,11 +463,24 @@ body .bold-text.photo-hover-active,
   margin-top: 0.2rem;
 }
 
+.skills-section p.skill-subcategory strong {
+  font-size: 1rem;
+  font-weight: 550;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline;
+}
+
 .skills-section p.skill-items {
   margin-left: 0;
   margin-bottom: 0;
   margin-top: 0;
 }
+
+.skills-section p.skill-items em {
+  font-style: normal;
+}
+
 
 
 
