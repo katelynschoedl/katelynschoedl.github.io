@@ -453,7 +453,7 @@ a.sneaky-link:visited {
   margin-top: 0;
 }
 
-.skills-section p.skill-category-title:hover strong {
+.skills-section:hover p.skill-category-title strong {
   color: #93c5fd;
   text-shadow: 0 0 10px rgba(111, 180, 255, 0.3), 0 0 20px rgba(111, 180, 255, 0.15);
 }
