@@ -120,12 +120,12 @@ permalink: /resume
 
 {% if skill.subcategories %}
 {% for subcat in skill.subcategories %}
-*{{ subcat.name }}: {{ subcat.items }}*
+{{ subcat.name }}: *{{ subcat.items }}*
 {: .skill-subcategory}
 
 {% endfor %}
 {% else %}
-{{ skill.items }}
+*{{ skill.items }}*
 {: .skill-items}
 
 {% endif %}
@@ -423,16 +423,12 @@ body .bold-text.photo-hover-active,
 }
 
 /* Skills Section Styling */
-.skills-section p {
-  transition: background-color 0.2s ease;
-}
-
 .skills-section strong {
   font-size: 1.1rem;
   color: #fff;
   display: block;
   margin-top: 0.8rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
   transition: color 0.18s ease, text-shadow 0.18s ease;
 }
 
@@ -446,28 +442,8 @@ body .bold-text.photo-hover-active,
 }
 
 .skills-section p.skill-subcategory {
-  margin-left: 1rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.3rem;
-  padding: 0.5rem 0.6rem;
-  border-radius: 4px;
-  line-height: 1.5;
-  transition: background-color 0.2s ease;
-}
-
-.skills-section p.skill-subcategory:hover {
-  background-color: rgba(147, 197, 253, 0.08);
-}
-
-.skills-section p.skill-subcategory em {
-  font-style: italic;
-  color: #93c5fd;
-  transition: color 0.18s ease, text-shadow 0.18s ease;
-}
-
-.skills-section p.skill-subcategory:hover em {
-  text-shadow: 0 0 8px rgba(111, 180, 255, 0.25);
-  color: #60a5fa;
+  margin-bottom: 0.3rem;
+  margin-top: 0.2rem;
 }
 
 .skills-section p.skill-items {
@@ -475,6 +451,7 @@ body .bold-text.photo-hover-active,
   margin-bottom: 0;
   margin-top: 0;
 }
+
 
 
 </style>
