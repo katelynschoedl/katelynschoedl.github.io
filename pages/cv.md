@@ -443,8 +443,8 @@ a.sneaky-link:visited {
   font-size: 1.1rem;
   color: #fff;
   display: block;
-  margin-top: 0.8rem;
-  margin-bottom: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   transition: color 0.18s ease, text-shadow 0.18s ease;
   font-weight: 700;
 }
@@ -453,18 +453,20 @@ a.sneaky-link:visited {
   margin-top: 0;
 }
 
-.skills-section:hover strong {
+.skills-section p.skill-category-title:hover strong {
   color: #93c5fd;
   text-shadow: 0 0 10px rgba(111, 180, 255, 0.3), 0 0 20px rgba(111, 180, 255, 0.15);
 }
 
 .skills-section p.skill-subcategory {
-  margin-bottom: 0.3rem;
-  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0;
+  margin-left: 1.2rem;
+  line-height: 1.5;
 }
 
 .skills-section p.skill-subcategory strong {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 550;
   margin-top: 0;
   margin-bottom: 0;
@@ -473,7 +475,7 @@ a.sneaky-link:visited {
 
 .skills-section p.skill-items {
   margin-left: 0;
-  margin-bottom: 0;
+  margin-bottom: 0.8rem;
   margin-top: 0;
 }
 
