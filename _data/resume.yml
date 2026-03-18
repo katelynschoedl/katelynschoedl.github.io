@@ -1,6 +1,7 @@
 contact:
   name: "Katelyn M. Schoedl"
   title: "Electrical Engineer | Research Coordinator"
+  city: "Grenoble, FR"
   phone: "+1 (847) 961-0243"
   phone_link: "+18479610243"
   email: "kschoedl8@gmail.com"
@@ -19,7 +20,7 @@ section_titles:
   experience: "Experience"
   undergraduate_roles: "Undergraduate Roles"
   internships: "Internships"
-  skills: "Skills"
+  skills: "Skills & Activities"
   affiliations: "Professional Affiliations & Certifications"
   activities: "Field & Alpine Activities"
   conferences: "Conferences & Workshops"
@@ -36,7 +37,7 @@ education:
     location: "Champaign-Urbana, IL"
     dates: "August 2015 – May 2019"
     details:
-      - "Relevant coursework: Electromagnetics, Signal Processing, Semiconductor Physics, Analog and Digital Circuits, IC Theory & Fabrication."
+      - "Relevant coursework: Computer Programming, Electromagnetics, Semiconductor Physics, Analog and Digital Circuits."
       - "Internships: GE Global Research (Summer 2016 & 2017), Amazon (Summer 2018)."
       - "Exchange Semester: Technical University of Denmark (Autumn 2017)."
 
@@ -47,10 +48,12 @@ experience:
     location: "Seattle, WA"
     dates: "May 2024 – May 2025"
     responsibilities:
-      - "Supported deployment, operation, testing, and maintenance of photonics-based Distributed Acoustic Sensing (DAS) data acquisition systems for seismic, oceanic, and cryospheric research."
-      - "Coordinated technical activities with external research partners and funding agencies; acted as operational liaison between research groups and departmental administration by managing procurement, inventory, shipping, and customs documentation."
-      - "Developed and maintained experimental system workflows for large-volume data management, metadata documentation, and technical reporting across multi-institution collaborations; maintained project websites and supported data dissemination platforms."
-      - "Supported safety and logistical planning and permitting for remote field deployments and instrumentation campaigns."
+      - "Operated, evaluated, and deployed fiber-optic interrogator systems (Sintella Onyx, ASN OptoDAS, FEBUS G1-C) for DAS/DTS/DSS sensing modes across seismic, ocean acoustic, and glacier/ice-ocean dynamics applications."
+      - "Conducted field deployments across six sites including offshore fiber installations in Homer AK, San Juan Islands WA, and Morro Bay CA, and seismic monitoring deployments at Mt. Rainier and Alpental Ski Resort WA; handled all pre-deployment acceptance testing, independent equipment transport, live-buffer drive swaps, and ferry and vehicle logistics."
+      - "Maintained daily operational oversight of concurrent DAS deployments across domestic and international field sites, managing data acquisition systems, remote monitoring infrastructure, and storage logistics across petabyte-scale datasets."
+      - "Configured remote network access for deployed interrogator systems, coordinated RAID storage architecture decisions with university IT, and ensured federal data handling compliance including Navy data scrubbing protocols for oceanographic datasets."
+      - "Coordinated international equipment shipments and customs carnets for Antarctic and Greenland deployments; managed procurement and lab inventory; facilitated dataset publication through DOI creation with UW Libraries; collaborated closely with USGS, EarthScope, and PNSN; contributed to and credited in Shi et al. 2025, Seismological Research Letters."
+      - "Actively participated in research group colloquia and engaged in future planning discussions; contributed to signal analysis including data cross-correlation and live characterization datasets."
 
   - title: "Hardware Engineer II (Signal Integrity)"
     organization: "Microsoft"
@@ -58,12 +61,10 @@ experience:
     location: "Seattle, WA"
     dates: "September 2021 – September 2023"
     responsibilities:
-      - "Modeled and analyzed end-to-end signal integrity performance across FPGA die, packages, connectors, and board-level interconnects."
-      - "Conducted high-speed hardware validation and SI characterization for enterprise AI and cloud infrastructure platforms."
-      - "Performed electromagnetic and circuit-level simulations using tools such as ANSYS HFSS and Keysight ADS."
-      - "Supported board-level stackup design, routing constraints, and interference mitigation strategies to resolve system integration issues."
-      - "Executed laboratory measurements, including S-parameters and eye-diagram analysis, using VNA and time-domain methods."
-      - "Supported contract PCB design reviews and monitored progress through manufacturing readiness."
+      - "Performed passive and active signal integrity characterization of PCIe and DDR5 traces across FPGA die, custom silicon packaging, connectors, and board-level interconnects using differential probing, VNA S-parameter analysis, and time-domain eye-diagram methods."
+      - "Identified component-level signal integrity defects through comparative validation of boards across manufacturers and production origins, enabling root cause isolation and cost savings in hardware qualification."
+      - "Supported stackup design decisions alongside motherboard EEs, contributing to material selection and layer thickness tradeoffs that determined high-speed signal propagation behavior."
+      - "Built end-to-end simulation models of signal paths from silicon to GPU and PCIe endpoints using ANSYS HFSS and Keysight ADS, analyzing microbend and geometry effects on transmission performance."
 
   - title: "Hardware Design Engineer (Satellite Avionics)"
     organization: "Amazon"
@@ -71,12 +72,12 @@ experience:
     location: "Seattle, WA"
     dates: "April 2020 – September 2021"
     responsibilities:
-      - "Supported early-phase (pre-PDR) satellite avionics sensor subsystem design and development."
-      - "Authored design review documents and test validation for electrical, thermal, and mechanical performance."
-      - "Defined early avionics sensor requirements from component to system level."
-      - "Designed and reviewed schematics, PCB layouts, and housings for sensor prototypes."
-      - "Performed board bring-up, debugging, and validation."
-      - "Supported hardware radiation test campaigns."
+      - "Owned end-to-end hardware development for magnetometer and sun sensor subsystems during early-phase pre-PDR program development (prior to launch provider selection and during initial lab standup) including electrical, mechanical, and functional requirements definition, FOV analysis, and ConOps documentation."
+      - "Led component selection, schematic design, and PCB layout for avionics sensor prototypes; coordinated with contract manufacturers on assembly requirements and parts library verification."
+      - "Performed sensor bring-up, functional validation, and photodiode characterization using test tools such as sun emulator, thermal chamber, vibration test bed, and Helmholtz coil; conducted field validation with standalone prototype hardware."
+      - "Designed and populated custom test boards for heavy-ion single-event effects (SEE) characterization at the Lawrence Berkeley National Laboratory 88-Inch Cyclotron; prepared delidded commercial components, coordinated beamline exposure parameters, and performed pre- and post-irradiation functional testing of semiconductor devices; contributed to Kuiper's internal COTS component radiation qualification library."
+      - "Supported PDR and CDR design reviews and contributed to cross-team integration reviews for bus avionics sensor suite."
+      - "Maintained comprehensive engineering documentation across requirements, design decisions, test results, and manufacturing handoff throughout full hardware development lifecycle."
 
   - title: "Technical Program Manager (Robotic Automation Prototypes)"
     organization: "Amazon"
@@ -84,11 +85,9 @@ experience:
     location: "Seattle, WA"
     dates: "June 2019 – March 2020"
     responsibilities:
-      - "Supported nationwide deployment of PLC-based robotic automation prototypes across fulfillment centers."
-      - "Managed schedules, logistics, and readiness planning for pilot programs."
-      - "Coordinated on-site installations, commissioning, and documentation with engineering and operations teams."
-      - "Tracked development milestones through production and operational handoff."
-      - "Supported standardization of risk reviews and vendor evaluations."
+      - "Coordinated nationwide deployment of alpha and beta PLC-based robotic automation systems across Amazon fulfillment centers, serving as liaison between robot manufacturers, software vendors, and internal engineering and operations teams."
+      - "Maintained program schedules, deployment readiness documentation, and risk review standardization across pilot programs."
+      - "Supported on-site commissioning, vendor evaluations, and operational handoff for new automation systems."
 
 undergraduate_roles:
   - title: "Shop Assistant"
@@ -127,28 +126,51 @@ internships:
       - "Contributed to multi-year research initiatives spanning two summer appointments."
 
 skills:
-  communication:
-    name: "Communication"
-    items: "English (native), Spanish (A2), French (beginner)"
-  
-  programming:
-    name: "Programming"
-    items: "Python, C/C++, MATLAB, JavaScript, LaTeX, Markdown"
-  
-  development:
-    name: "Systems & Development"
-    pdf_name: "Development"
-    items: "Git, Jupyter, Linux (Bash/Shell), Microcontrollers, ArcGIS, Docker, HW/SW RAID storage, HPC remote systems"
+  languages:
+    name: "Languages"
+    items: "English (native), French (A2), Spanish (A2)"
   
   instrumentation:
-    name: "Measurement & Instrumentation"
-    pdf_name: "Instrumentation"
-    items: "Distributed Acoustic Sensing (DAS), Data Acquisition Systems (DAQ), Noise Characterization, Sensor Calibration, Signal Integrity Analysis, Channel Simulation, Schematic Design, PCB Layout, Cyclotron Hardware Radiation Effects Testing"
+    name: "Instrumentation"
+    subcategories:
+      - name: "Photonics"
+        items: "DAS/DTS/DSS, Optical Connectors & Fiber Components, Fusion Splicing"
+      - name: "Interrogators"
+        items: "Sintella Onyx, ASN OptoDAS, FEBUS G1-C"
+      - name: "Electronic Test & Measurement"
+        items: "VNA, S-parameters, Eye-diagram Analysis, Oscilloscope, Passive & Active Probing, Photodetector Characterization, EMI/EMC Validation, Thermal/Mechanical Environmental Qualification"
   
-  field:
-    name: "Research & Field Operations"
-    pdf_name: "Field Operations"
-    items: "Hands-on system deployment, field logistics coordination, remote system monitoring, experimental setup and testing, test planning, data management, technical documentation, American Mountain Guides Association (AMGA) Professional Member"
+  simulation_design:
+    name: "Simulation & Design"
+    subcategories:
+      - name: "Hardware Design"
+        items: "Schematic, PCB Layout, Board Bring-up, Stackup Design, PCB Fabrication & Assembly Processes"
+      - name: "Simulation & Analysis"
+        items: "ANSYS HFSS, Keysight ADS, Signal Integrity Analysis, Channel Simulation, Noise Characterization"
+  
+  programming_development:
+    name: "Programming & Development"
+    subcategories:
+      - name: "Languages & Tools"
+        items: "Python, MATLAB, C/C++, JavaScript, LaTeX, Git, Linux/Bash, Docker, Jupyter"
+      - name: "Infrastructure"
+        items: "RAID Storage Architecture, Data Acquisition Pipelines, Remote System Monitoring"
+  
+  domain_knowledge:
+    name: "Domain Knowledge"
+    subcategories:
+      - name: "Engineering"
+        items: "Electromagnetics, Signal Integrity, SEE Radiation Effects Testing, COTS Component Qualification"
+      - name: "Research"
+        items: "Geophysical Sensing, Ocean Acoustics, Cryospheric Instrumentation, Seismic Monitoring"
+  
+  field_operations:
+    name: "Field & Operations"
+    subcategories:
+      - name: "Logistics"
+        items: "International Shipping, Customs & Carnets, Lab Budget & Procurement, Inventory Management, Project Tracking & Milestone Management"
+      - name: "Research Operations"
+        items: "Federal Data Compliance, Petabyte-scale Data Management, Grant Management & Documentation, Technical Reporting, Multi-institution & International Research Collaboration"
 
 affiliations:
   professional:
@@ -167,11 +189,26 @@ activities:
   - "Glacier travel, alpine climbing, skiing, and cross-training; prospective AMGA Alpine Guide."
   - "Experience planning safety, navigation, logistics, and remote system management for field exploration in diverse environments."
 
+field_certifications:
+  - "American Mountain Guides Association (AMGA) Professional Member"
+  - "American Alpine Club (AAC) Member"
+  - "Avalanche Rescue Training"
+  - "Wilderness First Responder (WFR) with AED and CPR Certifications"
+  - "OSHA 10 Training"
+
+workshops:
+  - name: "DesignCon"
+    location: "Santa Clara, CA"
+    year: "2022"
+  - name: "BOAT Ocean Acoustics Workshop"
+    location: "University of Washington"
+    year: "2025"
+
 conferences:
   - name: "BOAT Ocean Acoustics Workshop"
     location: "University of Washington"
     year: "2025"
-    description: "Two-day intensive workshop on experimental signal processing theory."
+    description: "Intensive workshop on experimental signal processing theory."
   
   - name: "DesignCon"
     location: "Santa Clara, CA"

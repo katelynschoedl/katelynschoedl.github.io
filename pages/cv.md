@@ -37,7 +37,7 @@ permalink: /resume
 </div>
 
 <a class="resume-float"
-   href="/resume/kschoedl.resume.pdf"
+   href="/resume/archive/kschoedl.resume.25.pdf"
    target="_blank"
    rel="noopener">
   Download PDF Resume →
@@ -113,8 +113,15 @@ permalink: /resume
   <div class="resume-section" markdown="1">
 ## {{ site.data.resume.section_titles.skills }}
 
-{% for skill_key in site.data.resume.skills %}{% assign skill = skill_key[1] %}**{{ skill.name }}**  
-{{ skill.items }}
+{% for skill_key in site.data.resume.skills %}{% assign skill = skill_key[1] %}
+**{{ skill.name }}**  
+{% if skill.subcategories %}
+{% for subcat in skill.subcategories %}
+*{{ subcat.name }}*: {{ subcat.items }}  
+{% endfor %}
+{% else %}
+{{ skill.items }}  
+{% endif %}
 
 {% endfor %}
 </div>
