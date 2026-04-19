@@ -11,8 +11,8 @@
 resume/content.tex
 resume/header.tex
 resume/archive/
+resume/letter_format/
 assets/media/signature.png
-resume/letter_format/kschoedl_cover_letter*.pdf
 
 # Python virtual environment
 .venv/
