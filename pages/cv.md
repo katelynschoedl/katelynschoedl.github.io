@@ -37,7 +37,7 @@ permalink: /resume
 </div>
 
 <a class="resume-float"
-   href="/resume/archive/kschoedl.resume.25.pdf"
+   href="/resume/Schoedl_Katelyn_Resume.pdf"
    target="_blank"
    rel="noopener">
   Download PDF Resume →
@@ -176,13 +176,7 @@ permalink: /resume
 </div>
 
 <div style="margin: 1.2rem 0 2rem 0; display: flex; gap: 12px; flex-wrap: wrap;">
-  <!---<a href="/resume/kschoedl.cv.pdf"
-     class="home-card"
-     target="_blank"
-     rel="noopener">
-    Download Full CV (2 pages) →
-  </a> --->
-  <a href="/resume/kschoedl.resume.pdf"
+  <a href="/resume/Schoedl_Katelyn_Resume.pdf"
      class="home-card"
      target="_blank"
      rel="noopener">
