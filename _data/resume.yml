@@ -27,9 +27,9 @@ section_titles:
   interests: "Interests"
 
 profile:
-  objective: "Electrical engineer and research coordinator with experience in hardware design for high-speed digital communication, photonic systems, and academic research processes for geophysical science applications."
-  background: "My background includes avionics sensor design at Amazon, signal integrity engineering at Microsoft, and academic research coordination for geophysics and environmental sensing groups at the University of Washington. I am interested in experimental design workflows, precision measurement systems, and field operations for high-quality scientific data collection."
-  seeking: "I am actively seeking roles in applied research and instrumentation alongside future graduate study at the intersection of hardware engineering, experimental physics, and geophysical sciences."
+  objective: "Electrical engineer and research coordinator with a background in satellite avionics hardware, high-speed signal integrity, and fiber-optic sensing systems for geophysical field research."
+  background: "I am interested in the precision measurement of dynamic physical systems combining methods of active instrumentation and remote sensing."
+  seeking: "I am currently based in Grenoble, France on a long-stay visa. I am actively seeking research positions and graduate thesis topics, particularly involving cryospheric instrumentation, photonics, optical scattering, and coherent sensing methods."
 
 education:
   - degree: "Bachelor of Science in Electrical Engineering"
@@ -37,7 +37,8 @@ education:
     location: "Champaign-Urbana, IL"
     dates: "August 2015 – May 2019"
     details:
-      - "Relevant coursework: <a href='https://ece.illinois.edu/academics/ugrad/curriculum/ee/before-fa2021' class='sneaky-link'>Computer Programming, Electromagnetics, Semiconductor Physics, Analog and Digital Circuits.</a>"
+      # - "Relevant coursework: <a href='https://ece.illinois.edu/academics/ugrad/curriculum/ee/before-fa2021' class='sneaky-link'>Computer Programming, Electromagnetics, Semiconductor Physics, Analog and Digital Circuits.</a>"
+      - "Relevant coursework: Computer Programming, Electromagnetics, Semiconductor Physics, Analog and Digital Circuits."
       - "Internships: GE Global Research (Summer 2016 & 2017), Amazon (Summer 2018)."
       - "Exchange Semester: Technical University of Denmark (Autumn 2017)."
 

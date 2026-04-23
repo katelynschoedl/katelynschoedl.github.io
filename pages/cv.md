@@ -45,14 +45,14 @@ permalink: /resume
 
 <div class="resume-container">
 
-  <div class="resume-section" markdown="1">
+  <div class="resume-section profile-section" markdown="1">
 ## {{ site.data.resume.section_titles.profile }}
 
-<p class="highlight-text">{{ site.data.resume.profile.objective }}</p>
+<p>{{ site.data.resume.profile.objective }}</p>
 
 <p>{{ site.data.resume.profile.background }}</p>
 
-<p><span class="highlight-text">{{ site.data.resume.profile.seeking }}</span></p>
+<p>{{ site.data.resume.profile.seeking }}</p>
   </div>
 
   <div class="resume-section" markdown="1">
@@ -320,8 +320,10 @@ permalink: /resume
 
 .resume-section:last-child{ border-bottom:none; }
 
-.resume-container:hover .resume-section{ opacity:0.35; }
-.resume-container .resume-section:hover{ opacity:1; }
+@media (hover:hover) and (pointer:fine){
+  .resume-container:hover .resume-section{ opacity:0.35; }
+  .resume-container .resume-section:hover{ opacity:1; }
+}
 
 .resume-section h2,
 .resume-section h3{
@@ -332,13 +334,15 @@ permalink: /resume
     opacity 0.18s ease;
 }
 
-.resume-section:hover h2{
-  color: #ffffff;
-  text-shadow:
-    0 0 10px rgba(255,255,255,0.22),
-    0 0 22px rgba(255,255,255,0.12);
-  transform: translateY(-1px) scale(1.02);
-  opacity: 1;
+@media (hover:hover) and (pointer:fine){
+  .resume-section:hover h2{
+    color: #ffffff;
+    text-shadow:
+      0 0 10px rgba(255,255,255,0.22),
+      0 0 22px rgba(255,255,255,0.12);
+    transform: translateY(-1px) scale(1.02);
+    opacity: 1;
+  }
 }
 
 .resume-section h2.profile-title-active{
@@ -350,7 +354,27 @@ permalink: /resume
   opacity: 1 !important;
 }
 
-.resume-section:hover h3{
+.resume-section.is-scroll-active h2{
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.22),
+    0 0 22px rgba(255,255,255,0.12);
+  transform: translateY(-1px) scale(1.02);
+  opacity: 1;
+}
+
+@media (hover:hover) and (pointer:fine){
+  .resume-section:hover h3{
+    color: #93c5fd;
+    text-shadow:
+      0 0 10px rgba(111,180,255,0.35),
+      0 0 20px rgba(111,180,255,0.18);
+    transform: translateY(-1px);
+    opacity: 1;
+  }
+}
+
+.resume-section.is-scroll-active h3{
   color: #93c5fd;
   text-shadow:
     0 0 10px rgba(111,180,255,0.35),
@@ -367,7 +391,18 @@ permalink: /resume
     opacity 0.18s ease;
 }
   
-.resume-section:hover .highlight-text{
+@media (hover:hover) and (pointer:fine){
+  .resume-section:hover .highlight-text{
+      color: #93c5fd;
+    text-shadow:
+      0 0 10px rgba(111,180,255,0.35),
+      0 0 20px rgba(111,180,255,0.18);
+    transform: translateY(-1px);
+    opacity: 1;
+  }
+}
+
+.resume-section.is-scroll-active .highlight-text{
     color: #93c5fd;
   text-shadow:
     0 0 10px rgba(111,180,255,0.35),
@@ -389,7 +424,14 @@ permalink: /resume
   transition: font-weight 0.18s ease, opacity 0.18s ease;
 }
 
-.resume-section:hover .bold-text{
+@media (hover:hover) and (pointer:fine){
+  .resume-section:hover .bold-text{
+    font-weight: 700;
+    opacity: 1;
+  }
+}
+
+.resume-section.is-scroll-active .bold-text{
   font-weight: 700;
   opacity: 1;
 }
@@ -447,7 +489,14 @@ a.sneaky-link:visited {
   margin-top: 0;
 }
 
-.skills-section:hover p.skill-category-title strong {
+@media (hover:hover) and (pointer:fine){
+  .skills-section:hover p.skill-category-title strong {
+    color: #93c5fd;
+    text-shadow: 0 0 10px rgba(111, 180, 255, 0.3), 0 0 20px rgba(111, 180, 255, 0.15);
+  }
+}
+
+.skills-section.is-scroll-active p.skill-category-title strong {
   color: #93c5fd;
   text-shadow: 0 0 10px rgba(111, 180, 255, 0.3), 0 0 20px rgba(111, 180, 255, 0.15);
 }
@@ -487,6 +536,7 @@ const profilePhoto = document.getElementById('profile-photo');
 const highlightTexts = document.querySelectorAll('.highlight-text');
 const userName = document.querySelector('.header-text h1');
 const profileTitle = document.querySelector('.resume-section h2');
+const resumeSections = Array.from(document.querySelectorAll('.resume-section'));
 
 if (profilePhoto) {
   profilePhoto.addEventListener('mouseenter', () => {
@@ -515,4 +565,90 @@ if (userName) {
     if (profileTitle) profileTitle.classList.remove('profile-title-active');
   });
 }
+
+const mobileMediaQuery = window.matchMedia('(max-width: 640px), (hover: none), (pointer: coarse)');
+let activeScrollSection = null;
+let sectionObserver = null;
+
+function clearActiveScrollSection() {
+  resumeSections.forEach(section => section.classList.remove('is-scroll-active'));
+  activeScrollSection = null;
+}
+
+function setActiveScrollSection(section) {
+  if (!section || activeScrollSection === section) return;
+  resumeSections.forEach(item => item.classList.toggle('is-scroll-active', item === section));
+  activeScrollSection = section;
+}
+
+function getClosestSectionToViewportCenter() {
+  const viewportCenter = window.innerHeight / 2;
+  let closestSection = null;
+  let closestDistance = Number.POSITIVE_INFINITY;
+
+  resumeSections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const sectionCenter = rect.top + (rect.height / 2);
+    const distance = Math.abs(sectionCenter - viewportCenter);
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestSection = section;
+    }
+  });
+
+  return closestSection;
+}
+
+function updateScrollActiveSection() {
+  if (!mobileMediaQuery.matches || resumeSections.length === 0) return;
+  setActiveScrollSection(getClosestSectionToViewportCenter());
+}
+
+function setupScrollSectionHighlighting() {
+  if (sectionObserver) {
+    sectionObserver.disconnect();
+    sectionObserver = null;
+  }
+
+  if (!mobileMediaQuery.matches || resumeSections.length === 0) {
+    clearActiveScrollSection();
+    return;
+  }
+
+  sectionObserver = new IntersectionObserver((entries) => {
+    let candidate = activeScrollSection;
+    let bestRatio = 0;
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= bestRatio) {
+        bestRatio = entry.intersectionRatio;
+        candidate = entry.target;
+      }
+    });
+
+    if (candidate) {
+      setActiveScrollSection(candidate);
+    } else {
+      updateScrollActiveSection();
+    }
+  }, {
+    threshold: [0.2, 0.35, 0.5, 0.65],
+    rootMargin: '-20% 0px -35% 0px'
+  });
+
+  resumeSections.forEach(section => sectionObserver.observe(section));
+  updateScrollActiveSection();
+}
+
+setupScrollSectionHighlighting();
+
+if (typeof mobileMediaQuery.addEventListener === 'function') {
+  mobileMediaQuery.addEventListener('change', setupScrollSectionHighlighting);
+} else if (typeof mobileMediaQuery.addListener === 'function') {
+  mobileMediaQuery.addListener(setupScrollSectionHighlighting);
+}
+
+window.addEventListener('resize', updateScrollActiveSection, { passive: true });
+window.addEventListener('orientationchange', updateScrollActiveSection, { passive: true });
 </script>
