@@ -50,8 +50,6 @@ permalink: /resume
 
 <p>{{ site.data.resume.profile.objective }}</p>
 
-<p>{{ site.data.resume.profile.background }}</p>
-
 <p>{{ site.data.resume.profile.seeking }}</p>
   </div>
 
@@ -166,12 +164,6 @@ permalink: /resume
 
 </div>
 
-  <div class="resume-section" markdown="1">
-## {{ site.data.resume.section_titles.interests }}
-
-{{ site.data.resume.interests }}
-
-</div>
 
 </div>
 
@@ -633,8 +625,8 @@ function setupScrollSectionHighlighting() {
       updateScrollActiveSection();
     }
   }, {
-    threshold: [0.2, 0.35, 0.5, 0.65],
-    rootMargin: '-20% 0px -35% 0px'
+    threshold: [0, 0.1, 0.2, 0.35],
+    rootMargin: '0px 0px -55% 0px'
   });
 
   resumeSections.forEach(section => sectionObserver.observe(section));

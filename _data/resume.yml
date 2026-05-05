@@ -28,8 +28,7 @@ section_titles:
 
 profile:
   objective: "Electrical engineer and research coordinator with a background in satellite avionics hardware, high-speed signal integrity, and fiber-optic sensing systems for geophysical field research."
-  background: "I am interested in the precision measurement of dynamic physical systems combining methods of active instrumentation and remote sensing."
-  seeking: "I am currently based in Grenoble, France on a long-stay visa. I am actively seeking research positions and graduate thesis topics, particularly involving cryospheric instrumentation, photonics, optical scattering, and coherent sensing methods."
+  seeking: "I am a US citizen from Seattle, Washington currently based in Grenoble, France on a long-stay visa. I am actively seeking research positions and graduate thesis topics, particularly involving cryospheric and ocean instrumentation, field experiments, photonics systems, optical scattering, acoustics, and coherent sensing methods."
 
 education:
   - degree: "Bachelor of Science in Electrical Engineering"
@@ -177,6 +176,7 @@ affiliations:
   professional:
     - "American Mountain Guides Association (AMGA) Professional Member"
     - "American Alpine Club (AAC) Member"
+    - "Club Alpin Français (CAF) Member"
     - "Boeing Alpine Society (BOEALPS) Member"
     - "SnowGoat Skimo Volunteer"
     - "Washington State Rare Plant Monitor"
@@ -206,6 +206,11 @@ workshops:
     year: "2025"
 
 conferences:
+  - name: "EGU General Assembly"
+    location: "Vienna, AUT"
+    year: "2026"
+    description: "European Geosciences Union annual general assembly."
+
   - name: "BOAT Ocean Acoustics Workshop"
     location: "University of Washington"
     year: "2025"
